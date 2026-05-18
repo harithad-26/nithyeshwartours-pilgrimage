@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     const tags = TAG_MAP[model] ?? ["packages", "destinations", "testimonials"];
 
     for (const tag of tags) {
-      revalidateTag(tag);
+      revalidateTag(tag, {});
     }
 
     return NextResponse.json({
