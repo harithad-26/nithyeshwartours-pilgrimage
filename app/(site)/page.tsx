@@ -1,12 +1,37 @@
-export default function Home() {
+import type { Metadata } from "next";
+import { getFeaturedPackages, getTestimonials } from "@/lib/strapi";
+import {
+  HeroSection,
+  TopPackages,
+  LuxuryEscapes,
+  SacredPilgrimages,
+  PilgrimStories,
+} from "@/components/sections";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Discover transformative pilgrimage and travel experiences across India and beyond with Nithyeshwar Tours.",
+  openGraph: {
+    title: "Nithyeshwar Tours — The Sacred Journey",
+    description:
+      "Curating pilgrimage and travel experiences across India and beyond.",
+  },
+};
+
+export default async function HomePage() {
+  const [packages, testimonials] = await Promise.all([
+    getFeaturedPackages(),
+    getTestimonials(),
+  ]);
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] px-6 text-center">
-      <h1 className="font-serif text-4xl text-navy mb-4">
-        Nithyeshwar Tours
-      </h1>
-      <p className="font-sans text-midnight/60 max-w-md leading-relaxed">
-        Curating transformative pilgrimage and travel experiences across India and beyond.
-      </p>
-    </div>
+    <main className="flex-1">
+      <HeroSection />
+      <TopPackages packages={packages} />
+      <LuxuryEscapes />
+      <SacredPilgrimages packages={packages} />
+      <PilgrimStories testimonials={testimonials} />
+    </main>
   );
 }
