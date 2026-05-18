@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand Colors */
+  --color-midnight: #000613;
+  --color-navy: #001f3f;
+  --color-navy-glass: color-mix(in srgb, #001f3f 70%, transparent);
+  --color-gold-dark: #735c00;
+  --color-gold: #fed65b;
+  --color-gold-muted: color-mix(in srgb, #fed65b 20%, transparent);
+  --color-surface: #faf9f8;
+  --color-surface-low: #f4f3f2;
+  --color-surface-lowest: #ffffff;
+
+  /* Tonal shadow (navy-tinted) */
+  --shadow-ambient: 0 10px 30px rgba(0, 31, 63, 0.06);
+  --shadow-card: 0 4px 20px rgba(0, 31, 63, 0.08);
+
+  /* Typography */
+  --font-serif: var(--font-noto-serif);
+  --font-sans: var(--font-manrope);
+
+  /* Spacing */
+  --spacing-section: 6rem;
+
+  /* Transitions */
+  --duration-slow: 300ms;
+  --duration-medium: 200ms;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Base reset */
+*, *::before, *::after { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-midnight);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus ring — visible, on-brand */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Gold accent line utility */
+.gold-accent-left {
+  border-left: 2px solid var(--color-gold-dark);
+  padding-left: 1rem;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--color-navy-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Tonal card */
+.card-tonal {
+  background: var(--color-surface-lowest);
+  box-shadow: var(--shadow-card);
+}
+
+/* Navy overlay on images */
+.img-overlay {
+  position: relative;
+}
+.img-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 31, 63, 0.20);
+  pointer-events: none;
 }
