@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Timeline } from "@/components/sections/Timeline";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getTestimonials } from "@/lib/strapi";
 import type { Metadata } from "next";
 
@@ -17,62 +16,110 @@ export default async function AboutPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[55vh] flex items-end pb-16" aria-label="About Nithyeshwar Tours">
+      {/* Hero — light desaturated treatment matching Figma */}
+      <section
+        className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+        aria-label="About Nithyeshwar Tours"
+      >
+        {/* Desaturated image at reduced opacity */}
         <Image
           src="/images/about-hero.jpg"
           alt="Ancient temple architecture"
           fill
           sizes="100vw"
-          className="object-cover"
+          className="object-cover opacity-40 grayscale"
           priority
           quality={90}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-midnight/90 via-navy/50 to-transparent" aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-          <p className="font-sans text-xs font-semibold tracking-[0.15em] uppercase text-gold mb-4">
-            Our Story
+        {/* Light gradient overlay — surface tone */}
+        <div
+          className="absolute inset-0 bg-linear-to-b from-surface/30 via-surface/50 to-surface/80"
+          aria-hidden="true"
+        />
+
+        {/* Centered text content */}
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center pt-24">
+          <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-5">
+            Our Sacred Roots
           </p>
-          <h1 className="font-serif text-4xl md:text-6xl text-white font-semibold leading-tight max-w-2xl">
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-midnight font-normal leading-tight tracking-tight mb-6">
             The Legacy of Spiritual Passage
           </h1>
+          <p className="font-sans text-lg text-[#43474e] leading-relaxed font-light max-w-2xl mx-auto">
+            For over three decades, Nithyeshwar Tours has been a bridge between
+            the seeker and the sacred, curating pilgrimages that transcend
+            physical travel to become soul-stirring journeys.
+          </p>
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="py-20 px-6 bg-surface">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <h2 className="font-serif text-3xl text-navy font-semibold mb-6 leading-snug">
+      {/* Mission — image left, text right */}
+      <section className="py-32 px-6 bg-surface">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          {/* Left: image with gold ambient blur */}
+          <div className="relative">
+            {/* Gold ambient blur behind image */}
+            <div
+              className="absolute -top-10 -left-10 w-64 h-64 bg-gold-muted blur-3xl rounded-full"
+              aria-hidden="true"
+            />
+            <div className="relative rounded-md overflow-hidden aspect-4/5">
+              <Image
+                src="/images/about-hero.jpg"
+                alt="Sacred mission — Nithyeshwar Tours"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={85}
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right: text */}
+          <div className="pt-4">
+            <h2 className="font-serif text-3xl md:text-4xl text-midnight font-normal mb-6 leading-snug">
               A Purpose Beyond Destination
             </h2>
-            <p className="font-sans text-base text-midnight/70 leading-relaxed mb-4">
-              Founded in the philosophy of Dharma, Nithyeshwar Tours was born from a singular belief — that spiritual travel is not merely tourism, but transformation.
+            <p className="font-sans text-lg text-[#43474e] leading-relaxed mb-5">
+              Founded in the philosophy of Dharma, Nithyeshwar Tours was born
+              from a singular belief — that spiritual travel is not merely
+              tourism, but transformation.
             </p>
-            <p className="font-sans text-base text-midnight/70 leading-relaxed">
-              Our team of dedicated guides, scholars, and spiritual companions have walked these sacred paths themselves. We do not merely plan itineraries — we walk with you on your pilgrimage.
+            <p className="font-sans text-lg text-[#43474e] leading-relaxed mb-8">
+              We believe that a pilgrimage is not merely a visit to a site; it
+              is a transformative internal experience that reshapes the pilgrim
+              from within, one sacred step at a time.
             </p>
+
+            <blockquote className="border-l-2 border-gold-dark pl-5">
+              <p className="font-serif text-xl text-midnight leading-relaxed">
+                &ldquo;We do not just show you the temples; we invite you to
+                experience the vibration of the sacred.&rdquo;
+              </p>
+              <footer className="mt-3 font-sans text-xs text-gold-dark uppercase tracking-widest">
+                — Shri Nithyeshwar, Founder
+              </footer>
+            </blockquote>
           </div>
-          <blockquote className="gold-accent-left">
-            <p className="font-serif text-xl text-navy italic leading-relaxed">
-              &ldquo;We do not plan journeys for the feet. We plan journeys for the soul.&rdquo;
-            </p>
-            <footer className="mt-4 font-sans text-sm text-midnight/50">
-              — Founder, Nithyeshwar Tours
-            </footer>
-          </blockquote>
         </div>
       </section>
 
       <Timeline />
 
       {/* Testimonials */}
-      <section className="py-20 px-6 bg-surface">
+      <section className="py-32 px-6 bg-surface">
         <div className="max-w-7xl mx-auto">
-          <SectionHeader eyebrow="Pilgrim Stories" title="Spoken from the Heart" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.slice(0, 3).map((t) => (
-              <TestimonialCard key={t.id} t={t} />
+          <h2 className="font-serif text-3xl md:text-4xl text-midnight font-normal text-center mb-12 leading-snug">
+            Spoken from the Heart
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+            {testimonials.slice(0, 3).map((t, i) => (
+              <div
+                key={t.id}
+                className={i === 1 ? "-mt-4 ring-1 ring-gold-dark/20 rounded-md" : ""}
+              >
+                <TestimonialCard t={t} />
+              </div>
             ))}
           </div>
         </div>

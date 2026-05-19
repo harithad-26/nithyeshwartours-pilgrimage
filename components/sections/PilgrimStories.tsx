@@ -11,14 +11,13 @@ export function PilgrimStories({ testimonials }: PilgrimStoriesProps) {
 
   return (
     <section
-      className="py-[var(--spacing-section)] bg-surface"
+      className="py-24 bg-surface"
       aria-labelledby="pilgrim-stories-heading"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionHeader
-          eyebrow="Pilgrim Stories"
-          title="What Our Travellers Say"
-          subtitle="Real experiences from the people who've journeyed with us. Their stories are our greatest achievement."
+          eyebrow="VOICES OF ENLIGHTENMENT"
+          title="Pilgrim Stories"
           align="center"
         />
 
@@ -27,9 +26,19 @@ export function PilgrimStories({ testimonials }: PilgrimStoriesProps) {
             Testimonials coming soon.
           </p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {displayTestimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} t={testimonial} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+            {displayTestimonials.map((testimonial, i) => (
+              <div
+                key={testimonial.id}
+                className={
+                  /* Middle card gets a subtle lift and gold ring */
+                  i === 1
+                    ? "-mt-3 ring-1 ring-gold-dark/20 rounded-md"
+                    : ""
+                }
+              >
+                <TestimonialCard t={testimonial} />
+              </div>
             ))}
           </div>
         )}

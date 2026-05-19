@@ -1,206 +1,198 @@
+import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
-import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Our Services — Sacred Travel, Beautifully Arranged",
+  description:
+    "From visa assistance to private spiritual guides — every service at Nithyeshwar Tours is crafted with devotion.",
 };
 
-const services = [
+const SERVICES = [
   {
-    title: "Spiritual Guided Tours",
+    id: "visa",
+    eyebrow: "DOCUMENTATION",
+    title: "Visa & Documentation Assistance",
     description:
-      "Expert-led pilgrimages to sacred sites across India. Our knowledgeable guides illuminate the history, mythology, and spiritual significance of every temple and shrine you visit.",
-    icon: (
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="var(--color-gold-dark)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        {/* Hands together / namaste */}
-        <path d="M16 4 C16 4 10 10 10 16 L10 22 C10 24.2 11.8 26 14 26 L18 26 C20.2 26 22 24.2 22 22 L22 16 C22 10 16 4 16 4Z" />
-        <path d="M10 18 L6 18 C4.9 18 4 18.9 4 20 L4 22 C4 24.2 5.8 26 8 26 L10 26" />
-        <path d="M22 18 L26 18 C27.1 18 28 18.9 28 20 L28 22 C28 24.2 26.2 26 24 26 L22 26" />
-        <line x1="16" y1="26" x2="16" y2="30" />
-      </svg>
-    ),
+      "Navigating international pilgrimage paperwork can be complex. Our dedicated documentation team handles all visa applications, NOC letters, and permit processing for Kailash Mansarovar, Nepal, Sri Lanka, and beyond — so you can focus entirely on your spiritual preparation.",
+    highlights: [
+      "End-to-end visa processing",
+      "NOC and permit letters",
+      "Emergency documentation support",
+    ],
+    img: "/images/india-states/kashmir.jpg",
+    imgAlt: "Serene mountain landscape",
   },
   {
-    title: "Heritage Accommodation",
+    id: "guides",
+    eyebrow: "SPIRITUAL EXPERTISE",
+    title: "Certified Spiritual Guides",
     description:
-      "Carefully selected stays that blend comfort with cultural immersion — from heritage havelis to tranquil ashram guesthouses, each property chosen for its character and location.",
-    icon: (
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="var(--color-gold-dark)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        {/* Building */}
-        <rect x="4" y="10" width="24" height="20" rx="1" />
-        <path d="M4 10 L16 2 L28 10" />
-        <rect x="12" y="20" width="8" height="10" />
-        <rect x="7" y="14" width="4" height="4" />
-        <rect x="21" y="14" width="4" height="4" />
-      </svg>
-    ),
+      "Each pilgrimage is accompanied by a deeply knowledgeable guide — scholars versed in Sanskrit texts, temple rituals, and the mythology of every sacred site. They don't just narrate; they illuminate, transforming each visit into a living darshan.",
+    highlights: [
+      "Sanskrit-trained temple scholars",
+      "Ritual and puja facilitation",
+      "24/7 on-ground support",
+    ],
+    img: "/images/pilgrimage/badrinath.jpg",
+    imgAlt: "Badrinath temple in Himalayas",
   },
   {
-    title: "Complete Travel Coordination",
+    id: "insurance",
+    eyebrow: "PEACE OF MIND",
+    title: "Pilgrim Travel Insurance",
     description:
-      "From airport transfers to train bookings, puja arrangements to local sightseeing — we handle every logistical detail so you can focus entirely on your spiritual journey.",
-    icon: (
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="var(--color-gold-dark)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        {/* Bus */}
-        <rect x="3" y="8" width="26" height="16" rx="2" />
-        <path d="M3 14 L29 14" />
-        <circle cx="9" cy="26" r="2" />
-        <circle cx="23" cy="26" r="2" />
-        <path d="M7 24 L25 24" />
-        <rect x="6" y="10" width="5" height="3" rx="0.5" />
-        <rect x="13" y="10" width="5" height="3" rx="0.5" />
-        <rect x="20" y="10" width="5" height="3" rx="0.5" />
-        <path d="M29 12 L31 12 L31 16 L29 16" />
-        <path d="M3 12 L1 12 L1 16 L3 16" />
-      </svg>
-    ),
-  },
-  {
-    title: "Group Tour Packages",
-    description:
-      "Thoughtfully curated group experiences that foster community and shared devotion. Travel with fellow pilgrims and create bonds that last a lifetime, at rates that make sacred travel accessible.",
-    icon: (
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="var(--color-gold-dark)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        {/* Group of people */}
-        <circle cx="16" cy="7" r="4" />
-        <path d="M8 28 C8 22 10 18 16 18 C22 18 24 22 24 28" />
-        <circle cx="6" cy="10" r="3" />
-        <path d="M0 28 C0 23 2 20 6 20" />
-        <circle cx="26" cy="10" r="3" />
-        <path d="M32 28 C32 23 30 20 26 20" />
-      </svg>
-    ),
-  },
-  {
-    title: "International Pilgrimages",
-    description:
-      "Sacred journeys beyond India's borders — Kailash Mansarovar, Nepal's Pashupatinath, Sri Lanka's Kataragama, and other revered destinations across the world.",
-    icon: (
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="var(--color-gold-dark)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        {/* Globe */}
-        <circle cx="16" cy="16" r="13" />
-        <path d="M3 16 L29 16" />
-        <path d="M16 3 C12 8 10 12 10 16 C10 20 12 24 16 29" />
-        <path d="M16 3 C20 8 22 12 22 16 C22 20 20 24 16 29" />
-        <path d="M5 9 C8 11 11 12 16 12 C21 12 24 11 27 9" />
-        <path d="M5 23 C8 21 11 20 16 20 C21 20 24 21 27 23" />
-      </svg>
-    ),
-  },
-  {
-    title: "Honeymoon Packages",
-    description:
-      "Begin your journey together with a blessing. Our honeymoon packages weave romantic getaways with sacred experiences, creating a foundation of devotion for your life together.",
-    icon: (
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="var(--color-gold-dark)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        {/* Two interlocking rings */}
-        <circle cx="11" cy="16" r="7" />
-        <circle cx="21" cy="16" r="7" />
-        {/* Heart above */}
-        <path d="M16 8 C16 6 14 4 12 5 C10 6 10 9 12 11 L16 14 L20 11 C22 9 22 6 20 5 C18 4 16 6 16 8Z" />
-      </svg>
-    ),
+      "Sacred journeys sometimes traverse challenging terrain and remote regions. Our comprehensive pilgrim insurance covers medical emergencies, trip disruptions, and high-altitude evacuations — ensuring your peace of mind never wavers.",
+    highlights: [
+      "High-altitude medical coverage",
+      "Emergency evacuation",
+      "Trip cancellation protection",
+    ],
+    img: "/images/india-states/himachal.jpg",
+    imgAlt: "Himalayan mountain path",
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <main className="flex-1">
-      <section className="py-24 px-4 bg-surface">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeader
-            eyebrow="What We Offer"
-            title="Services Crafted with Devotion"
-            subtitle="Every offering is designed with care and reverence, ensuring your sacred journey unfolds with grace, comfort, and meaning at every step."
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
-            {services.map((service) => (
-              <article
-                key={service.title}
-                className="card-tonal p-8 border-l-2 border-gold-dark rounded-md flex flex-col gap-4"
-              >
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gold-muted">
-                  {service.icon}
-                </div>
-                <h2 className="font-serif text-xl font-semibold text-navy leading-snug">
-                  {service.title}
-                </h2>
-                <p className="font-sans text-sm leading-relaxed text-midnight/70">
-                  {service.description}
-                </p>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Button href="/inquiry" variant="primary" size="lg">
-              Plan Your Journey
-            </Button>
-          </div>
+    <>
+      {/* Hero */}
+      <section
+        className="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden"
+        aria-label="Our Services"
+      >
+        <Image
+          src="/images/india-states/varanasi-ghats.jpg"
+          alt="Sacred services — Nithyeshwar Tours"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-50 grayscale"
+          priority
+          quality={90}
+        />
+        <div
+          className="absolute inset-0 bg-linear-to-b from-surface/20 via-surface/50 to-surface/85"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pt-24">
+          <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-5">
+            What We Offer
+          </p>
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-midnight font-normal leading-tight tracking-tight mb-6">
+            Services Crafted with Devotion
+          </h1>
+          <p className="font-sans text-lg text-[#43474e] leading-relaxed font-light max-w-2xl mx-auto">
+            Every offering is designed with care and reverence, ensuring your
+            sacred journey unfolds with grace, comfort, and meaning at every
+            step.
+          </p>
         </div>
       </section>
-    </main>
+
+      {/* Three core services — alternating layout */}
+      <section className="py-32 px-6 bg-surface" aria-label="Core services">
+        <div className="max-w-6xl mx-auto space-y-32">
+          {SERVICES.map((service, i) => {
+            const isEven = i % 2 === 0;
+            return (
+              <article
+                key={service.id}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+              >
+                {/* Image */}
+                <div
+                  className={`relative rounded-md overflow-hidden aspect-4/5 ${
+                    !isEven ? "lg:order-2" : ""
+                  }`}
+                >
+                  <Image
+                    src={service.img}
+                    alt={service.imgAlt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={85}
+                    className="object-cover"
+                  />
+                  {/* Gold ambient blur */}
+                  <div
+                    className="absolute -bottom-8 -right-8 w-48 h-48 bg-gold-muted blur-3xl rounded-full opacity-60"
+                    aria-hidden="true"
+                  />
+                </div>
+
+                {/* Text */}
+                <div className={!isEven ? "lg:order-1" : ""}>
+                  <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4">
+                    {service.eyebrow}
+                  </p>
+                  <h2 className="font-serif text-3xl md:text-4xl text-midnight font-normal mb-5 leading-snug">
+                    {service.title}
+                  </h2>
+                  <p className="font-sans text-base text-[#43474e] leading-relaxed mb-8">
+                    {service.description}
+                  </p>
+
+                  <ul className="space-y-3 mb-10">
+                    {service.highlights.map((item) => (
+                      <li key={item} className="flex items-center gap-3">
+                        <span className="w-4 h-4 rounded-full bg-gold-dark/20 flex items-center justify-center shrink-0">
+                          <svg
+                            width="8"
+                            height="6"
+                            viewBox="0 0 8 6"
+                            fill="none"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M1 3l2 2 4-4"
+                              stroke="var(--color-gold-dark)"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span className="font-sans text-sm text-midnight/70">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href="/inquiry"
+                    className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-midnight border border-midnight/20 px-6 py-3 rounded-md transition-all duration-300 hover:bg-midnight hover:text-white min-h-11"
+                  >
+                    Inquire About This Service
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* CTA teaser — dark */}
+      <section className="py-32 px-6 bg-midnight" aria-label="Plan your journey">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-5">
+            Begin Here
+          </p>
+          <h2 className="font-serif text-3xl md:text-5xl text-white font-normal leading-snug mb-6">
+            Ready to Walk the Sacred Path?
+          </h2>
+          <p className="font-sans text-base text-white/60 leading-relaxed mb-10 max-w-xl mx-auto">
+            Our spiritual travel consultants are ready to craft a personalised
+            journey that resonates with your soul&apos;s deepest calling.
+          </p>
+          <Link
+            href="/inquiry"
+            className="inline-flex items-center gap-2 font-sans text-sm font-semibold bg-gold text-midnight px-8 py-4 rounded-md hover:bg-gold-dark hover:text-white transition-colors duration-300 min-h-11"
+          >
+            Begin Your Journey
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

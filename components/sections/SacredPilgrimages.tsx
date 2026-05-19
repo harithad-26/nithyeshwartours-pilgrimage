@@ -8,107 +8,142 @@ interface SacredPilgrimagesProps {
   packages: Package[];
 }
 
-// Static fallback cards shown when packages array is empty
 const FALLBACK_CARDS = [
   {
     id: "fallback-1",
-    title: "Char Dham Yatra",
-    category: "Pilgrimage",
-    imageSrc: "/images/pilgrimage-char-dham.jpg",
-    imageAlt: "Kedarnath temple in the Himalayas",
+    title: "Kashi — The Eternal City",
+    description: "Walk the ancient ghats of Varanasi and witness the transcendent Ganga Aarti at dusk.",
+    duration: "7N / 8D",
+    price: "₹55,000",
+    badge: "ICONIC",
+    imageSrc: "/images/india-states/varanasi-ghats.jpg",
+    imageAlt: "Evening Ganga Aarti ceremony at Varanasi ghats",
+    href: "/packages/uttar-pradesh",
   },
   {
     id: "fallback-2",
-    title: "Varanasi & Ganga Aarti",
-    category: "Pilgrimage",
-    imageSrc: "/images/pilgrimage-varanasi.jpg",
-    imageAlt: "Evening Ganga Aarti ceremony at Varanasi ghats",
+    title: "The Dravidian Trail",
+    description: "Journey through Tamil Nadu's grand Dravidian temples and ancient sacred traditions.",
+    duration: "10N / 11D",
+    price: "₹72,000",
+    badge: "ARCHITECTURAL",
+    imageSrc: "/images/india-states/tamil-nadu.jpg",
+    imageAlt: "Dravidian temple gopuram in Tamil Nadu",
+    href: "/packages/tamil-nadu",
   },
   {
     id: "fallback-3",
-    title: "Tirupati Balaji Darshan",
-    category: "Pilgrimage",
-    imageSrc: "/images/pilgrimage-tirupati.jpg",
-    imageAlt: "Tirupati Venkateswara temple gopuram",
+    title: "Chardham Yatra",
+    description: "The sacred circuit of Badrinath, Kedarnath, Gangotri and Yamunotri in the Himalayas.",
+    duration: "12N / 13D",
+    price: "₹1,45,000",
+    badge: "DIVINE",
+    imageSrc: "/images/pilgrimage/badrinath.jpg",
+    imageAlt: "Badrinath temple shrine in the Himalayas",
+    href: "/pilgrimage",
   },
 ];
+
+const BADGES = ["ICONIC", "ARCHITECTURAL", "DIVINE"];
 
 export function SacredPilgrimages({ packages }: SacredPilgrimagesProps) {
   const pilgrimagePackages = packages
     .filter((p) => p.category === "pilgrimage")
     .slice(0, 3);
 
-  // Build display items: use real packages if available, else static fallbacks
   const displayItems =
     pilgrimagePackages.length > 0
-      ? pilgrimagePackages.map((pkg) => ({
+      ? pilgrimagePackages.map((pkg, i) => ({
           id: String(pkg.id),
           title: pkg.title,
-          category: pkg.category,
+          description: pkg.subtitle,
+          duration: pkg.duration,
+          price: `₹${pkg.price.toLocaleString("en-IN")}`,
+          badge: BADGES[i] ?? "SACRED",
           imageSrc: getStrapiImageUrl(pkg.coverImage.url),
           imageAlt: pkg.coverImage.alternativeText ?? pkg.title,
           href: `/packages/${pkg.slug}`,
         }))
-      : FALLBACK_CARDS.map((card) => ({
-          ...card,
-          href: "/pilgrimage",
-        }));
+      : FALLBACK_CARDS;
 
   return (
     <section
-      className="py-[var(--spacing-section)] bg-surface-low"
+      className="py-24 bg-midnight"
       aria-labelledby="sacred-pilgrimages-heading"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionHeader
-          eyebrow="Spiritual Travel"
+          eyebrow="THE ETERNAL PATH"
           title="Sacred Pilgrimages"
-          subtitle="Journey to the holiest sites in India. We handle every detail so you can focus on what matters most — your spiritual experience."
+          subtitle="Walking the steps of the ancients. Journeys that transform the spirit through ritual, history, and profound peace."
           align="center"
+          light
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Horizontally scrollable card row */}
+        <div
+          className="flex gap-6 overflow-x-auto pb-4 mt-4 snap-x snap-mandatory scrollbar-none"
+          role="list"
+          aria-label="Sacred pilgrimage packages"
+        >
           {displayItems.map((item) => (
-            <Link
+            <div
               key={item.id}
-              href={item.href}
-              className="group block rounded-md overflow-hidden focus-visible:outline-2 focus-visible:outline-gold"
-              aria-label={`View ${item.title} pilgrimage package`}
+              role="listitem"
+              className="snap-start shrink-0 w-85 sm:w-95"
             >
-              {/* Card: fixed height image with gradient overlay */}
-              <div className="relative h-72 img-overlay">
-                <Image
-                  src={item.imageSrc}
-                  alt={item.imageAlt}
-                  fill
-                  quality={85}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
-                />
-                {/* Bottom gradient for text legibility */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-t from-midnight/80 via-transparent to-transparent z-10"
-                  aria-hidden="true"
-                />
-                {/* Category label + title */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                  <p className="font-sans text-[10px] font-semibold tracking-[0.12em] uppercase text-gold mb-1.5">
-                    {item.category}
-                  </p>
-                  <h3 className="font-serif text-xl text-white font-semibold leading-snug">
+              <Link
+                href={item.href}
+                className="group flex flex-col bg-navy border border-white/10 rounded-md overflow-hidden transition-all duration-300 hover:border-gold/30 focus-visible:outline-2 focus-visible:outline-gold h-full"
+                aria-label={`View ${item.title} pilgrimage`}
+              >
+                {/* Card image */}
+                <div className="relative h-56 shrink-0 overflow-hidden">
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    fill
+                    sizes="380px"
+                    quality={85}
+                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
+                  />
+                  {/* Badge */}
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="font-sans text-[10px] font-semibold tracking-[0.12em] uppercase bg-gold-dark/90 text-white px-3 py-1 rounded-full">
+                      {item.badge}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Card body */}
+                <div className="flex flex-col flex-1 p-6 gap-3">
+                  <h3 className="font-serif text-xl text-gold font-normal leading-snug">
                     {item.title}
                   </h3>
+                  <p className="font-sans text-sm text-white/60 leading-relaxed flex-1">
+                    {item.description}
+                  </p>
+
+                  {/* Card footer */}
+                  <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                    <span className="font-sans text-sm text-white/70">
+                      {item.duration}
+                    </span>
+                    <span className="font-serif text-xl text-white font-normal">
+                      {item.price}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           ))}
         </div>
 
-        {/* CTA link */}
+        {/* CTA */}
         <div className="mt-10 text-center">
           <Link
             href="/pilgrimage"
-            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-gold-dark border border-gold-dark px-6 py-2.5 rounded-md transition-all duration-300 hover:bg-gold-dark hover:text-white focus-visible:outline-2 focus-visible:outline-gold min-h-[44px]"
+            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-gold border border-gold/40 px-6 py-3 rounded-md transition-all duration-300 hover:bg-gold hover:text-midnight focus-visible:outline-2 focus-visible:outline-gold min-h-11"
           >
             View All Pilgrimages
           </Link>

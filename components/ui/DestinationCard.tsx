@@ -23,7 +23,7 @@ export function DestinationCard({ destination, priority = false }: DestinationCa
         priority={priority}
         quality={85}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 via-midnight/20 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-midnight/80 via-midnight/20 to-transparent" />
 
       {/* Content */}
       <div className="absolute bottom-0 left-0 right-0 p-6">

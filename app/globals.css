@@ -53,11 +53,19 @@ body {
   padding-left: 1rem;
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism utility — dark (navy) */
 .glass {
   background: var(--color-navy-glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+}
+
+/* Glassmorphism utility — light (surface) */
+.glass-surface {
+  background: rgba(250, 249, 248, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 31, 63, 0.06);
 }
 
 /* Tonal card */

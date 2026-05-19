@@ -1,12 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export function MobileNavToggle() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => { setOpen(false); }, [pathname]);
+  useEffect(() => { startTransition(() => setOpen(false)); }, [pathname]);
 
   useEffect(() => {
     const btn = document.querySelector('[aria-controls="mobile-nav"]') as HTMLButtonElement | null;
@@ -19,8 +19,10 @@ export function MobileNavToggle() {
 
   return (
     <button
-      className="md:hidden text-white p-2 rounded-md focus-visible:outline-gold"
+      className="md:hidden text-midnight p-2 rounded-md focus-visible:outline-gold"
       aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+      aria-controls="mobile-nav"
+      aria-expanded={open}
       onClick={() => setOpen((v) => !v)}
     >
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">

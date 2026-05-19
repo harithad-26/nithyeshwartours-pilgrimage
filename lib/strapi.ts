@@ -32,78 +32,106 @@ async function strapiGet<T>(
 }
 
 export async function getFeaturedPackages(): Promise<Package[]> {
-  const data = await strapiGet<StrapiListResponse<Package>>(
-    "/packages",
-    ["packages"],
-    {
-      "filters[isFeatured][$eq]": "true",
-      "populate": "coverImage,testimonials",
-      "sort": "publishedAt:desc",
-      "pagination[limit]": "6",
-    }
-  );
-  return data.data;
+  try {
+    const data = await strapiGet<StrapiListResponse<Package>>(
+      "/packages",
+      ["packages"],
+      {
+        "filters[isFeatured][$eq]": "true",
+        "populate": "coverImage,testimonials",
+        "sort": "publishedAt:desc",
+        "pagination[limit]": "6",
+      }
+    );
+    return data.data;
+  } catch {
+    return [];
+  }
 }
 
 export async function getPackagesByDestination(destination: string): Promise<Package[]> {
-  const data = await strapiGet<StrapiListResponse<Package>>(
-    "/packages",
-    ["packages", `packages-${destination}`],
-    {
-      "filters[state][$eqi]": destination,
-      "populate": "coverImage",
-      "sort": "publishedAt:desc",
-    }
-  );
-  return data.data;
+  try {
+    const data = await strapiGet<StrapiListResponse<Package>>(
+      "/packages",
+      ["packages", `packages-${destination}`],
+      {
+        "filters[state][$eqi]": destination,
+        "populate": "coverImage",
+        "sort": "publishedAt:desc",
+      }
+    );
+    return data.data;
+  } catch {
+    return [];
+  }
 }
 
 export async function getPackageBySlug(slug: string): Promise<Package | null> {
-  const data = await strapiGet<StrapiListResponse<Package>>(
-    "/packages",
-    ["packages", `package-${slug}`],
-    {
-      "filters[slug][$eq]": slug,
-      "populate": "coverImage,galleryImages,itinerary,testimonials.avatar",
-    }
-  );
-  return data.data[0] ?? null;
+  try {
+    const data = await strapiGet<StrapiListResponse<Package>>(
+      "/packages",
+      ["packages", `package-${slug}`],
+      {
+        "filters[slug][$eq]": slug,
+        "populate": "coverImage,galleryImages,itinerary,testimonials.avatar",
+      }
+    );
+    return data.data[0] ?? null;
+  } catch {
+    return null;
+  }
 }
 
 export async function getAllPackageSlugs(): Promise<string[]> {
-  const data = await strapiGet<StrapiListResponse<Package>>(
-    "/packages",
-    ["packages"],
-    { "fields": "slug", "pagination[limit]": "100" }
-  );
-  return data.data.map((p) => p.slug);
+  try {
+    const data = await strapiGet<StrapiListResponse<Package>>(
+      "/packages",
+      ["packages"],
+      { "fields": "slug", "pagination[limit]": "100" }
+    );
+    return data.data.map((p) => p.slug);
+  } catch {
+    return [];
+  }
 }
 
 export async function getDestinations(): Promise<Destination[]> {
-  const data = await strapiGet<StrapiListResponse<Destination>>(
-    "/destinations",
-    ["destinations"],
-    { "populate": "coverImage", "sort": "name:asc" }
-  );
-  return data.data;
+  try {
+    const data = await strapiGet<StrapiListResponse<Destination>>(
+      "/destinations",
+      ["destinations"],
+      { "populate": "coverImage", "sort": "name:asc" }
+    );
+    return data.data;
+  } catch {
+    return [];
+  }
 }
 
 export async function getTestimonials(): Promise<Testimonial[]> {
-  const data = await strapiGet<StrapiListResponse<Testimonial>>(
-    "/testimonials",
-    ["testimonials"],
-    { "populate": "avatar", "sort": "publishedAt:desc", "pagination[limit]": "12" }
-  );
-  return data.data;
+  try {
+    const data = await strapiGet<StrapiListResponse<Testimonial>>(
+      "/testimonials",
+      ["testimonials"],
+      { "populate": "avatar", "sort": "publishedAt:desc", "pagination[limit]": "12" }
+    );
+    return data.data;
+  } catch {
+    return [];
+  }
 }
 
 export async function getTeamMembers(): Promise<TeamMember[]> {
-  const data = await strapiGet<StrapiListResponse<TeamMember>>(
-    "/team-members",
-    ["team"],
-    { "populate": "avatar", "sort": "order:asc" }
-  );
-  return data.data;
+  try {
+    const data = await strapiGet<StrapiListResponse<TeamMember>>(
+      "/team-members",
+      ["team"],
+      { "populate": "avatar", "sort": "order:asc" }
+    );
+    return data.data;
+  } catch {
+    return [];
+  }
 }
 
 export async function submitInquiry(inquiry: Inquiry): Promise<void> {

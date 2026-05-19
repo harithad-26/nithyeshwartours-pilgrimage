@@ -12,47 +12,45 @@ export function PackageCard({ pkg, priority = false }: PackageCardProps) {
   const imgUrl = getStrapiImageUrl(pkg.coverImage.url);
 
   return (
-    <article className="group relative bg-surface-lowest rounded-md overflow-hidden transition-shadow duration-300 hover:shadow-card">
-      {/* Gold left accent */}
-      <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gold-dark z-10" aria-hidden="true" />
-
+    <article className="group bg-white rounded-md overflow-hidden shadow-ambient hover:shadow-card transition-shadow duration-300">
       {/* Image */}
-      <div className="relative h-52 overflow-hidden img-overlay">
+      <div className="relative h-60 overflow-hidden">
         <Image
           src={imgUrl}
           alt={pkg.coverImage.alternativeText ?? pkg.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
+          className="object-cover transition-transform duration-700 motion-safe:group-hover:scale-105"
           priority={priority}
           quality={85}
         />
-        {/* Category tag */}
-        <span className="absolute top-3 left-4 font-sans text-[10px] font-semibold tracking-[0.1em] uppercase text-white/90 bg-navy/60 backdrop-blur-sm px-2.5 py-1 rounded-sm z-10">
+        <div className="absolute inset-0 bg-midnight/15" />
+        {/* Category badge */}
+        <span className="absolute top-4 left-4 font-sans text-[10px] font-semibold tracking-[0.12em] uppercase text-white bg-midnight/60 backdrop-blur-sm px-3 py-1 rounded-full z-10">
           {pkg.category}
         </span>
       </div>
 
       {/* Content */}
-      <div className="p-8">
-        <h3 className="font-serif text-xl text-navy font-semibold leading-snug mb-2 line-clamp-2">
+      <div className="p-6">
+        <h3 className="font-serif text-xl text-midnight font-normal leading-snug mb-2 line-clamp-2">
           {pkg.title}
         </h3>
         <p className="font-sans text-sm text-midnight/60 leading-relaxed mb-6 line-clamp-2">
           {pkg.subtitle}
         </p>
 
-        {/* Meta row */}
-        <div className="flex items-center justify-between">
+        {/* Footer */}
+        <div className="flex items-end justify-between pt-4 border-t border-surface-low">
           <div>
-            <p className="font-sans text-xs text-midnight/40 uppercase tracking-wide">From</p>
-            <p className="font-serif text-2xl font-semibold text-navy">
+            <p className="font-sans text-xs text-midnight/40 mb-0.5">{pkg.duration}</p>
+            <p className="font-serif text-2xl text-midnight font-normal tabular-nums">
               ₹{pkg.price.toLocaleString("en-IN")}
             </p>
           </div>
           <Link
             href={`/packages/${pkg.slug}`}
-            className="font-sans text-xs font-semibold tracking-wide text-gold-dark border border-gold-dark px-4 py-2 rounded-md transition-all duration-300 hover:bg-gold-dark hover:text-white focus-visible:outline-2 focus-visible:outline-gold"
+            className="font-sans text-xs font-semibold text-gold-dark border border-gold-dark/40 px-4 py-2 rounded-md transition-all duration-300 hover:bg-gold-dark hover:text-white focus-visible:outline-2 focus-visible:outline-gold"
             aria-label={`View details for ${pkg.title}`}
           >
             View Details
