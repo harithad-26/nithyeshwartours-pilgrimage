@@ -595,3 +595,6 @@ export default function CharDhamPage() {
           </div>
         </div>
       </section>
+    </>
+  );
+}

@@ -164,7 +164,7 @@ export default function PackageDetailPage({ params }: { params: { packageCode: s
             <div>
               <h2 className="font-serif text-2xl text-midnight font-normal mb-6">Package Highlights</h2>
               <ul className="space-y-3">
-                {pkg.code === "UK 01" ? [
+                {(pkg.code === "UK 01" ? [
                   "3 nights stay in Haridwar & Rishikesh",
                   "Evening Ganga Aarti at Har Ki Pauri",
                   "Visit to Laxman Jhula & Ram Jhula",
@@ -183,7 +183,7 @@ export default function PackageDetailPage({ params }: { params: { packageCode: s
                   "Guptkashi & Sonprayag visits",
                   "Haridwar Ganga Aarti ceremony",
                   "All meals & transfers included",
-                ]}.map((item, i) => (
+                ]).map((item, i) => (
                   <li key={i} className="flex items-start gap-3 font-sans text-sm text-midnight/70">
                     <span className="text-gold-dark mt-0.5 text-lg">✦</span>
                     {item}
