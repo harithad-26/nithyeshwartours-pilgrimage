@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd nithyeshwartours-master && npm install && npm run build",
+  "devCommand": "cd nithyeshwartours-master && npm run dev",
+  "installCommand": "cd nithyeshwartours-master && npm install",
+  "outputDirectory": "nithyeshwartours-master/.next",
+  "framework": null
+}
