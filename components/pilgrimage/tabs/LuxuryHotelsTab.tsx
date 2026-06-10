@@ -29,7 +29,7 @@ export default function LuxuryHotelsTab({ hotels }: LuxuryHotelsTabProps) {
         return (
           <div
             key={index}
-            className="border border-midnight/5 hover:border-midnight/10 bg-white transition-colors overflow-hidden"
+            className="border border-midnight/5 rounded-lg hover:-translate-y-0.5 hover:shadow-md hover:border-gold-dark/20 bg-white transition-all duration-300 overflow-hidden"
           >
             {/* Header Accordion Toggle */}
             <button

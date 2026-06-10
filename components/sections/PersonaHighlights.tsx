@@ -278,7 +278,7 @@ export default function PersonaHighlights() {
             {activePersona.highlights.map((h, idx) => (
               <div
                 key={idx}
-                className="p-6 bg-surface border border-midnight/5 rounded-lg shadow-ambient hover:shadow-card hover:border-gold-dark/20 transition-all duration-300"
+                className="p-6 bg-surface border border-midnight/5 rounded-lg shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 transition-all duration-300"
               >
                 <div className="flex items-start gap-3.5">
                   <div className="w-5 h-5 rounded-full bg-gold-dark/10 border border-gold-dark/20 flex items-center justify-center shrink-0 mt-1">

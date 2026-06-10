@@ -33,7 +33,7 @@ export default function LuxuryItineraryTab({ data }: LuxuryItineraryTabProps) {
 
               {/* Content Panel */}
               <div className="flex-1 pb-2">
-                <div className="bg-white border border-midnight/5 hover:border-midnight/10 transition-colors shadow-sm">
+                <div className="bg-white border border-midnight/5 rounded-lg hover:-translate-y-0.5 hover:shadow-md hover:border-gold-dark/20 transition-all duration-300">
                   {/* Accordion Toggle Header */}
                   <button
                     onClick={() => setExpandedDay(isExpanded ? null : day.day)}

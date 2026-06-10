@@ -102,7 +102,7 @@ export default function LuxuryPreDepartureTab({ data }: LuxuryPreDepartureTabPro
             }
 
             return (
-              <div key={index} className="p-6 bg-white border border-midnight/5 shadow-ambient hover:border-gold-dark/10 transition-all rounded">
+              <div key={index} className="p-6 bg-white border border-midnight/5 shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 transition-all duration-300 rounded-lg">
                 <div className="flex items-start gap-3.5">
                   <div className="w-5 h-5 rounded-full bg-gold-dark/5 border border-gold-dark/15 flex items-center justify-center shrink-0 mt-0.5">
                     <svg className="w-3 h-3 text-gold-dark" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">

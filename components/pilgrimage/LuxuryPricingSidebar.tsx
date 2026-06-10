@@ -26,7 +26,7 @@ export default function LuxuryPricingSidebar({ pkg }: LuxuryPricingSidebarProps)
   return (
     <aside className="w-full" aria-label="Package booking and quick facts">
       {/* Premium Booking Card */}
-      <div className="bg-[#000613] text-white border border-white/10 p-8 shadow-card relative overflow-hidden">
+      <div className="bg-[#000613] text-white border border-white/10 hover:border-gold-dark/30 transition-all duration-300 p-8 shadow-card relative overflow-hidden">
         {/* Subtle Decorative Gradient */}
         <div className="absolute -right-24 -top-24 w-48 h-48 bg-gold-dark/10 rounded-full blur-3xl pointer-events-none" />
         

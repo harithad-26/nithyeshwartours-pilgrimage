@@ -154,7 +154,7 @@ export default function KailashMansarovarPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-midnight/8 rounded-xl overflow-hidden">
 
             {/* Card 1 — Pilgrims */}
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low transition-colors duration-300">
+            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
               <div className="w-16 h-16 mb-6 flex items-center justify-center">
                 <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
                   <circle cx="26" cy="14" r="8" />
@@ -169,7 +169,7 @@ export default function KailashMansarovarPage() {
             </div>
 
             {/* Card 2 — Completion */}
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low transition-colors duration-300">
+            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
               <div className="w-16 h-16 mb-6 flex items-center justify-center">
                 <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
                   <path d="M26 6L32 18l13 2-9.5 9.2 2.2 13L26 36l-11.7 6.2 2.2-13L7 20l13-2z" />
@@ -182,7 +182,7 @@ export default function KailashMansarovarPage() {
             </div>
 
             {/* Card 3 — Medical */}
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low transition-colors duration-300">
+            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
               <div className="w-16 h-16 mb-6 flex items-center justify-center">
                 <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
                   <rect x="10" y="10" width="32" height="32" rx="6" />
@@ -196,7 +196,7 @@ export default function KailashMansarovarPage() {
             </div>
 
             {/* Card 4 — Experience */}
-            <div className="flex flex-col items-center text-center p-10 bg-white hover:bg-surface-low transition-colors duration-300">
+            <div className="flex flex-col items-center text-center p-10 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
               <div className="w-16 h-16 mb-6 flex items-center justify-center">
                 <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
                   <path d="M26 6v5M26 41v5M6 26h5M41 26h5" />
@@ -230,14 +230,14 @@ export default function KailashMansarovarPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Card 1: Mount Kailash */}
-            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card group">
+            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 group">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/images/pilgrimage/kailash_trinity_mount.png"
                   alt="Mount Kailash peak rising in pristine symmetry"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-102"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-midnight/10" aria-hidden="true" />
               </div>
@@ -252,14 +252,14 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Card 2: Lake Mansarovar */}
-            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card group">
+            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 group">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/images/pilgrimage/kailash_trinity_lake.png"
                   alt="Lake Mansarovar blue waters mirroring sky"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-102"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-midnight/10" aria-hidden="true" />
               </div>
@@ -274,14 +274,14 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Card 3: Parikrama Pilgrims */}
-            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card group">
+            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 group">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/images/pilgrimage/kailash_trinity_pilgrims.png"
                   alt="Pilgrims walking along the rocky parikrama trail"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-102"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-midnight/10" aria-hidden="true" />
               </div>
@@ -412,12 +412,12 @@ export default function KailashMansarovarPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Package 1: Helicopter Route */}
-            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card transition-shadow duration-300">
+            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-gold-dark/20 transition-all duration-300">
               {/* Header */}
               <div className="p-8 border-b border-midnight/5 bg-surface-low/30">
                 <div className="flex items-center justify-between mb-5">
                   <span className="font-sans text-[10px] font-bold tracking-[0.25em] text-gold-dark uppercase bg-gold-muted/40 px-3 py-1 rounded-full">
-                    🚁 HELICOPTER ROUTE
+                    🚀 HELICOPTER ROUTE
                   </span>
                   <span className="font-sans text-xs font-medium text-midnight/50 tracking-wide">
                     10 Nights / 11 Days
@@ -484,7 +484,7 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Package 2: Overland Coach Route */}
-            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card transition-shadow duration-300">
+            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-gold-dark/20 transition-all duration-300">
               {/* Header */}
               <div className="p-8 border-b border-midnight/5 bg-surface-low/30">
                 <div className="flex items-center justify-between mb-5">
@@ -575,7 +575,7 @@ export default function KailashMansarovarPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Standard 1 */}
-            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card transition-shadow">
+            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-gold-dark/5 flex items-center justify-center border border-gold-dark/15">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#735c00" strokeWidth="1.75" aria-hidden="true">
                   <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
@@ -588,7 +588,7 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Standard 2 */}
-            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card transition-shadow">
+            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-gold-dark/5 flex items-center justify-center border border-gold-dark/15">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#735c00" strokeWidth="1.75" aria-hidden="true">
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -601,7 +601,7 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Standard 3 */}
-            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card transition-shadow">
+            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-gold-dark/5 flex items-center justify-center border border-gold-dark/15">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#735c00" strokeWidth="1.75" aria-hidden="true">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -743,7 +743,7 @@ export default function KailashMansarovarPage() {
             {TESTIMONIALS.map((t, i) => (
               <article
                 key={i}
-                className="bg-white p-8 rounded border border-midnight/5 shadow-ambient flex flex-col justify-between"
+                className="bg-white p-8 rounded border border-midnight/5 shadow-ambient hover:-translate-y-1 hover:shadow-card hover:border-gold-dark/20 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Rating Stars */}

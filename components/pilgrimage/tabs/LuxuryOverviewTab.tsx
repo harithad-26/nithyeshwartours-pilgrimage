@@ -37,7 +37,7 @@ export default function LuxuryOverviewTab({ data }: LuxuryOverviewTabProps) {
       </div>
 
       {/* Experience Highlights */}
-      <div className="bg-[#faf9f8] p-8 border border-midnight/5">
+      <div className="bg-[#faf9f8] p-8 border border-midnight/5 rounded-lg hover:-translate-y-1 hover:shadow-card hover:border-gold-dark/20 transition-all duration-300">
         <p className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-midnight mb-6">
           Experience Highlights
         </p>
