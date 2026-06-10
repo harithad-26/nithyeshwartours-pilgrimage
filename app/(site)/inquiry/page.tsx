@@ -9,16 +9,10 @@ export const metadata: Metadata = {
 
 const OFFICES = [
   {
-    city: "Varanasi Headquarters",
-    address: "Shiv Ghat, Sacred Circle, Varanasi, UP 221001",
-    phone: "+91 (542) 233-4455",
-    email: "support@nithyeshwartours.com",
-  },
-  {
-    city: "Rishikesh Office",
-    address: "Spiritual Heights, Tapovan, Rishikesh, UK 249192",
-    phone: "+91 (542) 233-4455",
-    email: "support@nithyeshwartours.com",
+    city: "Tiruvannamalai Office",
+    address: "99, Kadambarayan Street, Tiruvannamalai, Tamil Nadu",
+    phone: "+91 72001 18411",
+    email: "info@nithyeshwartours.com",
   },
 ];
 
@@ -90,7 +84,7 @@ export default function InquiryPage() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/915422334455"
+              href="https://wa.me/917200118411?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20pilgrimage%20packages"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 flex items-center gap-3 font-sans text-sm font-semibold text-midnight bg-[#25D366] px-5 py-3.5 rounded-md hover:opacity-90 transition-opacity duration-300 min-h-11"

@@ -26,6 +26,30 @@ export function HeroSection() {
 
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto pt-28 pb-16 w-full">
+        {/* Trust Strip */}
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-6 text-white/90">
+          <div className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span className="font-sans text-sm font-medium tracking-wide">No Junk Tours</span>
+          </div>
+          <span className="text-white/40" aria-hidden="true">·</span>
+          <div className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span className="font-sans text-sm font-medium tracking-wide">No Gimmicks</span>
+          </div>
+          <span className="text-white/40" aria-hidden="true">·</span>
+          <div className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span className="font-sans text-sm font-medium tracking-wide">Complete Transparency</span>
+          </div>
+        </div>
+
         <h1 className="font-serif text-7xl md:text-8xl lg:text-[96px] font-bold text-white leading-none tracking-tight mb-6">
           The Sacred Journey
         </h1>

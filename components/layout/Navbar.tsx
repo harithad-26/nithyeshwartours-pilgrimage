@@ -5,7 +5,7 @@ import { MobileNavToggle } from "./MobileNav";
 const NAV_LINKS = [
   { href: "/india", label: "India" },
   { href: "/packages/international", label: "International" },
-  { href: "/pilgrimage", label: "Pilgrimages" },
+  { href: "/pilgrimages", label: "Pilgrimages" },
   { href: "/trip-builder", label: "Trip Builder" },
   { href: "/about", label: "About Us" },
 ];

@@ -2,18 +2,18 @@ import Link from "next/link";
 
 const FOOTER_LINKS = {
   EXPLORE: [
-    { href: "/india", label: "Spiritual Guides" },
     { href: "/india", label: "Destinations" },
-    { href: "/inquiry", label: "Newsletter" },
+    { href: "/pilgrimage", label: "Pilgrimages" },
+    { href: "/services", label: "Services" },
   ],
   COMPANY: [
     { href: "/about", label: "About Us" },
     { href: "/inquiry", label: "Contact Us" },
-    { href: "/inquiry", label: "Terms of Service" },
+    { href: "/testimonials", label: "Testimonials" },
   ],
-  PRIVACY: [
-    { href: "/inquiry", label: "Privacy Policy" },
-    { href: "/inquiry", label: "Cookie Settings" },
+  CONTACT: [
+    { href: "tel:+917200118411", label: "+91 72001 18411" },
+    { href: "https://wa.me/917200118411", label: "WhatsApp Us" },
   ],
 };
 
@@ -31,14 +31,18 @@ export function Footer() {
             >
               Nithyeshwar Tours
             </Link>
-            <p className="text-sm leading-relaxed text-surface/60 max-w-xs">
+            <p className="text-sm leading-relaxed text-surface/60 max-w-xs mb-4">
               Curating profound spiritual journeys through the ancient and sacred
               landscapes of India and beyond.
             </p>
+            <address className="text-sm leading-relaxed text-surface/60 not-italic">
+              99, Kadambarayan Street,<br />
+              Tiruvannamalai, Tamil Nadu
+            </address>
           </div>
 
           {/* Link columns */}
-          {Object.entries(FOOTER_LINKS).map(([heading, links], colIndex) => (
+          {Object.entries(FOOTER_LINKS).map(([heading, links]) => (
             <div key={heading}>
               <h3 className="text-gold text-xs font-semibold tracking-wider uppercase mb-4">
                 {heading}
@@ -55,34 +59,6 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-
-              {/* Social icons in PRIVACY column */}
-              {colIndex === 2 && (
-                <div className="flex gap-4 pt-6" aria-label="Social media links">
-                  <a
-                    href="#"
-                    aria-label="Visit our website"
-                    className="text-surface/50 hover:text-gold transition-colors duration-300"
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"/>
-                      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="Share this page"
-                    className="text-surface/50 hover:text-gold transition-colors duration-300"
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                      <circle cx="18" cy="5" r="3"/>
-                      <circle cx="6" cy="12" r="3"/>
-                      <circle cx="18" cy="19" r="3"/>
-                      <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/>
-                    </svg>
-                  </a>
-                </div>
-              )}
             </div>
           ))}
         </div>
