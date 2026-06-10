@@ -2,37 +2,567 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import LuxuryPackageDetailTabs from "@/components/pilgrimage/LuxuryPackageDetailTabs";
+import LuxuryPricingSidebar from "@/components/pilgrimage/LuxuryPricingSidebar";
 
-// Package data
 const PACKAGES = {
   "uk-01": {
-    code: "UK 01",
-    name: "Haridwar-Rishikesh Circuit",
-    duration: "3N / 4D",
-    price: "₹15,000",
+    code: "UK-01",
+    name: "Haridwar-Rishikesh Circuit — 3 Nights & 4 Days",
+    tagline: "Gateway to the Himalayas",
+    description: "Explore the holy twins of Haridwar and Rishikesh. Witness the Ganga Aarti, visit ancient temples, and relax in the yoga capital.",
+    heroImage: {
+      src: "/images/pilgrimage/badrinath.jpg",
+      alt: "Haridwar Har Ki Pauri Ghat",
+    },
+    duration: {
+      days: 4,
+      nights: 3,
+      display: "3N / 4D",
+    },
+    difficulty: "Easy",
+    maxAltitude: {
+      meters: 340,
+      feet: 1115,
+      display: "340m (1,115ft)",
+    },
     startingPoint: "Haridwar",
-    description: "Gateway to Himalayas - spiritual retreat at Haridwar and Rishikesh",
+    bestSeason: ["Year-round", "October to March recommended"],
+    pricing: {
+      startingFrom: 15000,
+      currency: "INR",
+      display: "₹15,000",
+      notes: "Per person, based on twin-sharing standard room",
+    },
+    overview: {
+      route: "Haridwar → Rishikesh → Haridwar",
+      destinations: ["Haridwar", "Rishikesh"],
+      highlights: [
+        "Attend the sacred Ganga Aarti at Har Ki Pauri, Haridwar",
+        "Visit historic Laxman Jhula, Ram Jhula, and Beatles Ashram in Rishikesh",
+        "Guided temple tour of Mansa Devi and Chandi Devi with cable car rides",
+        "Spend time in peaceful ashrams along the river banks",
+        "All transfers and tours in comfortable AC private vehicle",
+        "Satvik vegetarian dining showcasing local Himalayan food styles"
+      ],
+      themes: ["Spiritual Retreat", "Ganges Heritage", "Yoga Capital"],
+    },
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival in Haridwar & Ganga Aarti",
+        activities: [
+          "Pick up from Haridwar railway station or Dehradun Airport (DED)",
+          "Transfer to hotel, check in and rest",
+          "Evening visit to Har Ki Pauri to witness the divine Ganga Aarti from VIP seating areas",
+          "Hot vegetarian dinner at the hotel"
+        ],
+        accommodation: "Hotel Ganga Azure or similar",
+        meals: { breakfast: false, lunch: false, dinner: true },
+        travelDistance: "Local transfer",
+      },
+      {
+        day: 2,
+        title: "Haridwar Temples & Transfer to Rishikesh",
+        activities: [
+          "Breakfast at the hotel, visit the hilltop Mansa Devi and Chandi Devi Temples via cable car (Udan Khatola)",
+          "Visit Daksh Mahadev Temple and Maya Devi Temple",
+          "Afternoon drive to Rishikesh (30 km, 1 hour)",
+          "Check in at Rishikesh hotel, attend evening Ganga Aarti at Parmarth Niketan Ashram",
+          "Dinner at Rishikesh hotel"
+        ],
+        accommodation: "Hotel Divine Resorts or similar",
+        meals: { breakfast: true, lunch: false, dinner: true },
+        travelDistance: "35 km drive",
+      },
+      {
+        day: 3,
+        title: "Rishikesh Exploration & Yoga Ashram Walk",
+        activities: [
+          "Morning yoga and meditation session led by ashram masters (optional)",
+          "Breakfast at hotel, then visit Ram Jhula and Laxman Jhula suspension bridges",
+          "Explore the historic Beatles Ashram (Chaurasi Kutia) and Swarg Ashram",
+          "Evening free for personal exploration or sitting by the ghats",
+          "Dinner at the hotel"
+        ],
+        accommodation: "Hotel Divine Resorts or similar",
+        meals: { breakfast: true, lunch: false, dinner: true },
+        travelDistance: "Local sightseeing",
+      },
+      {
+        day: 4,
+        title: "Departure from Haridwar / Rishikesh",
+        activities: [
+          "Breakfast at Rishikesh hotel, checkout",
+          "Depending on departure timings, transfer back to Haridwar station or Dehradun Airport",
+          "End of sacred pilgrimage services"
+        ],
+        accommodation: "End of Journey",
+        meals: { breakfast: true, lunch: false, dinner: false },
+        travelDistance: "Local transfer",
+      }
+    ],
+    inclusions: [
+      "Accommodation in standard 3-star comfort properties (twin-sharing basis)",
+      "Daily pure vegetarian breakfast & dinner at hotels",
+      "Private AC Sedan/SUV for all transfers and tours (Haridwar to Haridwar)",
+      "Mansa Devi & Chandi Devi cable car tickets included",
+      "Parmarth Niketan evening Aarti coordination",
+      "Dedicated local tour guide for sightseeing",
+      "All toll taxes, parking fees, and driver allowances"
+    ],
+    exclusions: [
+      "Flight or train fares to Haridwar/Dehradun",
+      "Lunch meals during the tour",
+      "Personal tips, laundry, telephone charges",
+      "Travel insurance"
+    ],
+    hotels: [
+      { location: "Haridwar", hotelName: "Hotel Ganga Azure", category: "3-Star Hotel", nights: 1 },
+      { location: "Rishikesh", hotelName: "Hotel Divine Resorts", category: "River-View Comfort", nights: 2 }
+    ],
+    booking: {
+      requiredDocuments: [
+        "Aadhar Card / Voter ID / Passport copy",
+        "Completed registration details"
+      ],
+      paymentSchedule: [
+        { stage: "Booking Advance", amount: "30% of total package cost", due: "At time of booking" },
+        { stage: "Final Payment", amount: "Remaining 70% balance", due: "7 days prior to departure date" }
+      ],
+      importantNotes: [
+        "Temples require modest dressing—shoulders and knees must be covered",
+        "Non-vegetarian food and alcohol are strictly prohibited in both Haridwar and Rishikesh municipal zones"
+      ]
+    },
+    terms: {
+      cancellationPolicy: [
+        { timeBefore: "30+ days", refund: "95% refund" },
+        { timeBefore: "15-29 days", refund: "50% refund" },
+        { timeBefore: "Less than 15 days", refund: "No refund available" }
+      ],
+      travelInsurance: "Recommended.",
+      changes: "Itinerary sequence may alter due to local administration VIP movements or festivals.",
+      companyRights: "We reserve the right to modify routes to avoid seasonal traffic congestion.",
+      refundPolicy: "Unused meals or services are non-refundable.",
+      ageRestriction: "Suitable for all age groups."
+    },
+    preDeparture: {
+      clothing: [
+        "Light cotton clothes for summer",
+        "Light shawl or pullover for evening Aarti sessions",
+        "Comfortable walking shoes"
+      ],
+      essentials: [
+        "Personal medicines, sunscreen",
+        "Sufficient cash"
+      ],
+      health: [
+        "Drink bottled water"
+      ],
+      currency: "INR."
+    },
+    faq: [
+      {
+        question: "Is rafting included in the Rishikesh package?",
+        answer: "Rafting is not included by default to cater to all age groups, but our tour manager can help you book safe river rafting sessions with certified operators during your free time on Day 3."
+      }
+    ]
   },
   "uk-02": {
-    code: "UK 02",
-    name: "Do Dham Yatra",
-    duration: "6N / 7D",
-    price: "₹28,000",
+    code: "UK-02",
+    name: "Do Dham Yatra — 6 Nights & 7 Days",
+    tagline: "Divine Peaks of Kedarnath & Badrinath",
+    description: "A sacred Himalayan pilgrimage covering the two most powerful shrines: Kedarnath Jyotirlinga and Badrinath Temple.",
+    heroImage: {
+      src: "/images/pilgrimage/badrinath.jpg",
+      alt: "Badrinath Temple Shrine",
+    },
+    duration: {
+      days: 7,
+      nights: 6,
+      display: "6N / 7D",
+    },
+    difficulty: "Moderate to Challenging",
+    maxAltitude: {
+      meters: 3583,
+      feet: 11755,
+      display: "3,583m (11,755ft)",
+    },
     startingPoint: "Haridwar",
-    description: "Kedarnath-Badrinath pilgrimage circuit",
+    bestSeason: ["May", "June", "September", "October"],
+    pricing: {
+      startingFrom: 28000,
+      currency: "INR",
+      display: "₹28,000",
+      notes: "Per person, twin sharing. Includes basic Kedarnath and comfort Badrinath lodging",
+    },
+    overview: {
+      route: "Haridwar → Guptkashi → Kedarnath → Badrinath → Rudraprayag → Haridwar",
+      destinations: ["Haridwar", "Guptkashi", "Kedarnath", "Badrinath", "Rudraprayag"],
+      highlights: [
+        "Darshan at holy Kedarnath Jyotirlinga and Badrinath Temple",
+        "Trek through the gorgeous Mandakini and Alaknanda valleys",
+        "Visit Mana Village, the last Indian village at the Tibetan border",
+        "Attend confluences at Rudraprayag and Devprayag",
+        "Professional spiritual guide throughout the Himalayan loop",
+        "Coordinated priority queue passes for Darshan"
+      ],
+      themes: ["High-Altitude Pilgrimage", "Spiritual devotion"],
+    },
+    itinerary: [
+      {
+        day: 1,
+        title: "Haridwar to Guptkashi",
+        activities: [
+          "Early morning pick up from Haridwar, drive to Guptkashi (220 km, 8 hours) along Ganges & Mandakini confluences",
+          "En route views of Devprayag and Rudraprayag confluences",
+          "Check in at hotel in Guptkashi, rest and acclimatize",
+          "Dinner at the hotel"
+        ],
+        accommodation: "Hotel Mandakini or similar",
+        meals: { breakfast: false, lunch: false, dinner: true },
+        travelDistance: "220 km drive",
+      },
+      {
+        day: 2,
+        title: "Guptkashi – Gaurikund – Kedarnath Trek",
+        activities: [
+          "Early morning drive to Sonprayag/Gaurikund basecamp",
+          "Begin the challenging 18 km trek to Kedarnath Temple (options: walk, pony, palki or pre-booked helicopter shuttle)",
+          "Arrive Kedarnath plateau by evening, check into guest houses",
+          "Attend the powerful evening Aarti ceremony at the ancient stone temple",
+          "Dinner and overnight stay in Kedarnath"
+        ],
+        accommodation: "Local Guest House (Basic comfort room sharing)",
+        meals: { breakfast: true, lunch: true, dinner: true },
+        altitude: "3,583m",
+        travelDistance: "18 km trek",
+      },
+      {
+        day: 3,
+        title: "Kedarnath to Guptkashi",
+        activities: [
+          "Early morning Bhasma Abhishek puja at the sanctum sanctorum of Kedarnath Temple",
+          "Trek back down 18 km to Gaurikund basecamp",
+          "Drive back to Guptkashi hotel in private vehicle",
+          "Full evening rest, delicious hot dinner at resort"
+        ],
+        accommodation: "Hotel Mandakini or similar",
+        meals: { breakfast: true, lunch: true, dinner: true },
+        travelDistance: "18 km trek + local drive",
+      },
+      {
+        day: 4,
+        title: "Guptkashi to Badrinath",
+        activities: [
+          "Scenic drive to Badrinath via Joshimath pass (190 km, 8 hours)",
+          "En route visit the ancient Narsingh Temple at Joshimath",
+          "Arrive Badrinath, take holy dip in Tapt Kund natural hot springs",
+          "Special evening Aarti inside the Badrinath Temple shrine",
+          "Dinner and stay at Badrinath"
+        ],
+        accommodation: "Hotel Narayan Palace or similar",
+        meals: { breakfast: true, lunch: true, dinner: true },
+        travelDistance: "190 km drive",
+      },
+      {
+        day: 5,
+        title: "Badrinath – Mana Village – Rudraprayag",
+        activities: [
+          "Explore Mana Village (Vyas Gufa, Ganesh Gufa, Bhim Pul over Saraswati River)",
+          "Checkout and drive to Rudraprayag confluence (160 km, 6 hours)",
+          "Check in at river-view hotel in Rudraprayag, evening rest",
+          "Dinner at the hotel"
+        ],
+        accommodation: "Hotel Tulip or similar",
+        meals: { breakfast: true, lunch: true, dinner: true },
+        travelDistance: "160 km drive",
+      },
+      {
+        day: 6,
+        title: "Rudraprayag to Haridwar via Rishikesh",
+        activities: [
+          "Breakfast, drive back to Haridwar (160 km, 6 hours)",
+          "Stopover in Rishikesh to visit Laxman Jhula and Ram Jhula",
+          "Arrive Haridwar hotel, check in, evening free for personal shopping",
+          "Dinner at hotel"
+        ],
+        accommodation: "Hotel Ganga Azure or similar",
+        meals: { breakfast: true, lunch: true, dinner: true },
+        travelDistance: "160 km drive",
+      },
+      {
+        day: 7,
+        title: "Departure",
+        activities: [
+          "Breakfast at hotel, checkout",
+          "Transfer drop off at Haridwar railway station or Dehradun Airport for final return journey"
+        ],
+        accommodation: "End of Journey",
+        meals: { breakfast: true, lunch: false, dinner: false },
+        travelDistance: "Local transfer",
+      }
+    ],
+    inclusions: [
+      "Accommodation: 2 nights in Guptkashi, 1 night in Kedarnath, 1 night in Badrinath, 1 night in Rudraprayag, 1 night in Haridwar",
+      "Pure vegetarian Satvik meals (daily breakfast & dinner, packed lunches on trek)",
+      "All transfers by comfortable AC SUV (Haridwar to Haridwar)",
+      "Spiritual tour guide assisting throughout the Himalayan loop",
+      "Forest permits, biometric registration card fees, and local tolls",
+      "Medical first-aid oxygen cylinder backup in the transfer vehicle"
+    ],
+    exclusions: [
+      "Flight or train fares to Haridwar",
+      "Pony, doli, porter, or helicopter tickets for Kedarnath/Yamunotri treks",
+      "VIP temple entry tickets or personal puja expenses",
+      "Personal items: laundry, tips, phone calls",
+      "Travel insurance"
+    ],
+    hotels: [
+      { location: "Guptkashi", hotelName: "Hotel Mandakini", category: "3-Star Hotel", nights: 2 },
+      { location: "Kedarnath", hotelName: "Local Guest House", category: "Basic Guesthouse", nights: 1 },
+      { location: "Badrinath", hotelName: "Hotel Narayan Palace", category: "3-Star Hotel", nights: 1 },
+      { location: "Rudraprayag", hotelName: "Hotel Tulip", category: "3-Star Hotel", nights: 1 },
+      { location: "Haridwar", hotelName: "Hotel Ganga Azure", category: "3-Star Hotel", nights: 1 }
+    ],
+    booking: {
+      requiredDocuments: [
+        "Aadhar Card / Voter ID / Passport copy",
+        "Biometric registration registration details (managed by our team)",
+        "Self-declaration medical fitness form"
+      ],
+      paymentSchedule: [
+        { stage: "Booking Advance", amount: "30% of total package cost", due: "At time of booking" },
+        { stage: "Second Payment", amount: "40% of total package cost", due: "15 days before departure" },
+        { stage: "Final Payment", amount: "Remaining 30% balance", due: "7 days prior to departure date" }
+      ],
+      importantNotes: [
+        "Bring thermal innerwear and heavy jackets—temperatures at Kedarnath can drop below 5°C even in summer",
+        "Kedarnath trek is physically demanding, start physical walk preparation 30 days prior"
+      ]
+    },
+    terms: {
+      cancellationPolicy: [
+        { timeBefore: "30+ days", refund: "90% refund" },
+        { timeBefore: "15-29 days", refund: "50% refund" },
+        { timeBefore: "Less than 15 days", refund: "No refund available" }
+      ],
+      travelInsurance: "Comprehensive high-altitude medical travel insurance is highly recommended.",
+      changes: "Road closures due to landslides or weather may alter the itinerary sequences.",
+      companyRights: "We reserve the right to swap accommodation depending on road availability.",
+      refundPolicy: "Unused items are non-refundable.",
+      ageRestriction: "Recommended for age groups between 8 and 70 years old."
+    },
+    preDeparture: {
+      clothing: [
+        "Heavy woolen jacket & fleece sweaters",
+        "Thermal innerwear",
+        "Raincoat or umbrella (essential for sudden mountain rains)",
+        "Sturdy hiking shoes with good rubber grip"
+      ],
+      essentials: [
+        "Personal altitude medicines, sunscreen, sunglasses",
+        "Power bank for mobile charging due to remote locations"
+      ],
+      health: [
+        "Perform cardio prep walks prior to the trip",
+        "Avoid smoking/alcohol during the yatra"
+      ],
+      currency: "INR. Carry cash as internet signal is poor at Kedarnath/Badrinath, making UPI and ATMs unreliable."
+    },
+    faq: [
+      {
+        question: "How do we book the helicopter for Kedarnath?",
+        answer: "Helicopter services are managed by the state aviation department and bookings open months in advance. Please select the helicopter upgrade option at booking time so our helpdesk can secure slots for you."
+      }
+    ]
   },
   "uk-03": {
-    code: "UK 03",
-    name: "Kedarnath Special",
-    duration: "4N / 5D",
-    price: "₹22,000",
+    code: "UK-03",
+    name: "Kedarnath Special — 4 Nights & 5 Days",
+    tagline: "Pilgrimage to Lord Shiva's Abode",
+    description: "A focused package dedicated entirely to the sacred Kedarnath Temple. Ideal for pilgrims seeking a shorter trip with direct trekking focus.",
+    heroImage: {
+      src: "/images/pilgrimage/badrinath.jpg",
+      alt: "Kedarnath Temple and peaks",
+    },
+    duration: {
+      days: 5,
+      nights: 4,
+      display: "4N / 5D",
+    },
+    difficulty: "Moderate to Challenging",
+    maxAltitude: {
+      meters: 3583,
+      feet: 11755,
+      display: "3,583m (11,755ft)",
+    },
     startingPoint: "Haridwar",
-    description: "Focus on Kedarnath Jyotirlinga darshan",
-  },
+    bestSeason: ["May", "June", "September", "October"],
+    pricing: {
+      startingFrom: 22000,
+      currency: "INR",
+      display: "₹22,000",
+      notes: "Per person on twin sharing standard lodging",
+    },
+    overview: {
+      route: "Haridwar → Guptkashi → Kedarnath → Guptkashi → Haridwar",
+      destinations: ["Haridwar", "Guptkashi", "Kedarnath"],
+      highlights: [
+        "Dedicated focus on Kedarnath Temple Darshan and Aarti",
+        "18 km trek from Gaurikund basecamp to Kedarnath plateau",
+        "Bypasses other Dhams for a shorter, focused itinerary",
+        "AC transport from Haridwar to Guptkashi and back",
+        "Experienced guides for safety in high elevation",
+        "All permits and biometric cards coordinated"
+      ],
+      themes: ["Shiva Devotion", "Mountain Trekking"],
+    },
+    itinerary: [
+      {
+        day: 1,
+        title: "Haridwar to Guptkashi",
+        activities: [
+          "Early morning pick up from Haridwar, drive to Guptkashi (220 km, 8 hours)",
+          "Scenic mountain drive alongside Alaknanda & Mandakini rivers",
+          "Check in at hotel in Guptkashi, evening rest and briefing",
+          "Dinner at the hotel"
+        ],
+        accommodation: "Hotel Mandakini or similar",
+        meals: { breakfast: false, lunch: false, dinner: true },
+        travelDistance: "220 km drive",
+      },
+      {
+        day: 2,
+        title: "Guptkashi – Gaurikund – Kedarnath Trek",
+        activities: [
+          "Drive to Sonprayag/Gaurikund basecamp early morning",
+          "Begin the 18 km trek up to Kedarnath Temple (walk, pony, palki or helicopter)",
+          "Arrive Kedarnath mountain plateau, check in at guesthouses",
+          "Attend the glorious evening Aarti at Kedarnath Temple",
+          "Dinner and overnight stay in Kedarnath guesthouses"
+        ],
+        accommodation: "Local Guest House (Basic shared rooms)",
+        meals: { breakfast: true, lunch: true, dinner: true },
+        altitude: "3,583m",
+        travelDistance: "18 km trek",
+      },
+      {
+        day: 3,
+        title: "Kedarnath to Guptkashi",
+        activities: [
+          "Early morning Abhishek puja at the temple",
+          "Trek back down 18 km to Gaurikund basecamp",
+          "Re-join transfer vehicles and drive back to Guptkashi hotel",
+          "Rest day after the trek, hot dinner at the hotel"
+        ],
+        accommodation: "Hotel Mandakini or similar",
+        meals: { breakfast: true, lunch: true, dinner: true },
+        travelDistance: "18 km trek + local drive",
+      },
+      {
+        day: 4,
+        title: "Guptkashi to Haridwar",
+        activities: [
+          "Breakfast, check out and drive back to Haridwar (220 km, 8 hours)",
+          "Arrive Haridwar hotel, check in",
+          "Attend evening Ganga Aarti at Har Ki Pauri ghat",
+          "Dinner at the hotel"
+        ],
+        accommodation: "Hotel Ganga Azure or similar",
+        meals: { breakfast: true, lunch: true, dinner: true },
+        travelDistance: "220 km drive",
+      },
+      {
+        day: 5,
+        title: "Departure",
+        activities: [
+          "Breakfast, checkout from hotel",
+          "Transfer drop off at Haridwar railway station or Dehradun Airport"
+        ],
+        accommodation: "End of Journey",
+        meals: { breakfast: true, lunch: false, dinner: false },
+        travelDistance: "Local transfer",
+      }
+    ],
+    inclusions: [
+      "Accommodation: 2 nights in Guptkashi, 1 night in Kedarnath, 1 night in Haridwar",
+      "Pure vegetarian breakfast & dinner daily",
+      "All transfers by comfortable AC SUV (Haridwar to Haridwar)",
+      "Local guide assisting during the Gaurikund to Kedarnath trek",
+      "Forest permits, tolls, parking, and biometric registration managed"
+    ],
+    exclusions: [
+      "Flight or train fares to Haridwar",
+      "Pony, porter, or helicopter ride charges",
+      "VIP temple passes or personal puja fees",
+      "Personal items, laundry, tips",
+      "5% GST charges"
+    ],
+    hotels: [
+      { location: "Guptkashi", hotelName: "Hotel Mandakini", category: "3-Star Hotel", nights: 2 },
+      { location: "Kedarnath", hotelName: "Local Guest House", category: "Basic Guesthouse", nights: 1 },
+      { location: "Haridwar", hotelName: "Hotel Ganga Azure", category: "3-Star Hotel", nights: 1 }
+    ],
+    booking: {
+      requiredDocuments: [
+        "Aadhar Card / Voter ID copy",
+        "Medical self-declaration form"
+      ],
+      paymentSchedule: [
+        { stage: "Booking Advance", amount: "30% of total package cost", due: "At time of booking" },
+        { stage: "Final Payment", amount: "Remaining 70% balance", due: "7 days prior to departure date" }
+      ],
+      importantNotes: [
+        "Temperatures at Kedarnath can drop to freezing point—ensure heavy warm layers are packed",
+        "Helicopter slot booking requests must be made immediately upon trip booking"
+      ]
+    },
+    terms: {
+      cancellationPolicy: [
+        { timeBefore: "30+ days", refund: "90% refund" },
+        { timeBefore: "15-29 days", refund: "50% refund" },
+        { timeBefore: "Less than 15 days", refund: "No refund available" }
+      ],
+      travelInsurance: "Recommended.",
+      changes: "Subject to weather and landslide clearances.",
+      companyRights: "We reserve the right to swap hotel selections depending on road closures.",
+      refundPolicy: "Unused items are non-refundable.",
+      ageRestriction: "Recommended for 8 to 70 years."
+    },
+    preDeparture: {
+      clothing: [
+        "Heavy warm jackets & thermals",
+        "Raincoat/poncho (very important)",
+        "Comfortable hiking footwear"
+      ],
+      essentials: [
+        "Personal medicines, sunscreen, physical cash",
+        "Mobile power banks"
+      ],
+      health: [
+        "Walk at least 5-6 km daily for 3 weeks prior to departure to prepare for the trek"
+      ],
+      currency: "INR."
+    },
+    faq: [
+      {
+        question: "Can children do the Kedarnath trek?",
+        answer: "Children above 8 years old can do the trek. For younger children, hiring a pony or palki/doli is highly recommended."
+      }
+    ]
+  }
 };
 
-export async function generateMetadata({ params }: { params: { packageCode: string } }): Promise<Metadata> {
-  const pkg = PACKAGES[params.packageCode as keyof typeof PACKAGES];
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ packageCode: string }>;
+}): Promise<Metadata> {
+  const { packageCode } = await params;
+  const pkg = PACKAGES[packageCode.toLowerCase() as keyof typeof PACKAGES];
+  
   if (!pkg) {
     return {
       title: "Package Not Found",
@@ -40,13 +570,18 @@ export async function generateMetadata({ params }: { params: { packageCode: stri
   }
 
   return {
-    title: `${pkg.name} - ${pkg.code} | Nithyeshwar Tours`,
-    description: `${pkg.description}. ${pkg.duration} package starting from ${pkg.price} per person.`,
+    title: `${pkg.name} | Uttarakhand Yatra`,
+    description: pkg.description,
   };
 }
 
-export default function PackageDetailPage({ params }: { params: { packageCode: string } }) {
-  const pkg = PACKAGES[params.packageCode as keyof typeof PACKAGES];
+export default async function PackageDetailPage({
+  params,
+}: {
+  params: Promise<{ packageCode: string }>;
+}) {
+  const { packageCode } = await params;
+  const pkg = PACKAGES[packageCode.toLowerCase() as keyof typeof PACKAGES];
 
   if (!pkg) {
     notFound();
@@ -54,352 +589,124 @@ export default function PackageDetailPage({ params }: { params: { packageCode: s
 
   return (
     <>
-      {/* Breadcrumb */}
-      <div className="bg-surface-low border-b border-midnight/5">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-midnight/50 hover:text-midnight transition-colors">Home</Link>
-            <span className="text-midnight/30">/</span>
-            <Link href="/yatra/uttarakhand" className="text-midnight/50 hover:text-midnight transition-colors">Uttarakhand Yatra</Link>
-            <span className="text-midnight/30">/</span>
-            <span className="text-midnight font-medium">{pkg.code}</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+      {/* Luxury Hero Section */}
+      <section className="relative h-screen flex items-end overflow-hidden">
         <Image
-          src="/images/pilgrimage/badrinath.jpg"
-          alt={pkg.name}
+          src={pkg.heroImage.src}
+          alt={pkg.heroImage.alt}
           fill
           sizes="100vw"
           className="object-cover"
           priority
-          quality={90}
+          quality={95}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight/50 via-midnight/40 to-midnight/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-transparent" />
         
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
-          <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-5">
-            {pkg.code} · Uttarakhand Yatra
-          </p>
-          <h1 className="font-serif text-5xl md:text-6xl text-white font-normal leading-tight tracking-tight mb-6">
-            {pkg.name}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-20">
+          {/* Breadcrumb */}
+          <nav className="mb-8 flex items-center gap-2 font-sans text-xs text-white/50">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/yatra/uttarakhand" className="hover:text-white transition-colors">Uttarakhand Yatra</Link>
+            <span>/</span>
+            <span className="text-white">{pkg.code}</span>
+          </nav>
+
+          <div className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur border border-white/20 mb-6">
+            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-white">{pkg.code}</span>
+          </div>
+
+          <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 leading-[0.95] max-w-4xl font-light">
+            {pkg.name.split('—')[0].trim()}
           </h1>
-          <p className="font-sans text-lg text-white/80 leading-relaxed max-w-2xl mx-auto mb-10">
-            {pkg.description}
+
+          <p className="font-serif text-xl md:text-2xl text-white/80 mb-12 max-w-2xl leading-relaxed font-light">
+            {pkg.tagline}
           </p>
-          <div className="flex items-center justify-center gap-6">
-            <Link
-              href="/inquiry"
-              className="inline-flex items-center gap-2 font-sans text-sm font-semibold bg-gold text-midnight px-8 py-4 rounded-md hover:bg-gold-dark hover:text-white transition-colors duration-300 min-h-11"
-            >
-              Book Now
-            </Link>
+
+          {/* Quick Stats */}
+          <div className="flex flex-wrap items-center gap-6 mb-12 font-sans text-sm text-white/70">
+            <div className="flex items-center gap-2">
+              <span className="text-white/40">Duration</span>
+              <span className="text-white font-medium">{pkg.duration.display}</span>
+            </div>
+            <div className="w-px h-4 bg-white/20" />
+            <div className="flex items-center gap-2">
+              <span className="text-white/40">Altitude</span>
+              <span className="text-white font-medium">{pkg.maxAltitude.display.split('(')[0].trim()}</span>
+            </div>
+            <div className="w-px h-4 bg-white/20" />
+            <div className="flex items-center gap-2">
+              <span className="text-white/40">From</span>
+              <span className="text-white font-medium">{pkg.pricing.display}</span>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
             <a
-              href="#itinerary"
-              className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-white border border-white/30 px-8 py-4 rounded-md hover:bg-white/10 transition-colors duration-300 min-h-11"
+              href={`/inquiry?package=${pkg.code}`}
+              className="inline-flex items-center gap-2 font-sans px-8 py-4 bg-white text-midnight text-sm font-semibold hover:bg-white/95 transition-all duration-300"
             >
-              View Itinerary
+              Book This Package
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/917200118411"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-sans px-8 py-4 bg-white/10 backdrop-blur text-white text-sm font-medium border border-white/30 hover:bg-white/20 transition-all duration-300"
+            >
+              Contact Us
             </a>
           </div>
         </div>
       </section>
 
-      {/* Quick Info */}
-      <section className="border-y border-midnight/10 bg-surface-low">
+      {/* Main Page Layout Grid */}
+      <div className="bg-[#F8F7F4] min-h-screen py-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {[
-              { label: "Duration", value: pkg.duration },
-              { label: "Starting Point", value: pkg.startingPoint },
-              { label: "Price", value: pkg.price },
-              { label: "Type", value: "Private Tour" },
-            ].map((item, i) => (
-              <div
-                key={item.label}
-                className={`px-6 py-8 text-center ${
-                  i < 3 ? "border-r border-midnight/10" : ""
-                } ${i >= 2 ? "border-t md:border-t-0 border-midnight/10" : ""}`}
-              >
-                <p className="font-sans text-[9px] text-gold-dark uppercase tracking-[0.3em] mb-2 font-semibold">
-                  {item.label}
-                </p>
-                <p className="font-serif text-base text-midnight font-normal">{item.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-8">
+              <LuxuryPackageDetailTabs packageData={pkg} />
+            </div>
 
-      {/* Sticky Navigation Tabs */}
-      <div className="sticky top-0 z-30 bg-white border-b border-midnight/10 shadow-sm">
-        <div className="max-w-7xl mx-auto">
-          <nav className="flex overflow-x-auto">
-            {[
-              { label: "Overview", href: "#overview" },
-              { label: "Itinerary", href: "#itinerary" },
-              { label: "What's Included", href: "#included" },
-              { label: "Hotels", href: "#hotels" },
-              { label: "Book Now", href: "#booking" },
-            ].map((tab) => (
-              <a
-                key={tab.label}
-                href={tab.href}
-                className="font-sans text-sm font-medium text-midnight/60 hover:text-midnight hover:bg-surface-low px-6 py-4 border-b-2 border-transparent hover:border-gold-dark transition-all whitespace-nowrap"
-              >
-                {tab.label}
-              </a>
-            ))}
-          </nav>
+            <div className="lg:col-span-4 relative hidden lg:block">
+              <div className="sticky top-[152px]">
+                <LuxuryPricingSidebar pkg={pkg} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Package Overview - Compact */}
-      <section className="py-16 px-6 bg-surface" id="overview">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left: Key Highlights */}
-            <div>
-              <h2 className="font-serif text-2xl text-midnight font-normal mb-6">Package Highlights</h2>
-              <ul className="space-y-3">
-                {(pkg.code === "UK 01" ? [
-                  "3 nights stay in Haridwar & Rishikesh",
-                  "Evening Ganga Aarti at Har Ki Pauri",
-                  "Visit to Laxman Jhula & Ram Jhula",
-                  "Temple & ashram tours with guide",
-                  "All meals & AC vehicle transfers",
-                ] : pkg.code === "UK 02" ? [
-                  "6 nights accommodation across circuit",
-                  "Kedarnath temple darshan (trek/pony)",
-                  "Badrinath temple & Mana Village",
-                  "Haridwar-Rishikesh sightseeing",
-                  "Experienced guide throughout journey",
-                  "All meals & comfortable hotels",
-                ] : [
-                  "4 nights focused on Kedarnath Jyotirlinga",
-                  "Trek/pony/helicopter options available",
-                  "Guptkashi & Sonprayag visits",
-                  "Haridwar Ganga Aarti ceremony",
-                  "All meals & transfers included",
-                ]).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 font-sans text-sm text-midnight/70">
-                    <span className="text-gold-dark mt-0.5 text-lg">✦</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Right: Quick Info Cards */}
-            <div className="space-y-4">
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-midnight/5">
-                <h3 className="font-sans text-xs font-bold tracking-wider uppercase text-gold-dark mb-4">Best Time to Visit</h3>
-                <p className="font-sans text-sm text-midnight/70">May-June & September-October. Shrines remain closed during winter (Nov-Apr).</p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-midnight/5">
-                <h3 className="font-sans text-xs font-bold tracking-wider uppercase text-gold-dark mb-4">Fitness Level</h3>
-                <p className="font-sans text-sm text-midnight/70">
-                  {pkg.code === "UK 01" ? "Easy - No trekking required. Suitable for all ages." : 
-                   pkg.code === "UK 02" ? "Moderate - Kedarnath requires 16km trek (pony available)." :
-                   "Moderate - Includes mountain trekking. Good fitness recommended."}
-                </p>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-midnight/5">
-                <h3 className="font-sans text-xs font-bold tracking-wider uppercase text-gold-dark mb-4">Group Size</h3>
-                <p className="font-sans text-sm text-midnight/70">Minimum 2 persons. Private tours available for families & groups.</p>
-              </div>
-            </div>
+      {/* Sticky Pricing Bar */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-midnight/5 z-50 lg:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+        <div className="flex items-center justify-between px-6 py-4">
+          <div>
+            <div className="font-sans text-[10px] font-semibold uppercase tracking-wider text-midnight/40 mb-1">From</div>
+            <div className="font-serif text-2xl text-midnight font-light">{pkg.pricing.display}</div>
           </div>
-        </div>
-      </section>
-
-      {/* Itinerary Section - Compact Timeline */}
-      <section className="py-16 px-6 bg-white" id="itinerary">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-serif text-2xl text-midnight font-normal mb-8 text-center">Day-by-Day Itinerary</h2>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-gold/20"></div>
-
-            <div className="space-y-6">
-              {[
-                { day: "01", title: "Arrival in Haridwar", desc: "Transfer to hotel. Evening Ganga Aarti at Har Ki Pauri." },
-                { day: "02", title: "Haridwar to Rishikesh", desc: "Visit Laxman Jhula, Ram Jhula, temples. Evening Aarti at Parmarth Niketan." },
-                { day: "03", title: "Rishikesh Exploration", desc: "Ashram visits, river rafting (optional). Yoga & meditation sessions." },
-                { day: "04", title: "Departure", desc: "Morning leisure. Drop to Haridwar station/Dehradun airport." },
-              ].slice(0, pkg.code === "UK 01" ? 4 : pkg.code === "UK 02" ? 7 : 5).map((item) => (
-                <div key={item.day} className="relative flex gap-6 items-start">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gold/10 border-2 border-gold flex items-center justify-center z-10">
-                    <span className="font-serif text-lg font-medium text-gold-dark">{item.day}</span>
-                  </div>
-                  <div className="flex-1 pt-2">
-                    <h3 className="font-serif text-lg text-midnight font-medium mb-1">{item.title}</h3>
-                    <p className="font-sans text-sm text-midnight/60">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <button className="font-sans text-sm text-gold-dark hover:text-midnight border-b border-gold-dark hover:border-midnight transition-colors">
-              Download Complete Itinerary PDF →
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Inclusions & Exclusions - Side by Side */}
-      <section className="py-16 px-6 bg-surface" id="included">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-2xl text-midnight font-normal mb-10 text-center">What's Included & Excluded</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Included */}
-            <div className="bg-white rounded-lg p-6 border border-[#15803d]/20">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-[#15803d] text-xl">✓</span>
-                <h3 className="font-sans text-sm font-bold tracking-wider uppercase text-[#15803d]">Included</h3>
-              </div>
-              <ul className="space-y-2">
-                {[
-                  "Accommodation as per itinerary",
-                  "Daily breakfast & dinner (veg)",
-                  "All transfers by AC vehicle",
-                  "Experienced driver cum guide",
-                  "Temple entrance fees",
-                  "All applicable taxes",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-midnight/70 font-sans text-sm">
-                    <span className="text-[#15803d] mt-1">•</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Excluded */}
-            <div className="bg-white rounded-lg p-6 border border-[#991b1b]/20">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-[#991b1b] text-xl">✗</span>
-                <h3 className="font-sans text-sm font-bold tracking-wider uppercase text-[#991b1b]">Not Included</h3>
-              </div>
-              <ul className="space-y-2">
-                {[
-                  "Airfare / Train tickets",
-                  "Lunch and beverages",
-                  "Personal expenses & tips",
-                  "Pony/palki charges",
-                  "Travel insurance",
-                  "Items not in inclusions",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-midnight/50 font-sans text-sm">
-                    <span className="text-[#991b1b] mt-1">•</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Hotels - Compact Grid */}
-      <section className="py-16 px-6 bg-white" id="hotels">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-2xl text-midnight font-normal mb-8 text-center">Accommodation</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { location: "Haridwar", hotel: "Hotel Ganga Azure", category: "3 Star" },
-              { location: "Rishikesh", hotel: "Zostel Rishikesh", category: "Comfort" },
-              { location: "Guptkashi", hotel: "Hotel Snow View", category: "Standard" },
-            ].slice(0, pkg.code === "UK 01" ? 2 : 3).map((item) => (
-              <div key={item.location} className="bg-surface rounded-lg p-4 border border-midnight/5">
-                <p className="font-sans text-xs font-bold tracking-wider uppercase text-gold-dark mb-1">
-                  {item.location}
-                </p>
-                <h3 className="font-serif text-base text-midnight font-medium mb-1">{item.hotel}</h3>
-                <p className="font-sans text-xs text-midnight/50">{item.category} · Similar hotels</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="font-sans text-xs text-midnight/50 text-center mt-6">
-            Hotels subject to availability. Upgrades available on request.
-          </p>
-        </div>
-      </section>
-
-      {/* Booking Section - Compact CTA */}
-      <section className="py-16 px-6 bg-midnight" id="booking">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-3xl text-white font-normal mb-4">Ready to Book {pkg.name}?</h2>
-          <p className="font-sans text-base text-white/60 mb-8 max-w-2xl mx-auto">
-            Contact us for customization, detailed itinerary, and special group rates.
-          </p>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8 max-w-md mx-auto">
-            <div className="flex items-baseline justify-center gap-2 mb-2">
-              <span className="font-serif text-5xl text-gold-light font-medium">{pkg.price}</span>
-              <span className="font-sans text-sm text-white/60">per person</span>
-            </div>
-            <p className="font-sans text-xs text-white/50 mb-6">Twin sharing · Taxes included</p>
-            
-            <div className="space-y-3">
-              <Link
-                href="/inquiry"
-                className="block font-sans text-sm font-semibold bg-gold text-midnight px-8 py-4 rounded-md hover:bg-gold-light transition-colors"
-              >
-                Submit Inquiry Form
-              </Link>
-              <a
-                href="https://wa.me/917200118411"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block font-sans text-sm font-semibold border border-white/30 text-white px-8 py-4 rounded-md hover:bg-white/10 transition-colors"
-              >
-                WhatsApp: +91 72001 18411
-              </a>
-            </div>
-          </div>
-
-          {/* Policies Summary */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-            <div className="bg-white/5 rounded-lg p-4">
-              <h4 className="font-sans text-xs font-bold tracking-wider uppercase text-gold-light mb-2">Payment</h4>
-              <p className="font-sans text-sm text-white/70">30% advance, balance 7 days before departure</p>
-            </div>
-            <div className="bg-white/5 rounded-lg p-4">
-              <h4 className="font-sans text-xs font-bold tracking-wider uppercase text-gold-light mb-2">Cancellation</h4>
-              <p className="font-sans text-sm text-white/70">Full refund if cancelled 30+ days before</p>
-            </div>
-            <div className="bg-white/5 rounded-lg p-4">
-              <h4 className="font-sans text-xs font-bold tracking-wider uppercase text-gold-light mb-2">Customization</h4>
-              <p className="font-sans text-sm text-white/70">Flexible dates, hotels & itinerary available</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Back to Packages */}
-      <div className="border-t border-midnight/10 bg-surface-low">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <Link
-            href="/yatra/uttarakhand"
-            className="inline-flex items-center gap-2 font-sans text-sm text-midnight/60 hover:text-midnight transition-colors"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M19 12H5M12 19l-7-7 7-7" />
+          <div className="flex gap-3">
+            <a
+              href="https://wa.me/917200118411"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center p-3 border border-midnight/10 text-midnight rounded"
+            >
+              <svg className="w-5 h-5 fill-current text-green-600" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.208-3.79c1.661.986 3.292 1.503 4.794 1.504 5.518 0 10.005-4.486 10.008-10.004.002-2.673-1.03-5.184-2.905-7.062C16.287 2.766 13.784 1.72 11.11 1.72c-5.524 0-10.01 4.487-10.014 10.007-.001 1.905.511 3.766 1.481 5.392L1.582 21.03l3.961-1.028 1.439.845-.717-2.637zM17.38 15.65c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.15-.669.15-.198.297-.768.967-.941 1.165-.173.199-.347.223-.644.074-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.15-.173.198-.297.298-.495.099-.198.05-.372-.025-.521-.075-.15-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             </svg>
-            Back to All Uttarakhand Packages
-          </Link>
+          </a>
+          <a
+            href={`/inquiry?package=${pkg.code}`}
+            className="font-sans px-6 py-3 bg-midnight text-white text-sm font-semibold hover:bg-midnight/90 transition-colors"
+          >
+            Book Now
+          </a>
         </div>
+      </div>
       </div>
     </>
   );

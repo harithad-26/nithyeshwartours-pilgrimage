@@ -284,7 +284,7 @@ export default function CharDhamPage() {
                   </div>
 
                   <Link
-                    href={`/inquiry?package=${pkg.code}`}
+                    href={`/yatra/char-dham/${pkg.code}`}
                     className={`block text-center font-sans text-sm tracking-wide font-semibold py-3 px-4 ${pkg.textColor} bg-white/80 hover:bg-white border-2 ${pkg.borderColor} rounded-lg transition-all duration-300 hover:scale-105`}
                   >
                     VIEW DETAILS & BOOK

@@ -258,10 +258,10 @@ export default function VaranasiPage() {
                 </ul>
 
                 <Link
-                  href="/inquiry"
+                  href="/yatra/varanasi/VNS-01"
                   className="block text-center font-sans text-xs tracking-[0.15em] uppercase font-semibold py-3.5 border border-gold-dark text-gold-dark hover:bg-gold-dark hover:text-white transition-colors duration-300 rounded-sm"
                 >
-                  Book This Package
+                  View Details
                 </Link>
               </div>
             </div>
@@ -305,10 +305,10 @@ export default function VaranasiPage() {
                 </ul>
 
                 <Link
-                  href="/inquiry"
+                  href="/yatra/varanasi/VNS-02"
                   className="block text-center font-sans text-xs tracking-[0.15em] uppercase font-semibold py-4 bg-secondary text-midnight hover:bg-secondary-container transition-colors duration-300 rounded-sm shadow-md"
                 >
-                  Book This Package
+                  View Details
                 </Link>
               </div>
             </div>
@@ -349,10 +349,10 @@ export default function VaranasiPage() {
                 </ul>
 
                 <Link
-                  href="/inquiry"
+                  href="/yatra/varanasi/VNS-03"
                   className="block text-center font-sans text-xs tracking-[0.15em] uppercase font-semibold py-3.5 border border-gold-dark text-gold-dark hover:bg-gold-dark hover:text-white transition-colors duration-300 rounded-sm"
                 >
-                  Book This Package
+                  View Details
                 </Link>
               </div>
             </div>

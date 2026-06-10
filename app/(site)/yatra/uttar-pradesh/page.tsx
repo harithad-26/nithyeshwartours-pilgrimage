@@ -258,7 +258,7 @@ export default function UttarPradeshYatraPage() {
                   </div>
 
                   <Link
-                    href="/inquiry"
+                    href={`/yatra/uttar-pradesh/${pkg.code.replace(' ', '-')}`}
                     className={`block text-center font-sans text-xs tracking-[0.15em] uppercase font-semibold py-3.5 transition-colors duration-300 rounded-sm ${
                       idx === 1
                         ? "bg-secondary text-midnight hover:bg-secondary-container shadow-md"
