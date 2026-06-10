@@ -230,7 +230,7 @@ export default function KailashMansarovarPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Card 1: Mount Kailash */}
-            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 group">
+            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-midnight group">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/images/pilgrimage/kailash_trinity_mount.png"
@@ -252,7 +252,7 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Card 2: Lake Mansarovar */}
-            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 group">
+            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-midnight group">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/images/pilgrimage/kailash_trinity_lake.png"
@@ -274,7 +274,7 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Card 3: Parikrama Pilgrims */}
-            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 group">
+            <article className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-midnight group">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/images/pilgrimage/kailash_trinity_pilgrims.png"
@@ -412,7 +412,7 @@ export default function KailashMansarovarPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Package 1: Helicopter Route */}
-            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-gold-dark/20 transition-all duration-300">
+            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-midnight transition-all duration-300">
               {/* Header */}
               <div className="p-8 border-b border-midnight/5 bg-surface-low/30">
                 <div className="flex items-center justify-between mb-5">
@@ -484,7 +484,7 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Package 2: Overland Coach Route */}
-            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-gold-dark/20 transition-all duration-300">
+            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-midnight transition-all duration-300">
               {/* Header */}
               <div className="p-8 border-b border-midnight/5 bg-surface-low/30">
                 <div className="flex items-center justify-between mb-5">
@@ -743,7 +743,7 @@ export default function KailashMansarovarPage() {
             {TESTIMONIALS.map((t, i) => (
               <article
                 key={i}
-                className="bg-white p-8 rounded border border-midnight/5 shadow-ambient hover:-translate-y-1 hover:shadow-card hover:border-gold-dark/20 transition-all duration-300 flex flex-col justify-between"
+                className="bg-white p-8 rounded border border-midnight/5 shadow-ambient hover:-translate-y-1 hover:shadow-card hover:border-midnight transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Rating Stars */}
