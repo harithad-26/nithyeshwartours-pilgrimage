@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   images: {
@@ -16,6 +17,10 @@ const nextConfig: NextConfig = {
       },
     ],
     formats: ["image/avif", "image/webp"],
+    qualities: [75, 85],
+  },
+  turbopack: {
+    root: path.resolve(__dirname),
   },
 };
 

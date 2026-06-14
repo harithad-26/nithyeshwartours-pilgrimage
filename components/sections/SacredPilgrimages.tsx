@@ -68,9 +68,12 @@ export function SacredPilgrimages({ packages }: SacredPilgrimagesProps) {
 
   return (
     <section
-      className="py-24 bg-midnight"
+      className="py-24 bg-midnight relative overflow-hidden"
       aria-labelledby="sacred-pilgrimages-heading"
     >
+      {/* Decorative gold ambient blur */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold-muted/5 blur-[120px] rounded-full -z-10" aria-hidden="true" />
+
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionHeader
           eyebrow="THE ETERNAL PATH"
@@ -80,9 +83,9 @@ export function SacredPilgrimages({ packages }: SacredPilgrimagesProps) {
           light
         />
 
-        {/* Horizontally scrollable card row */}
+        {/* Responsive layout: swipeable scroll on mobile, static grid on desktop */}
         <div
-          className="flex gap-6 overflow-x-auto pb-4 mt-4 snap-x snap-mandatory scrollbar-none"
+          className="grid grid-flow-col auto-cols-[85%] md:auto-cols-auto md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-6 mt-8 snap-x snap-mandatory scrollbar-hide md:snap-none"
           role="list"
           aria-label="Sacred pilgrimage packages"
         >
@@ -90,46 +93,46 @@ export function SacredPilgrimages({ packages }: SacredPilgrimagesProps) {
             <div
               key={item.id}
               role="listitem"
-              className="snap-start shrink-0 w-85 sm:w-95"
+              className="snap-start shrink-0 h-full"
             >
               <Link
                 href={item.href}
-                className="group flex flex-col bg-navy border border-white/10 rounded-md overflow-hidden transition-all duration-300 hover:border-gold/30 focus-visible:outline-2 focus-visible:outline-gold h-full"
+                className="group flex flex-col bg-navy/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-gold/30 hover:shadow-[0_20px_50px_rgba(254,214,91,0.08)] hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-gold h-full"
                 aria-label={`View ${item.title} pilgrimage`}
               >
                 {/* Card image */}
-                <div className="relative h-56 shrink-0 overflow-hidden">
+                <div className="relative h-60 shrink-0 overflow-hidden">
                   <Image
                     src={item.imageSrc}
                     alt={item.imageAlt}
                     fill
-                    sizes="380px"
-                    quality={85}
-                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={90}
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   {/* Badge */}
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="font-sans text-[10px] font-semibold tracking-[0.12em] uppercase bg-gold-dark/90 text-white px-3 py-1 rounded-full">
+                    <span className="font-sans text-[9px] font-bold tracking-widest uppercase bg-gold text-midnight px-3 py-1.5 rounded-full shadow-md">
                       {item.badge}
                     </span>
                   </div>
                 </div>
 
                 {/* Card body */}
-                <div className="flex flex-col flex-1 p-6 gap-3">
-                  <h3 className="font-serif text-xl text-gold font-normal leading-snug">
+                <div className="flex flex-col flex-1 p-6 gap-3 bg-gradient-to-b from-transparent to-navy/10">
+                  <h3 className="font-serif text-2xl text-gold font-normal leading-snug drop-shadow-sm">
                     {item.title}
                   </h3>
-                  <p className="font-sans text-sm text-white/60 leading-relaxed flex-1">
+                  <p className="font-sans text-sm text-white/70 leading-relaxed flex-1 line-clamp-3">
                     {item.description}
                   </p>
 
                   {/* Card footer */}
-                  <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                    <span className="font-sans text-sm text-white/70">
+                  <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-2">
+                    <span className="font-sans text-xs tracking-wider uppercase text-white/50">
                       {item.duration}
                     </span>
-                    <span className="font-serif text-xl text-white font-normal">
+                    <span className="font-serif text-xl text-white font-semibold">
                       {item.price}
                     </span>
                   </div>
@@ -140,12 +143,27 @@ export function SacredPilgrimages({ packages }: SacredPilgrimagesProps) {
         </div>
 
         {/* CTA */}
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center">
           <Link
             href="/pilgrimage"
-            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-gold border border-gold/40 px-6 py-3 rounded-md transition-all duration-300 hover:bg-gold hover:text-midnight focus-visible:outline-2 focus-visible:outline-gold min-h-11"
+            className="group/btn inline-flex items-center gap-2 font-sans text-sm font-bold text-midnight bg-gold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-[1.02] active:scale-[0.98] min-h-12"
           >
             View All Pilgrimages
+            <svg
+              className="transition-transform duration-300 group-hover/btn:translate-x-1"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
           </Link>
         </div>
       </div>

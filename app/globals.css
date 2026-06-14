@@ -210,3 +210,17 @@ body {
     --font-size-h2: 1.5rem;
   }
 }
+
+/* Premium Animations */
+@keyframes zoom-out {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-zoom-out {
+  animation: zoom-out 20s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}

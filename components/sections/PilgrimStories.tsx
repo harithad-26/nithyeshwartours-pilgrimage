@@ -26,15 +26,15 @@ export function PilgrimStories({ testimonials }: PilgrimStoriesProps) {
             Testimonials coming soon.
           </p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch pt-6">
             {displayTestimonials.map((testimonial, i) => (
               <div
                 key={testimonial.id}
                 className={
                   /* Middle card gets a subtle lift and gold ring */
                   i === 1
-                    ? "-mt-3 ring-1 ring-gold-dark/20 rounded-md"
-                    : ""
+                    ? "lg:-mt-6 lg:scale-[1.03] ring-2 ring-gold rounded-2xl shadow-2xl relative z-10 transition-all duration-500"
+                    : "transition-all duration-500 hover:scale-[1.01]"
                 }
               >
                 <TestimonialCard t={testimonial} />
