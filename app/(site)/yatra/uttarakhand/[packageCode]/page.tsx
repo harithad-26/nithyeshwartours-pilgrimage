@@ -12,8 +12,8 @@ const PACKAGES = {
     tagline: "Gateway to the Himalayas",
     description: "Explore the holy twins of Haridwar and Rishikesh. Witness the Ganga Aarti, visit ancient temples, and relax in the yoga capital.",
     heroImage: {
-      src: "/images/pilgrimage/badrinath.jpg",
-      alt: "Haridwar Har Ki Pauri Ghat",
+      src: "/images/pilgrimage/uttarakhand-card.png",
+      alt: "Haridwar Har Ki Pauri Sacred Ghat on the Ganges",
     },
     duration: {
       days: 4,

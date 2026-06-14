@@ -11,421 +11,570 @@ const PACKAGES = [
   {
     code: "CD-STD-10D",
     name: "Char Dham Standard",
-    duration: "9N / 10D",
-    cities: "Haridwar, Barkot, Uttarkashi, Guptkashi, Badrinath",
-    theme: "Budget Friendly",
+    subtitle: "9 Nights · 10 Days",
+    route: "Haridwar · Yamunotri · Gangotri · Kedarnath · Badrinath",
+    price: "₹33,700",
+    priceNote: "Per person, twin-sharing basis",
+    badge: null,
     highlights: [
-      "All four sacred dhams covered",
-      "Comfortable 3-star hotels",
-      "Vegetarian meals included",
-      "Experienced tour guide"
+      "Complete Darshan of all four sacred Dhams",
+      "3-Star hotels throughout the circuit",
+      "Pure vegetarian Satvik meals included",
+      "AC coach transfers — Haridwar to Haridwar",
+      "Experienced spiritual tour guide",
+      "Medical kit & oxygen cylinder on coach",
     ],
-    services: ["Bus", "Meal", "Hotel", "Guided"],
-    bgColor: "bg-[#e8f5e9]",
-    borderColor: "border-[#81c784]",
-    textColor: "text-[#2e7d32]"
   },
   {
     code: "CD-DLX-11D",
     name: "Char Dham Deluxe",
-    duration: "10N / 11D",
-    cities: "Haridwar, Barkot, Uttarkashi, Guptkashi, Badrinath, Rishikesh",
-    theme: "Premium Experience",
+    subtitle: "10 Nights · 11 Days",
+    route: "Haridwar · Yamunotri · Gangotri · Kedarnath · Badrinath · Rishikesh",
+    price: "₹48,500",
+    priceNote: "Per person, includes VIP Darshan priority",
+    badge: "MOST POPULAR",
     highlights: [
-      "Premium accommodation",
-      "Helicopter option for Kedarnath",
-      "Extra day for Rishikesh sightseeing",
-      "Smaller group size"
+      "Premium 3-star resorts with deluxe rooms",
+      "Pre-arranged VIP Darshan at Kedarnath & Badrinath",
+      "Travel in premium AC SUVs (Innova/Crysta)",
+      "Extra day sightseeing in Rishikesh",
+      "Helicopter assistance fully coordinated",
+      "Satvik vegetarian buffet dining",
     ],
-    services: ["Bus", "Helicopter", "Premium Meal", "Best Hotel", "Private"],
-    bgColor: "bg-[#e1e3f3]",
-    borderColor: "border-[#9fa8da]",
-    textColor: "text-[#3f51b5]"
   },
   {
     code: "CD-LUX-12D",
     name: "Char Dham Luxury",
-    duration: "11N / 12D",
-    cities: "Haridwar, Barkot, Uttarkashi, Guptkashi, Badrinath, Rishikesh",
-    theme: "Ultimate Comfort",
+    subtitle: "11 Nights · 12 Days",
+    route: "Dehradun · Yamunotri (Heli) · Gangotri (Heli) · Kedarnath (Heli) · Badrinath (Heli) · Rishikesh",
+    price: "₹1,45,000",
+    priceNote: "Per person, fully inclusive helicopter transfers",
+    badge: null,
     highlights: [
-      "5-star where available",
-      "Helicopter for Kedarnath & Badrinath",
-      "Personal guide and porter",
-      "VIP darshan arrangements"
+      "Chartered Helicopter flights to all four Dhams",
+      "Bypass 800+ km of strenuous mountain roads",
+      "5-star and finest available luxury resorts",
+      "VIP Darshan arrangements at all shrines",
+      "Personal travel concierge & porter service",
+      "Premium multi-cuisine Satvik buffet meals",
     ],
-    services: ["Car", "Helicopter", "Premium Meal", "Luxury Hotel", "Private"],
-    bgColor: "bg-[#fff9c4]",
-    borderColor: "border-[#fdd835]",
-    textColor: "text-[#f57f17]"
+  },
+];
+
+const FAQS = [
+  {
+    q: "When do the Char Dham shrines open for 2026?",
+    a: "The shrines typically open in late April/early May (around Akshaya Tritiya) and close in November (around Diwali). Exact 2026 dates are announced by the temple authorities in March. We will book your package aligned with the official opening dates.",
+  },
+  {
+    q: "Is biometric registration mandatory for Char Dham?",
+    a: "Yes, the Government of Uttarakhand requires biometric registration for all Char Dham pilgrims. We manage the entire registration process — you simply provide your ID proof and photograph at time of booking.",
+  },
+  {
+    q: "How difficult is the Kedarnath trek?",
+    a: "The Kedarnath trek is 18 km from Gaurikund. It is moderately challenging with steep sections. Options include walking, hiring a pony (₹1,500–2,000), using a palki/doli, or taking a helicopter from Phata/Sersi/Guptkashi. Good cardiovascular fitness is helpful but not mandatory.",
+  },
+  {
+    q: "Are helicopter services available for Kedarnath?",
+    a: "Yes. Helicopter services operate from Phata, Sersi, and Guptkashi. Since slots are limited and regulated by the state aviation authority, bookings fill months in advance. Please request a helicopter upgrade immediately upon booking.",
+  },
+  {
+    q: "What is included in the standard package price?",
+    a: "Accommodation in 3-star hotels (twin-sharing), daily vegetarian breakfast & dinner, AC coach transfers from Haridwar, spiritual tour guide, all permits and toll fees, oxygen cylinder and first-aid kit on the coach. Excluded: flights/trains to Haridwar, pony/porter fees for treks, lunch, and GST 5%.",
+  },
+  {
+    q: "What is the cancellation policy?",
+    a: "30+ days before departure: 90% refund. 15–29 days: 50% refund. Less than 15 days: No refund. In case of natural calamities or shrine closures, we offer full rescheduling or maximum possible refund after actual expense deductions.",
   },
 ];
 
 export default function CharDhamPage() {
   return (
-    <>
-      {/* SECTION 1: HERO */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <div className="bg-surface min-h-screen">
+
+      {/* 1. Cinematic Hero — Left Aligned */}
+      <section className="relative h-screen flex items-center overflow-hidden" aria-label="Char Dham Yatra">
         <Image
-          src="/images/pilgrimage/badrinath.jpg"
-          alt="Char Dham - Four Sacred Shrines"
+          src="/images/pilgrimage/chardham-card.png"
+          alt="Char Dham — Four sacred shrines of Uttarakhand"
           fill
           sizes="100vw"
           className="object-cover"
           priority
           quality={95}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight/70 via-midnight/40 to-midnight/90" />
-        
-        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto pt-16">
-          <div className="mb-6 inline-block">
-            <span className="font-sans text-xs font-bold tracking-[0.4em] uppercase text-gold bg-gold/10 backdrop-blur-sm px-6 py-2 rounded-full border border-gold/30">
-              The Sacred Circuit of Uttarakhand
-            </span>
-          </div>
-          
-          <h1 className="font-serif text-5xl md:text-7xl text-white font-light leading-[0.95] tracking-tight mb-6 drop-shadow-2xl">
-            Char Dham<br/>
-            <span className="text-gold-light font-normal italic">Yatra</span>
-          </h1>
-          
-          <p className="font-sans text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-4 font-light">
-            Badrinath • Kedarnath • Gangotri • Yamunotri
-          </p>
-          <p className="font-sans text-base text-white/70 leading-relaxed max-w-2xl mx-auto mb-10">
-            Journey to the four sacred abodes in the Himalayas — the ultimate pilgrimage that absolves sins and opens the gates to moksha
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Link
-              href="#packages"
-              className="group inline-flex items-center gap-3 font-sans text-sm font-semibold bg-gold text-midnight px-10 py-4 rounded-full hover:bg-gold-light hover:scale-105 transition-all duration-300 shadow-2xl"
-            >
-              <span>View Packages</span>
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <a
-              href="https://wa.me/917200118411?text=I'm%20interested%20in%20Char%20Dham%20Yatra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans text-sm font-medium text-white border-2 border-white/40 backdrop-blur-sm px-10 py-4 rounded-full hover:bg-white/10 hover:border-white transition-all duration-300"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              WhatsApp Inquiry
-            </a>
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/75 to-midnight/20" aria-hidden="true" />
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 max-w-5xl mx-auto">
-            {[
-              { label: "Duration", value: "10 Days", icon: "📅" },
-              { label: "Start Point", value: "Haridwar", icon: "📍" },
-              { label: "Best Season", value: "Apr-Nov", icon: "🌤️" },
-              { label: "Max Altitude", value: "3,133m", icon: "⛰️" },
-              { label: "Difficulty", value: "Moderate", icon: "💪" },
-              { label: "Price From", value: "₹35,000", icon: "💰" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="text-2xl mb-2">{stat.icon}</div>
-                <p className="font-sans text-xs text-gold uppercase tracking-wider mb-1 font-medium">
-                  {stat.label}
-                </p>
-                <p className="font-serif text-base text-white font-medium leading-tight">{stat.value}</p>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-8">
+          <div className="max-w-3xl">
+            <span className="font-sans text-xs font-bold tracking-[0.35em] uppercase text-gold mb-4 block">
+              THE SACRED CIRCUIT OF UTTARAKHAND
+            </span>
+            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-white mb-4 leading-[0.95] font-light">
+              Char Dham
+              <br />
+              <span className="italic font-normal">Yatra</span>
+            </h1>
+            <p className="font-serif text-xl md:text-2xl text-white/90 mb-4 font-light leading-snug">
+              Badrinath · Kedarnath · Gangotri · Yamunotri
+            </p>
+            <p className="font-sans text-sm md:text-base text-white/65 mb-10 leading-relaxed max-w-xl">
+              The four abodes of the divine nestled in the Himalayas of Uttarakhand — the ultimate pilgrimage that absolves sins and opens the path to moksha.
+            </p>
+
+            {/* Micro Stats */}
+            <div className="flex flex-wrap items-center gap-6 mb-10 font-sans text-xs md:text-sm text-white/80">
+              <div className="flex items-center gap-2">
+                <span className="text-white/40">Duration:</span>
+                <span className="font-semibold text-gold">10–12 Days</span>
               </div>
-            ))}
+              <div className="w-px h-4 bg-white/20" aria-hidden="true" />
+              <div className="flex items-center gap-2">
+                <span className="text-white/40">Altitude:</span>
+                <span className="font-semibold text-gold">3,583m (Kedarnath)</span>
+              </div>
+              <div className="w-px h-4 bg-white/20" aria-hidden="true" />
+              <div className="flex items-center gap-2">
+                <span className="text-white/40">From:</span>
+                <span className="font-semibold text-gold">₹33,700</span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="#packages"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-midnight font-sans text-sm font-semibold rounded hover:bg-gold/90 transition-all duration-300 min-h-11"
+              >
+                Explore Packages
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M19 9l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/inquiry?package=CD-General"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-sans text-sm font-medium rounded border border-white/20 hover:bg-white/20 transition-all duration-300 min-h-11"
+              >
+                Inquiry & Reserve
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" aria-hidden="true">
+          <span className="font-sans text-[10px] text-white/40 uppercase tracking-widest">Begin the Journey</span>
+          <div className="w-px h-10 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
+        </div>
+      </section>
+
+      {/* 2. Trust Stats */}
+      <section className="py-16 px-6 bg-white border-b border-midnight/5" aria-label="Why choose Nithyeshwar Tours">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-midnight/8 rounded-xl overflow-hidden">
+
+            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
+              <div className="w-16 h-16 mb-6 flex items-center justify-center">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
+                  <circle cx="26" cy="14" r="8" />
+                  <path d="M8 44c0-9.94 8.06-18 18-18s18 8.06 18 18" />
+                  <path d="M38 20c4 1.5 7 5.3 7 10" strokeDasharray="2 2" />
+                  <path d="M14 20c-4 1.5-7 5.3-7 10" strokeDasharray="2 2" />
+                </svg>
+              </div>
+              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">100k+</p>
+              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Pilgrims Guided</p>
+              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Over three decades guiding devoted pilgrims safely through the Char Dham circuit.</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
+              <div className="w-16 h-16 mb-6 flex items-center justify-center">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
+                  <path d="M26 6L32 18l13 2-9.5 9.2 2.2 13L26 36l-11.7 6.2 2.2-13L7 20l13-2z" />
+                </svg>
+              </div>
+              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">98%</p>
+              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Yatra Completion Rate</p>
+              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Careful pacing, medical support, and route planning ensures pilgrims complete all four dhams.</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
+              <div className="w-16 h-16 mb-6 flex items-center justify-center">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
+                  <rect x="10" y="10" width="32" height="32" rx="6" />
+                  <path d="M26 18v16M18 26h16" />
+                </svg>
+              </div>
+              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">24/7</p>
+              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Medical Support</p>
+              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Oxygen cylinders, first-aid kits, and emergency protocols on every coach throughout the journey.</p>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-10 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
+              <div className="w-16 h-16 mb-6 flex items-center justify-center">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
+                  <path d="M26 6v5M26 41v5M6 26h5M41 26h5" />
+                  <circle cx="26" cy="26" r="14" />
+                  <path d="M26 18v8l5 3" />
+                </svg>
+              </div>
+              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">30+</p>
+              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Years of Sacred Service</p>
+              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Nithyeshwar Tours has been the most trusted name in Char Dham Yatra organisation since 1993.</p>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: WHY THIS YATRA */}
-      <section className="py-20 px-6 bg-gradient-to-b from-surface to-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-midnight font-light leading-tight mb-6">
-              The Most Sacred <span className="italic text-gold-dark font-normal">Pilgrimage</span>
+      {/* 3. The Four Sacred Dhams */}
+      <section className="py-28 px-6 bg-surface" aria-labelledby="dhams-heading">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
+              FOUR ABODES OF THE DIVINE
+            </span>
+            <h2 id="dhams-heading" className="font-serif text-4xl md:text-5xl text-midnight font-normal leading-tight">
+              The Sacred Char Dham
             </h2>
-            <p className="font-sans text-lg text-midnight/70 leading-relaxed">
-              The Char Dham Yatra is considered the ultimate spiritual journey in Hinduism. Visiting these four sacred shrines — Yamunotri, Gangotri, Kedarnath, and Badrinath — is believed to wash away sins and pave the path to moksha (liberation). Nestled in the majestic Himalayas of Uttarakhand, each dham represents a unique aspect of divine energy and offers profound spiritual transformation.
-            </p>
+            <div className="w-12 h-0.5 bg-gold-dark mx-auto mt-6" aria-hidden="true" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: "🕉️",
-                title: "Four Sacred Dhams",
-                desc: "Yamunotri (Goddess Yamuna), Gangotri (Goddess Ganga), Kedarnath (Lord Shiva), Badrinath (Lord Vishnu) — the holiest circuit."
+                name: "Yamunotri",
+                deity: "Goddess Yamuna",
+                altitude: "3,293m",
+                desc: "The western source of the sacred Yamuna river. The first stop of the Char Dham circuit — pilgrims take a holy dip in the thermal hot springs of Surya Kund.",
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
+                    <path d="M16 4c0 0-8 6-8 12a8 8 0 0016 0c0-6-8-12-8-12z" />
+                    <path d="M16 20v-6M12 17l4-3 4 3" />
+                  </svg>
+                ),
               },
               {
-                icon: "✨",
-                title: "Spiritual Liberation",
-                desc: "Complete the yatra to cleanse your soul, absolve sins, and attain moksha. A journey that transforms lives."
+                name: "Gangotri",
+                deity: "Goddess Ganga",
+                altitude: "3,100m",
+                desc: "The origin of the sacred River Ganga. Pilgrims worship at the white granite temple where the celestial river first touched the earth, cleansing all sins.",
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
+                    <path d="M8 24c2-4 4-8 8-8s6 4 8 8" />
+                    <path d="M4 28c3-6 5-12 12-12s9 6 12 12" />
+                    <path d="M16 4v8" />
+                    <path d="M12 8l4-4 4 4" />
+                  </svg>
+                ),
               },
               {
-                icon: "🏔️",
-                title: "Himalayan Majesty",
-                desc: "Experience breathtaking landscapes, pristine rivers, snow-capped peaks, and the raw power of nature."
+                name: "Kedarnath",
+                deity: "Lord Shiva",
+                altitude: "3,583m",
+                desc: "One of the twelve sacred Jyotirlingas — an ancient stone temple dedicated to Lord Shiva, perched dramatically at the foot of Kedarnath Peak, accessible by an 18km trek.",
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
+                    <path d="M16 4L6 16h4v12h12V16h4z" />
+                    <path d="M12 28V20h8v8" />
+                    <circle cx="16" cy="13" r="2.5" />
+                  </svg>
+                ),
               },
               {
-                icon: "🙏",
-                title: "Ancient Traditions",
-                desc: "Participate in sacred rituals, witness evening aartis, and connect with centuries-old spiritual practices."
+                name: "Badrinath",
+                deity: "Lord Vishnu",
+                altitude: "3,133m",
+                desc: "The final and most revered dham — dedicated to Lord Vishnu seated in meditation. One of the 108 Divya Desams with a stunning backdrop of Nilkantha Peak (6,596m).",
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
+                    <path d="M16 3l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5z" />
+                    <path d="M8 18c0 5.5 3.6 10 8 10s8-4.5 8-10" />
+                  </svg>
+                ),
               },
-            ].map((exp) => (
-              <div
-                key={exp.title}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gold/10"
+            ].map((dham) => (
+              <article
+                key={dham.name}
+                className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 p-8"
               >
-                <div className="text-4xl mb-4">{exp.icon}</div>
-                <h3 className="font-serif text-xl text-midnight font-medium mb-3">{exp.title}</h3>
-                <p className="font-sans text-sm text-midnight/60 leading-relaxed">{exp.desc}</p>
-              </div>
+                <div className="w-14 h-14 rounded-xl bg-gold-dark/5 border border-gold-dark/15 flex items-center justify-center mb-6">
+                  {dham.icon}
+                </div>
+                <div className="mb-2 flex items-center justify-between">
+                  <h3 className="font-serif text-xl text-midnight font-normal">{dham.name}</h3>
+                  <span className="font-sans text-[9px] text-white/90 bg-midnight px-2 py-0.5 rounded-full uppercase tracking-wide">
+                    {dham.altitude}
+                  </span>
+                </div>
+                <p className="font-sans text-[10px] font-semibold uppercase tracking-wider text-gold-dark mb-4">{dham.deity}</p>
+                <p className="font-sans text-sm text-midnight/65 leading-relaxed flex-1">{dham.desc}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: PACKAGES */}
-      <section className="py-20 px-6 bg-surface" id="packages">
-        <div className="max-w-7xl mx-auto">
-          <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
-            CHOOSE YOUR JOURNEY
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-midnight font-normal text-center mb-4 leading-snug">
-            Char Dham Yatra Packages
-          </h2>
-          <p className="font-sans text-base text-midnight/50 text-center mb-14 max-w-2xl mx-auto leading-relaxed">
-            Select from our thoughtfully designed packages based on your comfort preferences and budget
-          </p>
+      {/* 4. Journey Route Timeline */}
+      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="timeline-heading">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
+              THE CIRCUIT ROUTE
+            </span>
+            <h2 id="timeline-heading" className="font-serif text-4xl text-midnight font-normal leading-tight">
+              The Classic Char Dham Pathway
+            </h2>
+            <p className="font-sans text-sm text-midnight/50 mt-4 max-w-md mx-auto">
+              A traditional clockwise pilgrimage circuit designed to cover all four shrines in the correct spiritual order.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="relative pl-0">
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gold-dark/20 -translate-x-1/2" aria-hidden="true" />
+            <ol className="space-y-16" role="list">
+              {[
+                {
+                  step: 1,
+                  title: "Haridwar — Gateway of the Gods",
+                  desc: "Arrive at Haridwar, attend the iconic evening Ganga Aarti at Har Ki Pauri. Begin the sacred journey with blessings from the holy Ganga.",
+                  side: "right",
+                },
+                {
+                  step: 2,
+                  title: "Yamunotri — First Dham",
+                  desc: "Drive to Janki Chatti. Trek 6km to Yamunotri Temple, take a holy dip in Surya Kund hot springs, and receive the blessings of Goddess Yamuna.",
+                  side: "left",
+                },
+                {
+                  step: 3,
+                  title: "Gangotri — Second Dham",
+                  desc: "Proceed to Uttarkashi and onward to Gangotri. Worship at the origin shrine of the sacred Ganga river at 3,100m altitude.",
+                  side: "right",
+                },
+                {
+                  step: 4,
+                  title: "Kedarnath — Third Dham",
+                  desc: "Drive to Guptkashi, then trek 18km to Kedarnath (or fly by helicopter). Receive darshan at the ancient Jyotirlinga temple amid towering Himalayan peaks.",
+                  side: "left",
+                },
+                {
+                  step: 5,
+                  title: "Badrinath — Fourth Dham",
+                  desc: "Journey to Badrinath via Joshimath. Complete the circuit with darshan at Lord Vishnu's shrine, take a holy dip in Tapt Kund, and return to Haridwar with divine blessings.",
+                  side: "right",
+                },
+              ].map((item) => (
+                <li
+                  key={item.step}
+                  className="relative grid grid-cols-[48px_1fr] md:grid-cols-[1fr_80px_1fr] items-start md:items-center gap-4 md:gap-0"
+                >
+                  {item.side === "right" ? (
+                    <>
+                      <div className="order-2 md:order-1 md:text-right md:pr-12">
+                        <h3 className="font-serif text-xl text-midnight font-normal mb-2">{item.title}</h3>
+                        <p className="font-sans text-sm text-midnight/60 leading-relaxed max-w-sm md:ml-auto">{item.desc}</p>
+                      </div>
+                      <div className="order-1 md:order-2 flex justify-center relative z-10">
+                        <div className="w-10 h-10 rounded-full bg-midnight border-2 border-gold flex items-center justify-center font-serif text-xs text-gold">{item.step}</div>
+                      </div>
+                      <div className="hidden md:block md:order-3" />
+                    </>
+                  ) : (
+                    <>
+                      <div className="hidden md:block md:order-1" />
+                      <div className="order-1 md:order-2 flex justify-center relative z-10">
+                        <div className="w-10 h-10 rounded-full bg-midnight border-2 border-gold flex items-center justify-center font-serif text-xs text-gold">{item.step}</div>
+                      </div>
+                      <div className="order-2 md:order-3 md:pl-12">
+                        <h3 className="font-serif text-xl text-midnight font-normal mb-2">{item.title}</h3>
+                        <p className="font-sans text-sm text-midnight/60 leading-relaxed max-w-sm">{item.desc}</p>
+                      </div>
+                    </>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Package Cards */}
+      <section className="py-28 px-6 bg-surface" id="packages" aria-labelledby="packages-heading">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
+              CHOOSE YOUR JOURNEY
+            </span>
+            <h2 id="packages-heading" className="font-serif text-4xl md:text-5xl text-midnight font-normal leading-tight">
+              Char Dham Yatra Packages
+            </h2>
+            <p className="font-sans text-sm text-midnight/50 mt-4">
+              Select from three thoughtfully designed packages based on your comfort preferences and budget.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {PACKAGES.map((pkg) => (
-              <div
+              <article
                 key={pkg.code}
-                className={`${pkg.bgColor} rounded-2xl overflow-hidden border-2 ${pkg.borderColor} shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1`}
+                className={`flex flex-col h-full bg-white rounded-md border-2 shadow-card hover:-translate-y-1.5 hover:shadow-ambient transition-all duration-300 ${
+                  pkg.badge
+                    ? "border-gold-dark/30 hover:border-gold-dark"
+                    : "border-midnight/5 hover:border-midnight"
+                }`}
               >
-                <div className="relative h-48 bg-gradient-to-br from-midnight/80 to-midnight/60 overflow-hidden">
-                  <Image
-                    src="/images/pilgrimage/badrinath.jpg"
-                    alt={pkg.name}
-                    fill
-                    className="object-cover mix-blend-overlay"
-                  />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                    <h3 className="font-serif text-2xl text-white font-medium mb-2 leading-tight">
-                      {pkg.name}
-                    </h3>
-                    <p className={`font-sans text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${pkg.bgColor} ${pkg.textColor}`}>
-                      {pkg.theme}
-                    </p>
+                {/* Header */}
+                <div className="p-8 border-b border-midnight/5 bg-surface-low/30">
+                  <div className="flex items-center justify-between mb-5">
+                    <span className={`font-sans text-[10px] font-bold tracking-[0.25em] uppercase px-3 py-1 rounded-full ${
+                      pkg.badge
+                        ? "bg-gold-muted/60 text-gold-dark"
+                        : "bg-midnight/5 text-midnight/50"
+                    }`}>
+                      {pkg.badge ?? pkg.code}
+                    </span>
+                    {pkg.badge && (
+                      <span className="font-sans text-[10px] font-medium text-midnight/40 tracking-wide">
+                        {pkg.code}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="font-serif text-2xl text-midnight font-normal leading-snug mb-2">{pkg.name}</h3>
+                  <p className="font-sans text-[11px] text-midnight/45 tracking-[0.15em] uppercase mb-6 font-medium">
+                    {pkg.subtitle}
+                  </p>
+                  <p className="font-sans text-[10px] text-midnight/40 mb-3 uppercase tracking-wider">Route</p>
+                  <p className="font-sans text-xs text-midnight/60 leading-relaxed">{pkg.route}</p>
+                  <div className="flex items-baseline gap-1.5 mt-5">
+                    <span className="font-sans text-xs text-midnight/50 font-light">From</span>
+                    <span className="font-serif text-3xl font-normal text-gold-dark leading-none">{pkg.price}</span>
+                    <span className="font-sans text-xs text-midnight/40 ml-1 font-light">/ person</span>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className={`font-sans text-xs tracking-[0.2em] uppercase ${pkg.textColor} font-bold`}>
-                      {pkg.code}
-                    </span>
-                    <span className="font-sans text-sm text-midnight/60 font-medium">
-                      {pkg.duration}
-                    </span>
-                  </div>
-
-                  <div className="mb-4">
-                    <p className="font-sans text-xs text-midnight/50 mb-1">Destinations:</p>
-                    <p className="font-sans text-sm text-midnight/70 leading-relaxed">
-                      {pkg.cities}
-                    </p>
-                  </div>
-
-                  <div className="mb-4">
-                    <p className="font-sans text-xs font-bold uppercase text-midnight/70 mb-2 tracking-wide">
+                {/* Body */}
+                <div className="p-8 flex-1 flex flex-col justify-between gap-7">
+                  <div>
+                    <p className="font-sans text-[10px] font-bold tracking-[0.25em] uppercase text-gold-dark mb-5">
                       Package Highlights
                     </p>
-                    <ul className="space-y-2">
-                      {pkg.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className={`${pkg.textColor} text-xs mt-0.5`}>✓</span>
-                          <span className="font-sans text-xs text-midnight/70 leading-relaxed">
-                            {highlight}
-                          </span>
+                    <ul className="space-y-3.5">
+                      {pkg.highlights.map((h) => (
+                        <li key={h} className="flex items-start gap-3">
+                          <svg className="w-4 h-4 text-gold-dark flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="font-sans text-sm text-midnight/75 font-light leading-relaxed">{h}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
+                  <p className="font-sans text-xs text-midnight/35 leading-relaxed border-t border-midnight/5 pt-5 font-light italic">
+                    {pkg.priceNote}
+                  </p>
+                </div>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {pkg.services.map((service, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-flex items-center gap-1 font-sans text-[10px] font-medium px-3 py-1.5 rounded-full bg-white/60 text-midnight/70 border border-midnight/10"
-                      >
-                        {service === "Flight" && "✈️"}
-                        {service === "Bus" && "🚌"}
-                        {service === "Car" && "🚗"}
-                        {service === "Helicopter" && "🚁"}
-                        {service === "Meal" && "🍽️"}
-                        {service === "Premium Meal" && "🍽️"}
-                        {service === "Hotel" && "🏨"}
-                        {service === "Best Hotel" && "🏨"}
-                        {service === "Luxury Hotel" && "🏨"}
-                        {service === "Private" && "🔒"}
-                        {service === "Guided" && "🗺️"}
-                        <span>{service}</span>
-                      </span>
-                    ))}
-                  </div>
-
+                {/* Footer */}
+                <div className="p-8 border-t border-midnight/5 bg-surface-low/30">
                   <Link
                     href={`/yatra/char-dham/${pkg.code}`}
-                    className={`block text-center font-sans text-sm tracking-wide font-semibold py-3 px-4 ${pkg.textColor} bg-white/80 hover:bg-white border-2 ${pkg.borderColor} rounded-lg transition-all duration-300 hover:scale-105`}
+                    className="block w-full text-center bg-midnight text-white font-sans text-sm font-semibold py-4 rounded hover:bg-navy transition-all duration-300 min-h-11 tracking-widest uppercase"
                   >
-                    VIEW DETAILS & BOOK
+                    View Details
                   </Link>
                 </div>
-              </div>
+              </article>
             ))}
+          </div>
+
+          <p className="font-sans text-xs text-midnight/40 text-center mt-10">
+            All prices are per person on twin-sharing basis. Single supplement applicable. GST 5% extra.
+          </p>
+        </div>
+      </section>
+
+      {/* 6. Expedition Standards */}
+      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
+              THE NITHYESHWAR STANDARD
+            </span>
+            <h2 id="standards-heading" className="font-serif text-4xl md:text-5xl text-midnight font-normal leading-tight">
+              Safety &amp; Service
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gold-dark/5 flex items-center justify-center border border-gold-dark/15">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#735c00" strokeWidth="1.75" aria-hidden="true">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h3 className="font-serif text-xl text-midnight font-medium">Biometric Permit Management</h3>
+              <p className="font-sans text-sm text-midnight/70 leading-relaxed">
+                We handle the mandatory Uttarakhand biometric Yatra registration, all forest permits, temple entry cards, and toll documentation on your behalf.
+              </p>
+            </article>
+
+            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gold-dark/5 flex items-center justify-center border border-gold-dark/15">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#735c00" strokeWidth="1.75" aria-hidden="true">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+              </div>
+              <h3 className="font-serif text-xl text-midnight font-medium">Medical Support on Every Coach</h3>
+              <p className="font-sans text-sm text-midnight/70 leading-relaxed">
+                Oxygen cylinders, pulse oximeters, altitude sickness medication, and a trained medical first responder accompany every group throughout the circuit.
+              </p>
+            </article>
+
+            <article className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gold-dark/5 flex items-center justify-center border border-gold-dark/15">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#735c00" strokeWidth="1.75" aria-hidden="true">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <h3 className="font-serif text-xl text-midnight font-medium">Fresh Satvik Vegetarian Meals</h3>
+              <p className="font-sans text-sm text-midnight/70 leading-relaxed">
+                Our culinary team serves hot, nutritious, pure vegetarian meals throughout the journey — Satvik style, mild in spices, designed for high-altitude digestion.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4: DETAILED ITINERARY */}
-      <section className="py-20 px-6 bg-[#f5f5f0]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl text-midnight font-normal text-center mb-16 leading-tight">
-            Day-by-Day Itinerary
-          </h2>
+      {/* 7. FAQ */}
+      <section className="py-28 px-6 bg-surface border-t border-midnight/5 pb-36" aria-labelledby="faq-heading">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
+              QUESTIONS &amp; CLARITY
+            </span>
+            <h2 id="faq-heading" className="font-serif text-4xl text-midnight font-normal leading-tight">
+              Frequently Asked Questions
+            </h2>
+          </div>
 
           <div className="space-y-3">
-            {[
-              {
-                day: "01",
-                city: "Haridwar → Barkot",
-                title: "Journey to Yamunotri Base",
-                desc: "Arrive in Haridwar, the gateway to the Char Dham Yatra. Our representative will greet you and transfer you to Barkot (220 km, 7-8 hours). En route, visit Kempty Falls in Mussoorie. Check into hotel in Barkot. Evening at leisure for acclimatization.",
-                meals: "Dinner",
-                stay: "Hotel in Barkot"
-              },
-              {
-                day: "02",
-                city: "Barkot → Yamunotri → Barkot",
-                title: "Yamunotri Darshan",
-                desc: "Early morning drive to Janki Chatti (45 km, 1.5 hours). Trek or take a pony/doli to Yamunotri Temple (6 km). Take a holy dip in Surya Kund and offer prayers to Goddess Yamuna. Visit Divya Shila. Return trek to Janki Chatti and drive back to Barkot.",
-                meals: "Breakfast, Packed Lunch, Dinner",
-                stay: "Hotel in Barkot"
-              },
-              {
-                day: "03",
-                city: "Barkot → Uttarkashi",
-                title: "Transfer to Uttarkashi",
-                desc: "After breakfast, drive to Uttarkashi (100 km, 4-5 hours), a holy town on the banks of River Bhagirathi. Visit Vishwanath Temple dedicated to Lord Shiva. Evening Ganga Aarti on the riverbank. Overnight stay in Uttarkashi.",
-                meals: "Breakfast, Lunch, Dinner",
-                stay: "Hotel in Uttarkashi"
-              },
-              {
-                day: "04",
-                city: "Uttarkashi → Gangotri → Uttarkashi",
-                title: "Gangotri Darshan",
-                desc: "Early morning drive to Gangotri (100 km, 3-4 hours) through scenic mountain roads. Visit Gangotri Temple, the origin of the sacred River Ganga. Take holy dip in the icy waters (optional). Visit Bhagirath Shila and Pandava Gufa. Return to Uttarkashi for overnight stay.",
-                meals: "Breakfast, Packed Lunch, Dinner",
-                stay: "Hotel in Uttarkashi"
-              },
-              {
-                day: "05",
-                city: "Uttarkashi → Guptkashi",
-                title: "Journey to Kedarnath Base",
-                desc: "Drive to Guptkashi (220 km, 8-9 hours) via Tehri Dam (optional stop for photo). Guptkashi is the base for Kedarnath darshan. Visit Ardh Nareshwar Temple. Check into hotel and rest for tomorrow's trek.",
-                meals: "Breakfast, Lunch, Dinner",
-                stay: "Hotel in Guptkashi"
-              },
-              {
-                day: "06",
-                city: "Guptkashi → Kedarnath",
-                title: "Kedarnath Darshan",
-                desc: "Early morning drive to Sonprayag/Gaurikund. Trek 18 km to Kedarnath (or take helicopter, pony, doli). Visit Kedarnath Temple, one of the 12 Jyotirlingas. Witness evening aarti. Overnight stay in Kedarnath (simple accommodation).",
-                meals: "Breakfast, Packed Lunch, Dinner",
-                stay: "Guest House in Kedarnath"
-              },
-              {
-                day: "07",
-                city: "Kedarnath → Guptkashi",
-                title: "Morning Darshan & Return",
-                desc: "Early morning darshan at Kedarnath Temple. After prayers and rituals, trek back to Gaurikund. Drive to Guptkashi for overnight stay. Rest and recuperate after the challenging trek.",
-                meals: "Breakfast, Lunch, Dinner",
-                stay: "Hotel in Guptkashi"
-              },
-              {
-                day: "08",
-                city: "Guptkashi → Badrinath",
-                title: "Journey to Badrinath",
-                desc: "Drive to Badrinath (190 km, 8-9 hours) via Joshimath. En route, visit Narsingh Temple in Joshimath. Reach Badrinath by evening. Visit Tapt Kund for holy bath. Attend evening aarti at Badrinath Temple. Overnight in Badrinath.",
-                meals: "Breakfast, Lunch, Dinner",
-                stay: "Hotel in Badrinath"
-              },
-              {
-                day: "09",
-                city: "Badrinath → Rudraprayag",
-                title: "Badrinath Darshan & Departure",
-                desc: "Early morning darshan at Badrinath Temple. Visit Mana Village (last village before Tibet border), Vyas Gufa, Ganesh Gufa, and Bhim Pul. After lunch, drive to Rudraprayag (160 km, 7 hours). Overnight stay.",
-                meals: "Breakfast, Lunch, Dinner",
-                stay: "Hotel in Rudraprayag"
-              },
-              {
-                day: "10",
-                city: "Rudraprayag → Haridwar",
-                title: "Return Journey",
-                desc: "After breakfast, drive back to Haridwar (160 km, 6-7 hours). Visit Devprayag (confluence of Alaknanda and Bhagirathi) en route. Reach Haridwar by evening. Transfer to railway station/airport. Yatra concludes with divine blessings.",
-                meals: "Breakfast, Lunch",
-                stay: "End of Yatra"
-              },
-            ].map((day) => (
+            {FAQS.map((faq, i) => (
               <details
-                key={day.day}
-                className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                key={i}
+                className="group bg-white rounded-md overflow-hidden shadow-ambient border border-midnight/5 hover:border-gold-dark/15 transition-colors duration-300"
               >
-                <summary className="flex items-center justify-between cursor-pointer px-8 py-6 hover:bg-gray-50 transition-colors list-none">
-                  <div className="flex items-center gap-6 flex-1">
-                    <span className="font-sans text-xs tracking-[0.2em] uppercase text-[#8B7355] font-semibold shrink-0">
-                      DAY {day.day}
-                    </span>
-                    <div className="flex-1">
-                      <h3 className="font-serif text-xl text-midnight font-normal mb-1">{day.title}</h3>
-                      <p className="font-sans text-sm text-[#B8860B]">{day.city}</p>
-                    </div>
-                  </div>
+                <summary className="flex items-center justify-between cursor-pointer px-6 py-5 hover:bg-surface-low transition-colors list-none">
+                  <h3 className="font-serif text-lg text-midnight font-normal pr-4 leading-snug">{faq.q}</h3>
                   <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="shrink-0 transition-transform group-open:rotate-180 text-midnight/40"
+                    width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                    className="shrink-0 transition-transform duration-300 group-open:rotate-180 text-midnight/40"
+                    aria-hidden="true"
                   >
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </summary>
-                <div className="px-8 pb-6 pt-2">
-                  <p className="font-sans text-base text-midnight/70 leading-relaxed mb-4">
-                    {day.desc}
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <span className="font-sans text-xs font-semibold text-midnight/50 uppercase tracking-wide">Meals:</span>
-                      <p className="font-sans text-midnight/70">{day.meals}</p>
-                    </div>
-                    <div>
-                      <span className="font-sans text-xs font-semibold text-midnight/50 uppercase tracking-wide">Stay:</span>
-                      <p className="font-sans text-midnight/70">{day.stay}</p>
-                    </div>
-                  </div>
+                <div className="px-6 pb-6 pt-1">
+                  <p className="font-sans text-sm text-midnight/70 leading-relaxed">{faq.a}</p>
                 </div>
               </details>
             ))}
@@ -433,168 +582,6 @@ export default function CharDhamPage() {
         </div>
       </section>
 
-      {/* SECTION 5: INCLUSIONS & EXCLUSIONS */}
-      <section className="py-20 px-6 bg-surface-low">
-        <div className="max-w-6xl mx-auto">
-          <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
-            WHAT'S COVERED
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-midnight font-normal text-center mb-14 leading-snug">
-            Package Inclusions & Exclusions
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg p-8">
-              <h3 className="font-sans text-sm font-bold tracking-[0.2em] uppercase text-[#15803d] mb-6 flex items-center gap-2">
-                <span className="text-xl">✓</span> INCLUDED IN PACKAGE
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  "Accommodation on twin sharing basis in hotels/guest houses",
-                  "All meals (breakfast, lunch, dinner) - Pure vegetarian",
-                  "Transportation by AC tempo traveler/bus (Haridwar to Haridwar)",
-                  "Professional tour guide throughout the journey",
-                  "All permit fees and entrance charges",
-                  "Parking fees, toll taxes, driver allowance",
-                  "First aid medical kit and oxygen cylinder",
-                  "All currently applicable taxes",
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-midnight/70 font-sans text-sm leading-relaxed">
-                    <span className="text-[#15803d] text-sm mt-1 shrink-0">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg p-8">
-              <h3 className="font-sans text-sm font-bold tracking-[0.2em] uppercase text-[#991b1b] mb-6 flex items-center gap-2">
-                <span className="text-xl">✗</span> NOT INCLUDED
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  "Airfare/train fare to and from Haridwar",
-                  "Personal expenses (laundry, telephone, tips, etc.)",
-                  "Helicopter tickets for Kedarnath/Badrinath",
-                  "Pony/doli/porter charges for Yamunotri and Kedarnath trek",
-                  "Any adventure activities or optional tours",
-                  "Travel insurance and medical expenses",
-                  "Any meals not mentioned in inclusions",
-                  "Monument entrance fees at sightseeing places",
-                  "Costs arising from natural calamities, roadblocks, or flight/train delays",
-                  "GST 5% (applicable on total package cost)",
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-midnight/50 font-sans text-sm leading-relaxed">
-                    <span className="text-[#991b1b] text-sm mt-1 shrink-0">✗</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6: ACCOMMODATION */}
-      <section className="py-20 px-6 bg-surface">
-        <div className="max-w-6xl mx-auto">
-          <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
-            WHERE YOU'LL STAY
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-midnight font-normal text-center mb-14 leading-snug">
-            Accommodation Details
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { location: "Barkot", hotel: "Hotel Himalayan Nature Resort / Similar", category: "3 Star Hotel" },
-              { location: "Uttarkashi", hotel: "Hotel Shiv Murti / Similar", category: "3 Star Hotel" },
-              { location: "Guptkashi", hotel: "Hotel Mandakini / Similar", category: "3 Star Hotel" },
-              { location: "Kedarnath", hotel: "Govt/Private Guest House", category: "Basic Accommodation" },
-              { location: "Badrinath", hotel: "Hotel Narayan Palace / Similar", category: "3 Star Hotel" },
-              { location: "Rudraprayag", hotel: "Hotel Tulip / Similar", category: "3 Star Hotel" },
-            ].map((item) => (
-              <div key={item.location} className="bg-white rounded-xl overflow-hidden shadow-lg p-6 hover:-translate-y-1 transition-all duration-300">
-                <p className="font-sans text-xs font-bold tracking-[0.15em] uppercase text-gold-dark mb-2">
-                  🏨 {item.location}
-                </p>
-                <h3 className="font-serif text-lg text-midnight font-medium mb-1">{item.hotel}</h3>
-                <p className="font-sans text-sm text-midnight/50">{item.category}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 bg-gold-muted rounded-xl p-6 text-center">
-            <p className="font-sans text-sm text-midnight/70 leading-relaxed">
-              <strong>Note:</strong> Accommodation in Kedarnath is basic due to high altitude and limited infrastructure. All other locations feature comfortable 3-star hotels with modern amenities.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7: IMPORTANT INFORMATION */}
-      <section className="py-20 px-6 bg-[#f5f5f0]">
-        <div className="max-w-5xl mx-auto">
-          <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
-            ESSENTIAL DETAILS
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-midnight font-normal text-center mb-14 leading-snug">
-            Important Yatra Information
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[
-              { label: "Start & End Point", value: "Haridwar", icon: "📍" },
-              { label: "Total Duration", value: "9 Nights / 10 Days", icon: "📅" },
-              { label: "Max Altitude", value: "3,133m (Kedarnath)", icon: "⛰️" },
-              { label: "Best Time", value: "April to November", icon: "🌤️" },
-              { label: "Temperature Range", value: "5°C to 25°C", icon: "🌡️" },
-              { label: "Trek Distance", value: "18 km (Kedarnath)", icon: "🥾" },
-              { label: "Difficulty Level", value: "Moderate", icon: "💪" },
-              { label: "Group Size", value: "10-20 people", icon: "👥" },
-              { label: "Meal Type", value: "Pure Vegetarian", icon: "🍽️" },
-            ].map((info) => (
-              <div key={info.label} className="bg-white rounded-xl overflow-hidden shadow-md p-6">
-                <div className="text-3xl mb-3">{info.icon}</div>
-                <p className="font-sans text-xs text-gold-dark font-semibold mb-2 tracking-wide uppercase">
-                  {info.label}
-                </p>
-                <p className="font-serif text-lg text-midnight font-medium">{info.value}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8">
-              <h3 className="font-sans text-sm font-bold tracking-[0.2em] uppercase text-midnight mb-6">
-                🏥 Health & Fitness
-              </h3>
-              <ul className="space-y-3 font-sans text-sm text-midnight/70 leading-relaxed">
-                <li>• Moderate fitness level required</li>
-                <li>• Ability to trek 18 km at altitude</li>
-                <li>• Not recommended for serious heart/lung conditions</li>
-                <li>• Consult doctor before booking if you have health concerns</li>
-                <li>• Carry personal medications</li>
-                <li>• We provide oxygen cylinder and first aid</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl p-8">
-              <h3 className="font-sans text-sm font-bold tracking-[0.2em] uppercase text-midnight mb-6">
-                🎒 What to Pack
-              </h3>
-              <ul className="space-y-3 font-sans text-sm text-midnight/70 leading-relaxed">
-                <li>• Warm clothing (jacket, sweater, thermals)</li>
-                <li>• Comfortable trekking shoes</li>
-                <li>• Rain gear and umbrella</li>
-                <li>• Personal toiletries and medications</li>
-                <li>• Sunglasses, sunscreen, cap</li>
-                <li>• Valid ID proof and photographs</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }

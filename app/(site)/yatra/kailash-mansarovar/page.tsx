@@ -412,7 +412,7 @@ export default function KailashMansarovarPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Package 1: Helicopter Route */}
-            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-midnight transition-all duration-300">
+            <article className="flex flex-col h-full bg-white rounded-md border-2 border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-midnight transition-all duration-300">
               {/* Header */}
               <div className="p-8 border-b border-midnight/5 bg-surface-low/30">
                 <div className="flex items-center justify-between mb-5">
@@ -440,7 +440,7 @@ export default function KailashMansarovarPage() {
 
               {/* Body */}
               <div className="p-8 flex-1 flex flex-col justify-between gap-7">
-                <p className="font-sans text-sm text-midnight/60 leading-relaxed font-light">
+                <p className="font-sans text-sm text-midnight/60 leading-relaxed font-light line-clamp-3">
                   Our fastest and most convenient route. Bypass days of strenuous mountain driving with chartered helicopter transfers, ideal for senior citizens and families seeking maximum safety.
                 </p>
 
@@ -484,7 +484,7 @@ export default function KailashMansarovarPage() {
             </article>
 
             {/* Package 2: Overland Coach Route */}
-            <article className="flex flex-col bg-white rounded-md border border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-midnight transition-all duration-300">
+            <article className="flex flex-col h-full bg-white rounded-md border-2 border-midnight/5 shadow-card hover:-translate-y-1.5 hover:shadow-ambient hover:border-midnight transition-all duration-300">
               {/* Header */}
               <div className="p-8 border-b border-midnight/5 bg-surface-low/30">
                 <div className="flex items-center justify-between mb-5">
@@ -512,7 +512,7 @@ export default function KailashMansarovarPage() {
 
               {/* Body */}
               <div className="p-8 flex-1 flex flex-col justify-between gap-7">
-                <p className="font-sans text-sm text-midnight/60 leading-relaxed font-light">
+                <p className="font-sans text-sm text-midnight/60 leading-relaxed font-light line-clamp-3">
                   A gradual altitude adaptation pathway driving through beautiful Tibetan plateaus. A cost-effective, budget-conscious option perfect for vloggers, spiritual seekers, and seasoned hikers.
                 </p>
 

@@ -2,6 +2,10 @@ import Image from "next/image";
 import { Timeline } from "@/components/sections/Timeline";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
+import { AwardsSection } from "@/components/sections/AwardsSection";
+import { TeamSection } from "@/components/sections/TeamSection";
+import { StatsSection } from "@/components/sections/StatsSection";
+import { CertificationsSection } from "@/components/sections/CertificationsSection";
 import { getTestimonials } from "@/lib/strapi";
 import type { Metadata } from "next";
 
@@ -105,6 +109,14 @@ export default async function AboutPage() {
       </section>
 
       <Timeline />
+
+      <StatsSection />
+
+      <AwardsSection />
+
+      <CertificationsSection />
+
+      <TeamSection />
 
       {/* Testimonials */}
       <section className="py-32 px-6 bg-surface">

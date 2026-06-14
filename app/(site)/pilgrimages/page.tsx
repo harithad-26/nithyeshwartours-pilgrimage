@@ -17,7 +17,7 @@ const YATRAS = [
     durationRange: "10N / 11D",
     priceRange: "₹1,85,000+",
     description: "Journey to Lord Shiva's eternal abode at 6,714m. Sacred parikrama of Mount Kailash and holy dip in Lake Mansarovar.",
-    img: "/images/pilgrimage/badrinath.jpg",
+    img: "/images/pilgrimage/kailash-card.png",
     badge: "ULTIMATE",
     href: "/yatra/kailash-mansarovar",
   },
@@ -29,7 +29,7 @@ const YATRAS = [
     durationRange: "10-14 Days",
     priceRange: "₹33,700+",
     description: "Yamunotri, Gangotri, Kedarnath, and Badrinath — the supreme Himalayan circuit.",
-    img: "/images/pilgrimage/badrinath.jpg",
+    img: "/images/pilgrimage/chardham-card.png",
     badge: "PREMIUM",
     href: "/yatra/char-dham",
   },
@@ -41,7 +41,7 @@ const YATRAS = [
     durationRange: "3-7 Days",
     priceRange: "₹18,500+",
     description: "Walk the ancient ghats, witness Ganga Aarti, and experience the spiritual heart of India.",
-    img: "/images/india-states/varanasi-ghats.jpg",
+    img: "/images/pilgrimage/varanasi-card.png",
     badge: "ICONIC",
     href: "/yatra/varanasi",
   },
@@ -53,7 +53,7 @@ const YATRAS = [
     durationRange: "3-7 Days",
     priceRange: "₹15,000+",
     description: "Shorter pilgrimages — Haridwar-Rishikesh, Do Dham (Kedarnath-Badrinath), or Kedarnath-only packages.",
-    img: "/images/pilgrimage/badrinath.jpg",
+    img: "/images/pilgrimage/uttarakhand-card.png",
     badge: "FLEXIBLE",
     href: "/yatra/uttarakhand",
   },
@@ -65,7 +65,7 @@ const YATRAS = [
     durationRange: "5-8 Days",
     priceRange: "₹22,000+",
     description: "Complete spiritual circuit covering the holy cities of UP and Bihar — Kashi, Ram Janmabhoomi, Sangam, and Pitru Tarpan.",
-    img: "/images/india-states/varanasi-ghats.jpg",
+    img: "/images/pilgrimage/uttarpradesh-card.png",
     badge: "EXTENDED",
     href: "/yatra/uttar-pradesh",
   },
@@ -98,10 +98,10 @@ export default function PilgrimagesPage() {
               <Link
                 key={yatra.id}
                 href={yatra.href}
-                className="group relative rounded-md overflow-hidden h-[420px] block bg-white shadow-ambient hover:shadow-card transition-shadow duration-300"
+                className="group relative rounded-md overflow-hidden h-full flex flex-col bg-white shadow-ambient hover:shadow-card transition-shadow duration-300"
               >
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-52 overflow-hidden">
                   <Image
                     src={yatra.img}
                     alt={yatra.name}
@@ -130,9 +130,9 @@ export default function PilgrimagesPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex flex-col gap-3">
-                  <div>
-                    <h3 className="font-serif text-2xl text-midnight font-normal leading-snug mb-1">
+                <div className="p-6 flex flex-col gap-4 flex-grow">
+                  <div className="space-y-1.5">
+                    <h3 className="font-serif text-2xl text-midnight font-normal leading-tight">
                       {yatra.name}
                     </h3>
                     <p className="font-sans text-sm text-gold-dark font-medium">
@@ -140,24 +140,27 @@ export default function PilgrimagesPage() {
                     </p>
                   </div>
 
-                  <p className="font-sans text-sm text-midnight/60 leading-relaxed line-clamp-2">
+                  <p className="font-sans text-sm text-midnight/60 leading-relaxed line-clamp-2 flex-grow">
                     {yatra.description}
                   </p>
 
                   {/* Footer */}
-                  <div className="flex items-center justify-between pt-3 mt-auto border-t border-surface-low">
-                    <div className="flex gap-4">
+                  <div className="flex items-center justify-between pt-4 mt-auto border-t border-surface-low">
+                    <div className="flex items-center gap-6 md:gap-8">
                       <div>
-                        <p className="font-sans text-xs text-midnight/40 mb-0.5">Duration</p>
-                        <p className="font-sans text-sm text-midnight font-medium">{yatra.durationRange}</p>
+                        <p className="font-sans text-[10px] uppercase tracking-wider text-midnight/40 mb-0.5">Duration</p>
+                        <p className="font-sans text-sm text-midnight font-semibold">{yatra.durationRange}</p>
                       </div>
+                      <div className="h-8 w-px bg-midnight/10 self-center" aria-hidden="true" />
                       <div>
-                        <p className="font-sans text-xs text-midnight/40 mb-0.5">Starting from</p>
-                        <p className="font-serif text-lg text-midnight font-normal">{yatra.priceRange}</p>
+                        <p className="font-sans text-[10px] uppercase tracking-wider text-midnight/40 mb-0.5">Starting from</p>
+                        <p className="font-serif text-lg text-gold-dark font-semibold leading-none">{yatra.priceRange}</p>
                       </div>
                     </div>
-                    <div className="font-sans text-xs font-semibold text-gold-dark group-hover:text-midnight transition-colors">
-                      View Packages →
+                    <div className="w-8 h-8 rounded-full border border-gold-dark/20 flex items-center justify-center text-gold-dark group-hover:bg-gold-dark group-hover:border-gold-dark group-hover:text-white transition-all duration-300 shrink-0">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="transition-transform duration-300 group-hover:translate-x-0.5">
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
                     </div>
                   </div>
                 </div>

@@ -22,7 +22,7 @@ const SPIRITUAL_PORTALS = [
   {
     name: "Uttar Pradesh",
     label: "Varanasi · Ayodhya · Allahabad · Gaya",
-    img: "/images/india-states/varanasi-ghats.jpg",
+    img: "/images/india-states/varanasi-ghats-v3.png",
     href: "/yatra/uttar-pradesh",
     colSpan: "col-span-12 md:col-span-5",
     large: false,
@@ -30,7 +30,7 @@ const SPIRITUAL_PORTALS = [
   {
     name: "Tamil Nadu",
     label: "Tirupati · Trichy · Rameswaram · Madurai",
-    img: "/images/india-states/tamil-nadu.jpg",
+    img: "/images/india-states/tamil-nadu-v4.png",
     href: "/yatra/tamil-nadu",
     colSpan: "col-span-12 md:col-span-5",
     large: false,
@@ -38,7 +38,7 @@ const SPIRITUAL_PORTALS = [
   {
     name: "Odisha",
     label: "Jagannath Puri · Konark · Bhubaneswar",
-    img: "/images/india-states/odisha.jpg",
+    img: "/images/india-states/odisha-v3.png",
     href: "/yatra/odisha",
     colSpan: "col-span-12 md:col-span-7",
     large: true,
@@ -46,7 +46,7 @@ const SPIRITUAL_PORTALS = [
   {
     name: "Gujarat",
     label: "Somnath · Dwarka · Palitana · Girnar",
-    img: "/images/india-states/somnath.jpg",
+    img: "/images/india-states/somnath-photo.png",
     href: "/yatra/gujarat",
     colSpan: "col-span-12 md:col-span-6",
     large: false,
@@ -54,7 +54,7 @@ const SPIRITUAL_PORTALS = [
   {
     name: "Madhya Pradesh",
     label: "Ujjain · Omkareshwar · Maheshwar · Khajuraho",
-    img: "/images/india-states/madhya-pradesh.jpg",
+    img: "/images/india-states/madhya-pradesh-photo.png",
     href: "/yatra/madhya-pradesh",
     colSpan: "col-span-12 md:col-span-6",
     large: false,

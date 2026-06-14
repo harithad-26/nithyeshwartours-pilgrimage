@@ -235,7 +235,7 @@ function PackageSuggestionCard({ card }: { card: SuggestionCard }) {
           href="/inquiry"
           className="mt-auto pt-3 font-sans text-xs font-bold tracking-widest uppercase text-gold-dark hover:text-navy transition-colors duration-300 focus-visible:outline-gold"
         >
-          Enquire About This Package →
+          Enquire About This Package
         </Link>
       </div>
     </article>

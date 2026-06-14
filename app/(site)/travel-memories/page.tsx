@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 const GALLERY_ROW_1 = [
   {
-    src: "/images/india-states/varanasi-ghats.jpg",
+    src: "/images/india-states/varanasi-ghats-v3.png",
     caption: "Varanasi Ghats",
     colSpan: "col-span-12 md:col-span-8",
     height: "h-[480px]",
   },
   {
-    src: "/images/india-states/himachal.jpg",
+    src: "/images/india-states/himachal-photo.png",
     caption: "Himalayan Paths",
     colSpan: "col-span-12 md:col-span-4",
     height: "h-[480px]",
@@ -25,19 +25,19 @@ const GALLERY_ROW_1 = [
 
 const GALLERY_ROW_2 = [
   {
-    src: "/images/india-states/tamil-nadu.jpg",
+    src: "/images/india-states/tamil-nadu-v4.png",
     caption: "Tamil Nadu Temples",
     colSpan: "col-span-12 md:col-span-4",
     height: "h-72",
   },
   {
-    src: "/images/india-states/odisha.jpg",
+    src: "/images/india-states/odisha-v3.png",
     caption: "Jagannath Puri",
     colSpan: "col-span-12 md:col-span-4",
     height: "h-72",
   },
   {
-    src: "/images/india-states/rajasthan.jpg",
+    src: "/images/india-states/rajasthan-photo.png",
     caption: "Rajasthan Palaces",
     colSpan: "col-span-12 md:col-span-4",
     height: "h-72",
@@ -52,7 +52,7 @@ const GALLERY_ROW_3 = [
     height: "h-[420px]",
   },
   {
-    src: "/images/india-states/kashmir.jpg",
+    src: "/images/india-states/kashmir-photo.png",
     caption: "Kashmir Valley",
     colSpan: "col-span-12 md:col-span-8",
     height: "h-[420px]",
@@ -67,13 +67,13 @@ const GALLERY_ROW_4 = [
     height: "h-80",
   },
   {
-    src: "/images/india-states/goa.jpg",
+    src: "/images/india-states/goa-photo.png",
     caption: "Sacred Goa",
     colSpan: "col-span-12 md:col-span-3",
     height: "h-80",
   },
   {
-    src: "/images/india-states/hampi.jpg",
+    src: "/images/india-states/hampi-photo.png",
     caption: "Hampi Ruins",
     colSpan: "col-span-12 md:col-span-4",
     height: "h-80",

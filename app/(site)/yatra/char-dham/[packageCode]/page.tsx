@@ -283,8 +283,8 @@ const PACKAGES = {
     tagline: "Premium Spiritual Experience",
     description: "Upgrade to deluxe lodging, premium AC SUV travel, pre-arranged VIP Darshan lines, and a dedicated day in the yoga capital Rishikesh.",
     heroImage: {
-      src: "/images/pilgrimage/badrinath.jpg",
-      alt: "Kedarnath Temple and Mountains",
+      src: "/images/pilgrimage/chardham-card.png",
+      alt: "Char Dham Sacred Circuit — Four Himalayan Shrines",
     },
     duration: {
       days: 11,
@@ -567,8 +567,8 @@ const PACKAGES = {
     tagline: "Ultimate Himalayan Comfort",
     description: "The gold-standard Char Dham expedition. Fly to the shrines via chartered helicopter services bypassing the long drives, stay in the finest resorts, and receive VIP temple services.",
     heroImage: {
-      src: "/images/pilgrimage/badrinath.jpg",
-      alt: "Helicopter at Badrinath Shrine",
+      src: "/images/pilgrimage/gallery_helicopter.png",
+      alt: "Chartered Helicopter over the Himalayan Peaks",
     },
     duration: {
       days: 12,

@@ -149,7 +149,7 @@ export default function LuxuryPackageDetailTabs({ packageData }: LuxuryPackageDe
             <p className="font-sans text-[10px] font-bold tracking-[0.25em] uppercase text-gold-dark mb-2">Expedition Readiness</p>
             <h2 className="font-serif text-3xl text-midnight font-light">Pre-Departure Guide</h2>
           </div>
-          <LuxuryPreDepartureTab data={packageData.preDeparture} />
+          <LuxuryPreDepartureTab data={packageData.preDeparture} maxAltitude={packageData.maxAltitude} />
         </section>
 
         {/* 7. FAQs */}

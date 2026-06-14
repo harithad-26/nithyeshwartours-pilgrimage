@@ -33,26 +33,6 @@ export default function IndiaPage() {
           <StateGrid />
         </div>
       </section>
-
-      {/* Closing quote — light surface-low section matching Figma */}
-      <section className="py-20 px-6 bg-surface-low">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Decorative lotus/om icon */}
-          <div className="flex justify-center mb-6" aria-hidden="true">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="text-gold-dark opacity-60">
-              <path d="M16 4C16 4 8 10 8 18C8 22.4 11.6 26 16 26C20.4 26 24 22.4 24 18C24 10 16 4 16 4Z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-              <path d="M16 26C16 26 10 22 6 18C10 16 13 17 16 20C19 17 22 16 26 18C22 22 16 26 16 26Z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-              <circle cx="16" cy="16" r="2" fill="currentColor"/>
-            </svg>
-          </div>
-          <p className="font-serif text-4xl md:text-5xl text-midnight font-normal leading-snug">
-            &ldquo;A Sacred Journey Awaits&rdquo;
-          </p>
-          <p className="font-sans text-xs text-gold-dark mt-6 tracking-[0.2em] uppercase font-semibold">
-            A Sacred Journey Awaits
-          </p>
-        </div>
-      </section>
     </>
   );
 }

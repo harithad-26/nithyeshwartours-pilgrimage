@@ -15,6 +15,22 @@ const LOCATION_DESCRIPTIONS: Record<string, string> = {
   Manasarovar: "Altitude: 4,550m. The holy freshwater lake. Offers breathtaking mirror views of the South Face of Kailash. Features sunrise baths and Vedic fireside puja rituals.",
   Dirapuk: "Altitude: 4,860m. The first basecamp of the 52km Parikrama. Sits directly opposite the colossal North Face of Mt. Kailash, offering pristine close-up darshan.",
   Zutulpuk: "Altitude: 4,600m. The final basecamp after descending from Dolma La Pass (5,630m). Home to the sacred cave temple of Milarepa and tranquil riverside meadows.",
+  Pokhara: "Altitude: 822m. The scenic lake city at the foothills of the Annapurna range. Features tranquil Phewa Lake boat rides, spectacular Sarangkot Himalayan sunrises, and visits to the Gupteshwar Mahadev cave shrine.",
+  "Ranipauwa (Muktinath)": "Altitude: 3,720m. High-altitude village situated at the base of the sacred Muktinath Temple in the Mustang region. Surrounded by stunning, cold winds and panoramic Himalayan landscapes.",
+  "Chitwan National Park": "Altitude: 150m. World-renowned UNESCO wildlife sanctuary in the southern plains. Known for its rich sal forests, canoeing on the Rapti river, Tharu cultural shows, and elephant/jeep safaris.",
+  Varanasi: "Altitude: 80m. Kashi, the world's oldest living city. Home to the sacred Kashi Vishwanath temple, predawn and evening Ganga Aarti ceremonies, and peaceful boat rides on the Ganges River.",
+  Gorakhpur: "Altitude: 100m. Historic city in eastern Uttar Pradesh. Features check-in and final darshan visits at the legendary Gorakhnath Temple, acting as our cross-border transit gateway.",
+  Lumbini: "Altitude: 150m. The sacred birthplace of Lord Buddha and a UNESCO World Heritage site. Home to the Maya Devi Temple, the Ashoka Pillar, and beautiful monasteries from across the world.",
+  Barkot: "Altitude: 1,220m. A peaceful town on the banks of the Yamuna River, serving as our gateway before embarking on the trek to Yamunotri.",
+  Uttarkashi: "Altitude: 1,158m. A holy city on the banks of the Bhagirathi River. Home to the historic Kashi Vishwanath Temple.",
+  Guptkashi: "Altitude: 1,319m. Located in the Mandakini river valley on the road to Kedarnath, home to the ancient Vishwanath temple.",
+  Kedarnath: "Altitude: 3,583m. The sacred basecamp right opposite the Kedarnath temple. Features clean, simple pilgrim shelter stays surrounded by snowy peaks.",
+  Badrinath: "Altitude: 3,133m. Nestled in a scenic valley between Nar and Narayana mountain ranges, featuring thermal springs and majestic temple views.",
+  Rudraprayag: "Altitude: 895m. The sacred confluence of the Alaknanda and Mandakini rivers, providing a serene rest stop during the return leg.",
+  Rishikesh: "Altitude: 340m. The world yoga capital, featuring relaxing river walks, Parmarth Niketan evening Ganga Aarti, and wellness retreats.",
+  Dehradun: "Altitude: 450m. The scenic capital city of Uttarakhand and our flight launching point. Offers premium hospitality before boarding heli flights.",
+  Kharsali: "Altitude: 2,675m. The helicopter landing site for Yamunotri, featuring beautiful views and comfortable cottage camps.",
+  Harsil: "Altitude: 2,620m. A gorgeous mountain valley filled with dense deodar forests and apple orchards, serving as our base for Gangotri.",
 };
 
 export default function LuxuryHotelsTab({ hotels }: LuxuryHotelsTabProps) {
@@ -81,32 +97,38 @@ export default function LuxuryHotelsTab({ hotels }: LuxuryHotelsTabProps) {
               </div>
             </button>
 
-            {/* Collapsible Details */}
-            {isExpanded && (
-              <div className="px-6 pb-6 border-t border-midnight/5 bg-[#FAFAF9] animate-[fadeIn_0.3s_ease-out]">
-                <div className="pt-6 space-y-4">
-                  <div>
-                    <h4 className="font-sans text-[10px] text-midnight/65 uppercase tracking-wider font-semibold mb-2">
-                      About this Basecamp Stop
-                    </h4>
-                    <p className="font-sans text-sm text-midnight/70 leading-relaxed font-light">
-                      {description}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-x-8 gap-y-2 pt-2 text-xs text-midnight/60 font-light border-t border-midnight/5">
+            {/* Collapsible Details — CSS grid height animation */}
+            <div
+              className={`grid transition-[grid-template-rows] duration-350 ease-in-out ${
+                isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+              }`}
+            >
+              <div className="overflow-hidden min-h-0">
+                <div className="px-6 pb-6 border-t border-midnight/5 bg-[#FAFAF9]">
+                  <div className="pt-6 space-y-4">
                     <div>
-                      <span className="font-semibold text-midnight">Type:</span> {hotel.category} Accommodation
+                      <h4 className="font-sans text-[10px] text-midnight/65 uppercase tracking-wider font-semibold mb-2">
+                        About this Basecamp Stop
+                      </h4>
+                      <p className="font-sans text-sm text-midnight/70 leading-relaxed font-light">
+                        {description}
+                      </p>
                     </div>
-                    {hotel.nights && (
+
+                    <div className="flex flex-wrap gap-x-8 gap-y-2 pt-2 text-xs text-midnight/60 font-light border-t border-midnight/5">
                       <div>
-                        <span className="font-semibold text-midnight">Duration:</span> {hotel.nights} {hotel.nights === 1 ? 'Night' : 'Nights'} stay
+                        <span className="font-semibold text-midnight">Type:</span> {hotel.category} Accommodation
                       </div>
-                    )}
+                      {hotel.nights && (
+                        <div>
+                          <span className="font-semibold text-midnight">Duration:</span> {hotel.nights} {hotel.nights === 1 ? 'Night' : 'Nights'} stay
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         );
       })}

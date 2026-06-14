@@ -148,7 +148,7 @@ export function InquiryForm() {
         disabled={status === "loading"}
         aria-busy={status === "loading"}
       >
-        {status === "loading" ? "Sending…" : "Submit Inquiry →"}
+        {status === "loading" ? "Sending…" : "Submit Inquiry"}
       </Button>
     </form>
   );

@@ -7,6 +7,7 @@ import type {
   StrapiResponse,
   StrapiListResponse,
 } from "./types";
+import { MOCK_INDIA_PACKAGES, populatePackageDetails, mockTestimonials } from "./mockIndiaData";
 
 const STRAPI_URL = process.env.STRAPI_URL ?? "http://localhost:1337";
 const STRAPI_TOKEN = process.env.STRAPI_API_TOKEN ?? "";
@@ -43,14 +44,24 @@ export async function getFeaturedPackages(): Promise<Package[]> {
         "pagination[limit]": "6",
       }
     );
-    return data.data;
+    return data.data && data.data.length > 0
+      ? data.data
+      : MOCK_INDIA_PACKAGES.filter((p) => p.isFeatured).map(populatePackageDetails);
   } catch {
-    return [];
+    return MOCK_INDIA_PACKAGES.filter((p) => p.isFeatured).map(populatePackageDetails);
   }
 }
 
 export async function getPackagesByDestination(destination: string): Promise<Package[]> {
   try {
+    // If it's a local mock destination, query mock packages
+    const mockPackages = MOCK_INDIA_PACKAGES.filter(
+      (p) => p.destination.toLowerCase() === destination.toLowerCase()
+    );
+    if (mockPackages.length > 0) {
+      return mockPackages.map(populatePackageDetails);
+    }
+
     const data = await strapiGet<StrapiListResponse<Package>>(
       "/packages",
       ["packages", `packages-${destination}`],
@@ -67,6 +78,9 @@ export async function getPackagesByDestination(destination: string): Promise<Pac
 }
 
 export async function getPackageBySlug(slug: string): Promise<Package | null> {
+  const mockPkg = MOCK_INDIA_PACKAGES.find((p) => p.slug === slug);
+  if (mockPkg) return populatePackageDetails(mockPkg);
+
   try {
     const data = await strapiGet<StrapiListResponse<Package>>(
       "/packages",
@@ -83,15 +97,17 @@ export async function getPackageBySlug(slug: string): Promise<Package | null> {
 }
 
 export async function getAllPackageSlugs(): Promise<string[]> {
+  const mockSlugs = MOCK_INDIA_PACKAGES.map((p) => p.slug);
   try {
     const data = await strapiGet<StrapiListResponse<Package>>(
       "/packages",
       ["packages"],
       { "fields": "slug", "pagination[limit]": "100" }
     );
-    return data.data.map((p) => p.slug);
+    const apiSlugs = data.data.map((p) => p.slug);
+    return Array.from(new Set([...mockSlugs, ...apiSlugs]));
   } catch {
-    return [];
+    return mockSlugs;
   }
 }
 
@@ -115,9 +131,9 @@ export async function getTestimonials(): Promise<Testimonial[]> {
       ["testimonials"],
       { "populate": "avatar", "sort": "publishedAt:desc", "pagination[limit]": "12" }
     );
-    return data.data;
+    return data.data && data.data.length > 0 ? data.data : mockTestimonials;
   } catch {
-    return [];
+    return mockTestimonials;
   }
 }
 
@@ -147,7 +163,7 @@ export async function submitInquiry(inquiry: Inquiry): Promise<void> {
 }
 
 export function getStrapiImageUrl(url: string): string {
-  if (url.startsWith("http")) return url;
+  if (url.startsWith("http") || url.startsWith("/images/")) return url;
   return `${STRAPI_URL}${url}`;
 }
 

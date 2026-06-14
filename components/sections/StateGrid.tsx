@@ -20,7 +20,7 @@ const STATES: StateTile[] = [
   {
     name: "Tamil Nadu",
     label: "Land of Eternal Temples and Ancient Traditions.",
-    img: "/images/india-states/tamil-nadu.jpg",
+    img: "/images/india-states/tamil-nadu-v4.png",
     slug: "tamil-nadu",
     colSpan: "md:col-span-8",
     mobileH: "h-[440px]",
@@ -31,7 +31,7 @@ const STATES: StateTile[] = [
   {
     name: "Uttar Pradesh",
     label: "The Cradle of Spirituality.",
-    img: "/images/india-states/varanasi-ghats.jpg",
+    img: "/images/india-states/uttar-pradesh-hd.png",
     slug: "uttar-pradesh",
     colSpan: "md:col-span-4",
     mobileH: "h-80",
@@ -41,7 +41,7 @@ const STATES: StateTile[] = [
   {
     name: "Odisha",
     label: "Where Art Meets Devotion.",
-    img: "/images/india-states/odisha.jpg",
+    img: "/images/destinations/odisha.jpg",
     slug: "odisha",
     colSpan: "md:col-span-4",
     mobileH: "h-64",
@@ -49,16 +49,16 @@ const STATES: StateTile[] = [
   {
     name: "Rajasthan",
     label: "Regal Echoes of the Past.",
-    img: "/images/india-states/rajasthan.jpg",
-    slug: null,
+    img: "/images/india-states/rajasthan-photo.png",
+    slug: "rajasthan",
     colSpan: "md:col-span-4",
     mobileH: "h-64",
   },
   {
     name: "Gujarat",
     label: "Shoreline of the Gods.",
-    img: "/images/india-states/somnath.jpg",
-    slug: null,
+    img: "/images/india-states/somnath-photo-hd.png",
+    slug: "gujarat",
     colSpan: "md:col-span-4",
     mobileH: "h-64",
   },
@@ -66,8 +66,8 @@ const STATES: StateTile[] = [
   {
     name: "Himachal Pradesh",
     label: "Abode of Eternal Snow.",
-    img: "/images/india-states/himachal.jpg",
-    slug: null,
+    img: "/images/india-states/himachal-photo.png",
+    slug: "himachal-pradesh",
     colSpan: "md:col-span-3",
     mobileH: "h-80",
   },
@@ -75,7 +75,7 @@ const STATES: StateTile[] = [
     name: "Kashmir",
     label: "The crown jewel of the Himalayas, where heaven meets earth.",
     img: "/images/india-states/kashmir.jpg",
-    slug: null,
+    slug: "kashmir",
     colSpan: "md:col-span-6",
     mobileH: "h-80",
     variant: "center",
@@ -84,7 +84,7 @@ const STATES: StateTile[] = [
   {
     name: "Madhya Pradesh",
     label: "Heart of the Heritage.",
-    img: "/images/india-states/madhya-pradesh.jpg",
+    img: "/images/india-states/madhya-pradesh-photo.png",
     slug: "madhya-pradesh",
     colSpan: "md:col-span-3",
     mobileH: "h-80",
@@ -93,23 +93,23 @@ const STATES: StateTile[] = [
   {
     name: "Karnataka",
     label: "Empire of Ruins & Rituals.",
-    img: "/images/india-states/hampi.jpg",
-    slug: null,
+    img: "/images/india-states/karnataka.jpg",
+    slug: "karnataka",
     colSpan: "md:col-span-4",
     mobileH: "h-64",
   },
   {
     name: "Goa",
     label: "Spiritual Serenity by the Sea.",
-    img: "/images/india-states/goa.jpg",
-    slug: null,
+    img: "/images/india-states/goa-photo.png",
+    slug: "goa",
     colSpan: "md:col-span-4",
     mobileH: "h-64",
   },
   {
     name: "Andaman Islands",
     label: "Sacred Shores & Pristine Waters.",
-    img: "/images/destinations/andaman.jpg",
+    img: "/images/destinations/andaman-v3.png",
     slug: "andaman",
     colSpan: "md:col-span-4",
     mobileH: "h-64",
@@ -170,6 +170,10 @@ function TileContent({ tile }: { tile: StateTile }) {
 }
 
 function TileInner({ tile }: { tile: StateTile }) {
+  const overlayClass = tile.variant === "center"
+    ? "bg-midnight/35 transition-all duration-500 group-hover:bg-midnight/45"
+    : "bg-gradient-to-t from-midnight/90 via-midnight/35 to-transparent transition-all duration-500 group-hover:opacity-95";
+
   return (
     <>
       <Image
@@ -181,7 +185,7 @@ function TileInner({ tile }: { tile: StateTile }) {
         priority={tile.priority}
         className="object-cover transition-transform duration-700 motion-safe:group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-midnight/20" aria-hidden="true" />
+      <div className={`absolute inset-0 ${overlayClass}`} aria-hidden="true" />
       <TileContent tile={tile} />
     </>
   );
@@ -219,7 +223,7 @@ function StateTileCard({ tile }: { tile: StateTile }) {
 export function StateGrid() {
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-[500px_373px_600px_373px] gap-8"
+      className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-[450px_370px_420px_370px] gap-8"
       aria-label="India destinations grid"
     >
       {STATES.map((tile) => (

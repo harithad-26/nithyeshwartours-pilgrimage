@@ -6,3 +6,7 @@ export { PilgrimStories } from "./PilgrimStories";
 export { TestimonialsGrid } from "./TestimonialsGrid";
 export { default as PersonaHighlights } from "./PersonaHighlights";
 export { default as KailashFaq } from "./KailashFaq";
+export { default as NepalItineraryExplorer } from "./NepalItineraryExplorer";
+export { IndiaDestinationTemplate } from "./IndiaDestinationTemplate";
+export { IndiaPackageDetailTemplate } from "./IndiaPackageDetailTemplate";
+

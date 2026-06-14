@@ -2,9 +2,12 @@
 
 interface LuxuryPreDepartureTabProps {
   data: any;
+  maxAltitude?: {
+    display: string;
+  };
 }
 
-export default function LuxuryPreDepartureTab({ data }: LuxuryPreDepartureTabProps) {
+export default function LuxuryPreDepartureTab({ data, maxAltitude }: LuxuryPreDepartureTabProps) {
   return (
     <div className="space-y-12">
       {/* Packing Categories */}
@@ -63,7 +66,7 @@ export default function LuxuryPreDepartureTab({ data }: LuxuryPreDepartureTabPro
           <div className="space-y-1.5">
             <h4 className="font-serif text-sm font-medium text-amber-900">High Altitude Medical Advisory</h4>
             <p className="font-sans text-xs text-amber-900/70 leading-relaxed">
-              Undertaking a trek at altitudes above 4,500m requires excellent cardiovascular fitness and medical clearance. Please consult your physician before reserving your path.
+              Undertaking a trek at altitudes above {maxAltitude?.display || "3,500m"} requires excellent cardiovascular fitness and medical clearance. Please consult your physician before reserving your path.
             </p>
           </div>
         </div>
