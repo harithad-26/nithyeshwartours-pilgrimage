@@ -12,9 +12,9 @@ const NAV_LINKS = [
 
 export function Navbar() {
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8 max-w-7xl mx-auto">
-      <nav className="bg-white/80 backdrop-blur-lg border border-white/40 rounded-2xl shadow-[0_12px_32px_rgba(0,31,63,0.08)]" aria-label="Main navigation">
-        <div className="px-6 md:px-10 h-18 flex items-center justify-between gap-8">
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-200/60 shadow-[0_2px_15px_rgba(0,0,0,0.03)]">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+        <div className="h-20 flex items-center justify-between gap-8">
           {/* Logo */}
           <Link
             href="/"
@@ -46,8 +46,8 @@ export function Navbar() {
         </div>
 
         {/* Mobile nav */}
-        <div id="mobile-nav" className="md:hidden border-t border-midnight/5 hidden bg-white/95 rounded-b-2xl overflow-hidden">
-          <div className="px-6 py-5 flex flex-col gap-4">
+        <div id="mobile-nav" className="md:hidden border-t border-slate-100 hidden bg-white overflow-hidden">
+          <div className="px-4 py-5 flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
               <NavLink key={link.href} href={link.href}>
                 {link.label}
