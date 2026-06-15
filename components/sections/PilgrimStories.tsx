@@ -31,8 +31,8 @@ const CELEBRITY_TESTIMONIALS = [
   },
   {
     id: 4,
-    name: "Ms. Priya Sharma",
-    role: "Entrepreneur",
+    name: "Ms. Deepika Padukone",
+    role: "Actress",
     location: "Mumbai",
     text: "An unforgettable spiritual retreat to Rishikesh. Every single detail from VIP entries to satvik meals was handled with grace.",
     image: "/images/testimonials/celebrity_4.png",
