@@ -43,23 +43,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${notoSerif.variable} ${manrope.variable} h-full antialiased`}
+      data-theme-edges="sharp"
       suppressHydrationWarning
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var stored = localStorage.getItem('theme-edges');
-                  var theme = stored || 'sharp';
-                  document.documentElement.setAttribute('data-theme-edges', theme);
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
+      <head />
       <body className="min-h-dvh flex flex-col bg-surface text-midnight">
         {children}
       </body>
