@@ -41,13 +41,13 @@ export function WhyChooseUs() {
           {PILLARS.map((pillar, idx) => (
             <div
               key={idx}
-              className="group bg-white rounded-2xl p-8 md:p-10 border border-midnight/8 hover:border-gold/30 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer flex flex-col"
+              className="group bg-white p-8 md:p-10 border border-midnight/15 hover:border-midnight/80 transition-all duration-300 cursor-pointer flex flex-col hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,6,19,0.02)]"
             >
               {/* Luxury divider line */}
-              <div className="w-16 h-px bg-gradient-to-r from-gold via-gold-light to-transparent mb-6 group-hover:w-24 transition-all duration-500" />
+              <div className="w-12 h-[1px] bg-midnight/10 group-hover:bg-midnight/60 mb-6 group-hover:w-20 transition-all duration-300" />
               
               {/* Title */}
-              <h3 className="font-serif text-xl md:text-2xl text-midnight font-normal mb-4 leading-tight group-hover:text-gold-dark transition-colors duration-300">
+              <h3 className="font-serif text-xl md:text-2xl text-midnight font-normal mb-4 leading-tight">
                 {pillar.title}
               </h3>
               
@@ -58,7 +58,7 @@ export function WhyChooseUs() {
 
               {/* Bottom accent line on hover */}
               <div className="mt-auto pt-6">
-                <div className="w-0 h-px bg-gradient-to-r from-gold/50 to-transparent group-hover:w-full transition-all duration-700" />
+                <div className="w-0 h-px bg-midnight/20 group-hover:w-full transition-all duration-700" />
               </div>
             </div>
           ))}
