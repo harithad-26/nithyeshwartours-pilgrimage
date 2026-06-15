@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import LuxuryPackageDetailTabs from "@/components/pilgrimage/LuxuryPackageDetailTabs";
+import LuxuryPackageDetailTabs, { LuxuryPackageDetailNav } from "@/components/pilgrimage/LuxuryPackageDetailTabs";
 import LuxuryPricingSidebar from "@/components/pilgrimage/LuxuryPricingSidebar";
 
 const PACKAGES = {
@@ -173,7 +173,7 @@ const PACKAGES = {
     tagline: "Lord Shiva's Light & Lord Ram's Birthplace",
     description: "Experience the ultimate sacred combination of Kashi Vishwanath and the brand new grand Ram Janmabhoomi Temple in Ayodhya.",
     heroImage: {
-      src: "/images/pilgrimage/varanasi.jpg",
+      src: "/images/india-states/ram-mandir-ayodhya.png",
       alt: "Ayodhya Temple Gates",
     },
     duration: {
@@ -344,7 +344,7 @@ const PACKAGES = {
     tagline: "Odyssey of Kashi, Prayagraj & Ayodhya",
     description: "A comprehensive journey through India's absolute most sacred lands: Varanasi, Ayodhya's Ram Mandir, and the Prayagraj Triveni Sangam.",
     heroImage: {
-      src: "/images/india-states/varanasi-ghats.jpg",
+      src: "/images/india-states/varanasi-ghats-photo.png",
       alt: "Sunrise over Ganga",
     },
     duration: {
@@ -645,8 +645,11 @@ export default async function PackageDetailPage({
         </div>
       </section>
 
+      {/* Sub-Navigation Bar */}
+      <LuxuryPackageDetailNav packageData={pkg} />
+
       {/* Main Page Layout Grid */}
-      <div className="bg-[#F8F7F4] min-h-screen py-16 px-6 lg:px-12">
+      <div className="bg-[#F8F7F4] min-h-screen pt-8 pb-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-8">

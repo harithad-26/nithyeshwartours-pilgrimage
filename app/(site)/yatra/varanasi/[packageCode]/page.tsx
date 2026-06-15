@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import LuxuryPackageDetailTabs from "@/components/pilgrimage/LuxuryPackageDetailTabs";
+import LuxuryPackageDetailTabs, { LuxuryPackageDetailNav } from "@/components/pilgrimage/LuxuryPackageDetailTabs";
 import LuxuryPricingSidebar from "@/components/pilgrimage/LuxuryPricingSidebar";
 
 const PACKAGES = {
@@ -187,7 +187,7 @@ const PACKAGES = {
     tagline: "Heritage & Soul of Benares",
     description: "Delve deeper into the mysticism of Benares. Features heritage stays, specialized guided walks, temple visits, and excursions to Ramnagar Fort.",
     heroImage: {
-      src: "/images/india-states/varanasi-ghats.jpg",
+      src: "/images/india-states/varanasi-ghats-photo.png",
       alt: "Varanasi Ghats and Ganga",
     },
     duration: {
@@ -707,8 +707,11 @@ export default async function PackageDetailPage({
         </div>
       </section>
 
+      {/* Sub-Navigation Bar */}
+      <LuxuryPackageDetailNav packageData={pkg} />
+
       {/* Main Page Layout Grid */}
-      <div className="bg-[#F8F7F4] min-h-screen py-16 px-6 lg:px-12">
+      <div className="bg-[#F8F7F4] min-h-screen pt-8 pb-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-8">

@@ -95,7 +95,7 @@ export default function CharDhamPage() {
       {/* 1. Cinematic Hero — Left Aligned */}
       <section className="relative h-screen flex items-center overflow-hidden" aria-label="Char Dham Yatra">
         <Image
-          src="/images/pilgrimage/chardham-card.png"
+          src="/images/india-states/kedarnath-temple.png"
           alt="Char Dham — Four sacred shrines of Uttarakhand"
           fill
           sizes="100vw"
@@ -147,7 +147,7 @@ export default function CharDhamPage() {
               >
                 Explore Packages
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M19 9l7 7-7 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
               <Link
@@ -167,66 +167,82 @@ export default function CharDhamPage() {
         </div>
       </section>
 
-      {/* 2. Trust Stats */}
-      <section className="py-16 px-6 bg-white border-b border-midnight/5" aria-label="Why choose Nithyeshwar Tours">
+      {/* 2. Trust Stats - Redesigned Premium Luxury Design */}
+      <section className="py-10 px-6 bg-gradient-to-b from-[#FCFBF9] to-white border-b border-gold/10 animate-in fade-in duration-500" aria-label="Why choose Nithyeshwar Tours">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-midnight/8 rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <circle cx="26" cy="14" r="8" />
-                  <path d="M8 44c0-9.94 8.06-18 18-18s18 8.06 18 18" />
-                  <path d="M38 20c4 1.5 7 5.3 7 10" strokeDasharray="2 2" />
-                  <path d="M14 20c-4 1.5-7 5.3-7 10" strokeDasharray="2 2" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <circle cx="26" cy="14" r="8" />
+                    <path d="M8 44c0-9.94 8.06-18 18-18s18 8.06 18 18" />
+                    <path d="M38 20c4 1.5 7 5.3 7 10" strokeDasharray="2 2" />
+                    <path d="M14 20c-4 1.5-7 5.3-7 10" strokeDasharray="2 2" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">100k+</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Pilgrims Guided</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Over three decades guiding devoted pilgrims safely through the Char Dham circuit.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">100k+</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Pilgrims Guided</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Over three decades guiding devoted pilgrims safely through the Char Dham circuit.</p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <path d="M26 6L32 18l13 2-9.5 9.2 2.2 13L26 36l-11.7 6.2 2.2-13L7 20l13-2z" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <path d="M26 6L32 18l13 2-9.5 9.2 2.2 13L26 36l-11.7 6.2 2.2-13L7 20l13-2z" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">98%</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Yatra Completion Rate</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Careful pacing, medical support, and route planning ensures pilgrims complete all four dhams.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">98%</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Yatra Completion Rate</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Careful pacing, medical support, and route planning ensures pilgrims complete all four dhams.</p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <rect x="10" y="10" width="32" height="32" rx="6" />
-                  <path d="M26 18v16M18 26h16" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <rect x="10" y="10" width="32" height="32" rx="6" />
+                    <path d="M26 18v16M18 26h16" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">24/7</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Medical Support</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Oxygen cylinders, first-aid kits, and emergency protocols on every coach throughout the journey.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">24/7</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Medical Support</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Oxygen cylinders, first-aid kits, and emergency protocols on every coach throughout the journey.</p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-10 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <path d="M26 6v5M26 41v5M6 26h5M41 26h5" />
-                  <circle cx="26" cy="26" r="14" />
-                  <path d="M26 18v8l5 3" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <path d="M26 6v5M26 41v5M6 26h5M41 26h5" />
+                    <circle cx="26" cy="26" r="14" />
+                    <path d="M26 18v8l5 3" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">30+</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Years of Sacred Service</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Nithyeshwar Tours has been the most trusted name in Char Dham Yatra organisation since 1993.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">30+</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Years of Sacred Service</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Nithyeshwar Tours has been the most trusted name in Char Dham Yatra organisation since 1993.</p>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* 3. The Four Sacred Dhams */}
+      {/* 3. The Four Sacred Dhams (With Visual Storytelling Layout) */}
       <section className="py-28 px-6 bg-surface" aria-labelledby="dhams-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
@@ -246,68 +262,54 @@ export default function CharDhamPage() {
                 deity: "Goddess Yamuna",
                 altitude: "3,293m",
                 desc: "The western source of the sacred Yamuna river. The first stop of the Char Dham circuit — pilgrims take a holy dip in the thermal hot springs of Surya Kund.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
-                    <path d="M16 4c0 0-8 6-8 12a8 8 0 0016 0c0-6-8-12-8-12z" />
-                    <path d="M16 20v-6M12 17l4-3 4 3" />
-                  </svg>
-                ),
+                image: "/images/pilgrimage/yamunotri_highlight.png",
               },
               {
                 name: "Gangotri",
                 deity: "Goddess Ganga",
                 altitude: "3,100m",
                 desc: "The origin of the sacred River Ganga. Pilgrims worship at the white granite temple where the celestial river first touched the earth, cleansing all sins.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
-                    <path d="M8 24c2-4 4-8 8-8s6 4 8 8" />
-                    <path d="M4 28c3-6 5-12 12-12s9 6 12 12" />
-                    <path d="M16 4v8" />
-                    <path d="M12 8l4-4 4 4" />
-                  </svg>
-                ),
+                image: "/images/pilgrimage/gangotri_highlight.png",
               },
               {
                 name: "Kedarnath",
                 deity: "Lord Shiva",
                 altitude: "3,583m",
                 desc: "One of the twelve sacred Jyotirlingas — an ancient stone temple dedicated to Lord Shiva, perched dramatically at the foot of Kedarnath Peak, accessible by an 18km trek.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
-                    <path d="M16 4L6 16h4v12h12V16h4z" />
-                    <path d="M12 28V20h8v8" />
-                    <circle cx="16" cy="13" r="2.5" />
-                  </svg>
-                ),
+                image: "/images/india-states/kedarnath-temple.png",
               },
               {
                 name: "Badrinath",
                 deity: "Lord Vishnu",
                 altitude: "3,133m",
                 desc: "The final and most revered dham — dedicated to Lord Vishnu seated in meditation. One of the 108 Divya Desams with a stunning backdrop of Nilkantha Peak (6,596m).",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
-                    <path d="M16 3l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5z" />
-                    <path d="M8 18c0 5.5 3.6 10 8 10s8-4.5 8-10" />
-                  </svg>
-                ),
+                image: "/images/india-states/badrinath-temple.png",
               },
             ].map((dham) => (
               <article
                 key={dham.name}
-                className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 p-8"
+                className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-midnight group"
               >
-                <div className="w-14 h-14 rounded-xl bg-gold-dark/5 border border-gold-dark/15 flex items-center justify-center mb-6">
-                  {dham.icon}
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={dham.image}
+                    alt={`${dham.name} Temple`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-midnight/10" aria-hidden="true" />
                 </div>
-                <div className="mb-2 flex items-center justify-between">
-                  <h3 className="font-serif text-xl text-midnight font-normal">{dham.name}</h3>
-                  <span className="font-sans text-[9px] text-white/90 bg-midnight px-2 py-0.5 rounded-full uppercase tracking-wide">
-                    {dham.altitude}
-                  </span>
+                <div className="p-6 flex-1 flex flex-col gap-3">
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-serif text-xl text-midnight font-normal">{dham.name}</h3>
+                    <span className="font-sans text-[9px] text-white bg-midnight px-2 py-0.5 rounded-full uppercase tracking-wide">
+                      {dham.altitude}
+                    </span>
+                  </div>
+                  <p className="font-sans text-[10px] font-semibold uppercase tracking-wider text-gold-dark">{dham.deity}</p>
+                  <p className="font-sans text-xs text-midnight/70 leading-relaxed flex-1">{dham.desc}</p>
                 </div>
-                <p className="font-sans text-[10px] font-semibold uppercase tracking-wider text-gold-dark mb-4">{dham.deity}</p>
-                <p className="font-sans text-sm text-midnight/65 leading-relaxed flex-1">{dham.desc}</p>
               </article>
             ))}
           </div>
@@ -541,6 +543,113 @@ export default function CharDhamPage() {
                 Our culinary team serves hot, nutritious, pure vegetarian meals throughout the journey — Satvik style, mild in spices, designed for high-altitude digestion.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Bento Gallery Section */}
+      <section className="py-28 px-6 bg-white border-t border-midnight/5" aria-labelledby="gallery-heading">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
+              VISUAL REVERENCE
+            </span>
+            <h2 id="gallery-heading" className="font-serif text-4xl text-midnight font-normal leading-tight">
+              Glances of the Sacred Valleys
+            </h2>
+            <div className="w-12 h-0.5 bg-gold-dark mx-auto mt-6" aria-hidden="true" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[720px] md:h-[520px]">
+            {/* Left wide card - Kedarnath */}
+            <div className="relative col-span-1 md:col-span-2 h-full overflow-hidden rounded shadow-ambient group">
+              <Image
+                src="/images/india-states/kedarnath-temple.png"
+                alt="Kedarnath Temple nestled amidst high snow-covered Himalayan peaks"
+                fill
+                sizes="(max-width: 768px) 100vw, 66vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-6 text-white">
+                <p className="font-serif text-xl">The Shrine of Shiva</p>
+                <p className="font-sans text-xs text-white/70">Kedarnath Temple (3,583m)</p>
+              </div>
+            </div>
+
+            {/* Right stacked cards */}
+            <div className="grid grid-rows-2 gap-6 h-full">
+              {/* Badrinath */}
+              <div className="relative h-full overflow-hidden rounded shadow-ambient group">
+                <Image
+                  src="/images/india-states/badrinath-temple.png"
+                  alt="Colorful façade of Badrinath Temple"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-102"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                  <p className="font-serif text-base">Badrinath Temple</p>
+                </div>
+              </div>
+              
+              {/* Yamunotri */}
+              <div className="relative h-full overflow-hidden rounded shadow-ambient group">
+                <Image
+                  src="/images/pilgrimage/yamunotri_highlight.png"
+                  alt="Yamunotri Temple in the mountain valley gorge"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-102"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                  <p className="font-serif text-base">Yamunotri Dham</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            {/* Gangotri */}
+            <div className="relative h-64 overflow-hidden rounded shadow-ambient group">
+              <Image
+                src="/images/pilgrimage/gangotri_highlight.png"
+                alt="White granite Gangotri Temple surrounded by pine trees"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                <p className="font-serif text-base">Gangotri Temple</p>
+              </div>
+            </div>
+
+            {/* Haridwar */}
+            <div className="relative h-64 overflow-hidden rounded shadow-ambient group">
+              <Image
+                src="/images/india-states/har-ki-pauri.png"
+                alt="Har Ki Pauri ghats on the banks of Ganga at Haridwar"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                <p className="font-serif text-base">Har Ki Pauri, Haridwar</p>
+              </div>
+            </div>
+
+            {/* Rishikesh */}
+            <div className="relative h-64 overflow-hidden rounded shadow-ambient group">
+              <Image
+                src="/images/pilgrimage/rishikesh_highlight.png"
+                alt="Laxman Jhula bridge in Rishikesh over the emerald Ganga"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                <p className="font-serif text-base">Laxman Jhula, Rishikesh</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

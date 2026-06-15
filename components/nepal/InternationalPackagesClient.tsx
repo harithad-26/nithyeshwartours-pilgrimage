@@ -120,26 +120,49 @@ export default function InternationalPackagesClient({ destinationKey }: Internat
         </div>
       </section>
 
-      {/* Standalone Trust Strip */}
-      <section className="bg-white border-y border-midnight/5 py-10 shadow-sm relative z-10 animate-in fade-in duration-500">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="flex flex-col items-center">
-            <p className="font-serif text-4xl text-gold-dark font-normal">50k+</p>
-            <p className="font-sans text-sm text-midnight/60 uppercase tracking-wider font-semibold mt-2">
-              Travelers Guided
-            </p>
+      {/* Standalone Trust Strip - Premium Luxury Design */}
+      <section className="bg-gradient-to-b from-[#FCFBF9] to-white border-y border-gold/10 py-10 shadow-xs relative z-10 animate-in fade-in duration-500">
+        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="group relative bg-white px-6 py-5 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+            {/* Gold accent line */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+            
+            <div className="flex flex-col items-center text-center">
+              <p className="font-serif text-5xl md:text-6xl text-gold-dark font-extralight tracking-tight group-hover:scale-102 transition-transform duration-300">50k+</p>
+              <div className="w-5 h-px bg-gold/40 my-2" />
+              <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold">
+                Travelers Guided
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col items-center border-t md:border-t-0 md:border-x border-midnight/10 py-8 md:py-0">
-            <p className="font-serif text-4xl text-gold-dark font-normal">4.9/5</p>
-            <p className="font-sans text-sm text-midnight/60 uppercase tracking-wider font-semibold mt-2">
-              Average Traveler Rating
-            </p>
+
+          {/* Card 2 */}
+          <div className="group relative bg-white px-6 py-5 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+            {/* Gold accent line */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+            
+            <div className="flex flex-col items-center text-center">
+              <p className="font-serif text-5xl md:text-6xl text-gold-dark font-extralight tracking-tight group-hover:scale-102 transition-transform duration-300">4.9/5</p>
+              <div className="w-5 h-px bg-gold/40 my-2" />
+              <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold">
+                Average Traveler Rating
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col items-center">
-            <p className="font-serif text-4xl text-gold-dark font-normal">25+</p>
-            <p className="font-sans text-sm text-midnight/60 uppercase tracking-wider font-semibold mt-2">
-              Years of Sacred Service
-            </p>
+
+          {/* Card 3 */}
+          <div className="group relative bg-white px-6 py-5 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+            {/* Gold accent line */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+            
+            <div className="flex flex-col items-center text-center">
+              <p className="font-serif text-5xl md:text-6xl text-gold-dark font-extralight tracking-tight group-hover:scale-102 transition-transform duration-300">25+</p>
+              <div className="w-5 h-px bg-gold/40 my-2" />
+              <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold">
+                Years of Sacred Service
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -185,9 +208,10 @@ export default function InternationalPackagesClient({ destinationKey }: Internat
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredPackages.map((pkg) => (
-              <div
+              <Link
                 key={pkg.code}
-                className="group relative flex flex-col h-full rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-ambient hover:border-midnight shadow-card border-2 bg-white border-midnight/5 text-midnight"
+                href={`/packages/international/${destinationKey}/${pkg.code}`}
+                className="group relative flex flex-col h-full rounded-lg overflow-hidden premium-card-interactive bg-white text-midnight"
               >
                 {/* Header */}
                 <div className="p-8 border-b border-midnight/10 bg-surface-low/30">
@@ -263,16 +287,14 @@ export default function InternationalPackagesClient({ destinationKey }: Internat
                   )}
                 </div>
 
-                {/* Footer */}
                 <div className="p-8 border-t border-midnight/10 bg-surface-low/30">
-                  <Link
-                    href={`/packages/international/${destinationKey}/${pkg.code}`}
-                    className="w-full text-center py-4 font-sans text-xs font-bold tracking-[0.12em] uppercase rounded transition-colors duration-300 min-h-11 flex items-center justify-center bg-midnight text-white hover:bg-navy"
+                  <span
+                    className="w-full text-center py-4 font-sans text-xs font-bold tracking-[0.12em] uppercase rounded transition-all duration-300 min-h-11 flex items-center justify-center bg-midnight text-white group-hover:bg-navy"
                   >
                     View Details
-                  </Link>
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -296,7 +318,7 @@ export default function InternationalPackagesClient({ destinationKey }: Internat
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {dest.storytelling.items.map((item, idx) => (
-                <article key={idx} className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 group">
+                <article key={idx} className="flex flex-col bg-white rounded-md overflow-hidden premium-card-static group">
                   <div className="relative h-60 w-full overflow-hidden">
                     <Image
                       src={item.image}
@@ -340,7 +362,7 @@ export default function InternationalPackagesClient({ destinationKey }: Internat
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {dest.standards.items.map((item, idx) => (
-                <article key={idx} className="flex flex-col gap-5 p-8 bg-surface border border-gold-dark/10 rounded shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300">
+                <article key={idx} className="flex flex-col gap-5 p-8 bg-surface rounded premium-card-static group">
                   <div className="w-12 h-12 rounded-xl bg-gold-dark/5 flex items-center justify-center border border-gold-dark/15">
                     {renderStandardIcon(item.iconType)}
                   </div>
@@ -371,7 +393,7 @@ export default function InternationalPackagesClient({ destinationKey }: Internat
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {dest.testimonials.items.map((item, idx) => (
-                <article key={idx} className="bg-white p-8 rounded border border-midnight/5 shadow-ambient hover:-translate-y-1 hover:shadow-card transition-all duration-300 flex flex-col justify-between">
+                <article key={idx} className="bg-white p-8 rounded flex flex-col justify-between premium-card-static">
                   <div>
                     <div className="flex gap-1 mb-5" aria-label={`Rating: ${item.rating} stars`}>
                       {[...Array(item.rating)].map((_, starIdx) => (

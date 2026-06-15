@@ -42,6 +42,16 @@
   /* Transitions */
   --duration-slow: 300ms;
   --duration-medium: 200ms;
+
+  /* Subtle rounded corporate border radius overrides */
+  --radius: 6px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-2xl: 12px;
+  --radius-3xl: 16px;
 }
 
 /* Base reset */
@@ -224,3 +234,55 @@ body {
 .animate-zoom-out {
   animation: zoom-out 20s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
+
+/* Complete global border radius overrides for sharp corporate aesthetics */
+html[data-theme-edges="sharp"] button:not(.theme-toggle),
+html[data-theme-edges="sharp"] input:not(.theme-toggle),
+html[data-theme-edges="sharp"] select:not(.theme-toggle),
+html[data-theme-edges="sharp"] textarea:not(.theme-toggle),
+html[data-theme-edges="sharp"] [class*="rounded-"]:not(.whatsapp-float):not(.theme-toggle):not(.w-2):not(.h-2):not(.w-1\.5):not(.h-1\.5):not(.size-2):not(.size-1\.5),
+html[data-theme-edges="sharp"] .rounded-full:not(.whatsapp-float):not(.theme-toggle):not(.w-2):not(.h-2):not(.w-1\.5):not(.h-1\.5):not(.size-2):not(.size-1\.5) {
+  border-radius: 0px !important;
+}
+
+/* Premium Card Interactive & Static styling styles */
+.premium-card-interactive {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0, 31, 63, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 31, 63, 0.06);
+  cursor: pointer;
+}
+
+.premium-card-interactive:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(0, 31, 63, 0.15), 0 0 15px rgba(254, 214, 91, 0.05);
+  border-color: rgba(115, 92, 0, 0.5);
+}
+
+.premium-card-interactive:active {
+  transform: translateY(-2px) scale(0.97);
+  box-shadow: 0 8px 16px rgba(0, 31, 63, 0.1), 0 0 0 3px rgba(254, 214, 91, 0.45);
+  border-color: rgba(115, 92, 0, 0.85);
+  transition-duration: 0.08s;
+}
+
+.premium-card-static {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0, 31, 63, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 31, 63, 0.06);
+  cursor: pointer;
+}
+
+.premium-card-static:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px rgba(0, 31, 63, 0.1), 0 0 10px rgba(254, 214, 91, 0.03);
+  border-color: rgba(115, 92, 0, 0.4);
+}
+
+.premium-card-static:active {
+  transform: translateY(-1px) scale(0.985);
+  box-shadow: 0 8px 16px rgba(0, 31, 63, 0.08), 0 0 0 2px rgba(254, 214, 91, 0.35);
+  border-color: rgba(115, 92, 0, 0.7);
+  transition-duration: 0.08s;
+}
+

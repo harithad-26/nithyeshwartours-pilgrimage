@@ -126,7 +126,7 @@ export default function KailashMansarovarPage() {
               >
                 Explore Packages
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M19 9l7 7-7 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
               <Link
@@ -146,71 +146,84 @@ export default function KailashMansarovarPage() {
         </div>
       </section>
 
-      {/* 2. Why Choose Us — GT Holidays Style Trust Section */}
-      <section className="py-20 px-6 bg-white border-b border-midnight/5" aria-label="Why choose Nithyeshwar Tours">
+      {/* 2. Why Choose Us - Redesigned Premium Luxury Design */}
+      <section className="py-10 px-6 bg-gradient-to-b from-[#FCFBF9] to-white border-b border-gold/10 animate-in fade-in duration-500" aria-label="Why choose Nithyeshwar Tours">
         <div className="max-w-7xl mx-auto">
-
-          {/* 4-column card grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-midnight/8 rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
             {/* Card 1 — Pilgrims */}
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <circle cx="26" cy="14" r="8" />
-                  <path d="M8 44c0-9.94 8.06-18 18-18s18 8.06 18 18" />
-                  <path d="M38 20c4 1.5 7 5.3 7 10" strokeDasharray="2 2" />
-                  <path d="M14 20c-4 1.5-7 5.3-7 10" strokeDasharray="2 2" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <circle cx="26" cy="14" r="8" />
+                    <path d="M8 44c0-9.94 8.06-18 18-18s18 8.06 18 18" />
+                    <path d="M38 20c4 1.5 7 5.3 7 10" strokeDasharray="2 2" />
+                    <path d="M14 20c-4 1.5-7 5.3-7 10" strokeDasharray="2 2" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">100k+</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Pilgrims Guided</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">For over three decades, we have safely guided over one lakh devotees on high-altitude pilgrimage journeys.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">100k+</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Pilgrims Guided</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">For over three decades, we have safely guided over one lakh devotees on high-altitude pilgrimage journeys.</p>
             </div>
 
             {/* Card 2 — Completion */}
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <path d="M26 6L32 18l13 2-9.5 9.2 2.2 13L26 36l-11.7 6.2 2.2-13L7 20l13-2z" />
-                  <path d="M18 34l-5 10M34 34l5 10" strokeDasharray="2 2" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <path d="M26 6L32 18l13 2-9.5 9.2 2.2 13L26 36l-11.7 6.2 2.2-13L7 20l13-2z" />
+                    <path d="M18 34l-5 10M34 34l5 10" strokeDasharray="2 2" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">98%</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Yatra Completion Rate</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Our meticulous acclimatisation planning and medical support ensures almost every pilgrim completes the Parikrama.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">98%</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Yatra Completion Rate</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Our meticulous acclimatisation planning and medical support ensures almost every pilgrim completes the Parikrama.</p>
             </div>
 
             {/* Card 3 — Medical */}
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <rect x="10" y="10" width="32" height="32" rx="6" />
-                  <path d="M26 18v16M18 26h16" />
-                  <circle cx="26" cy="26" r="18" strokeDasharray="2 3" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <rect x="10" y="10" width="32" height="32" rx="6" />
+                    <path d="M26 18v16M18 26h16" />
+                    <circle cx="26" cy="26" r="18" strokeDasharray="2 3" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">24/7</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Medical Concierge</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Oxygen cylinders, pulse oximeters, altitude sickness protocol, and emergency evacuation on every single group.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">24/7</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Medical Concierge</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Oxygen cylinders, pulse oximeters, altitude sickness protocol, and emergency evacuation on every single group.</p>
             </div>
 
             {/* Card 4 — Experience */}
-            <div className="flex flex-col items-center text-center p-10 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <path d="M26 6v5M26 41v5M6 26h5M41 26h5" />
-                  <circle cx="26" cy="26" r="14" />
-                  <path d="M26 18v8l5 3" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <path d="M26 6v5M26 41v5M6 26h5M41 26h5" />
+                    <circle cx="26" cy="26" r="14" />
+                    <path d="M26 18v8l5 3" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">30+</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Years of Sacred Service</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Nithyeshwar Tours has been the most trusted name in Kailash Mansarovar Yatra organisation since 1993.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">30+</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Years of Sacred Service</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Nithyeshwar Tours has been the most trusted name in Kailash Mansarovar Yatra organisation since 1993.</p>
             </div>
 
           </div>
-
         </div>
       </section>
 

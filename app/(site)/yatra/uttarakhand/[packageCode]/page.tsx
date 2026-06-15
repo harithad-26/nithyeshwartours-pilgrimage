@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import LuxuryPackageDetailTabs from "@/components/pilgrimage/LuxuryPackageDetailTabs";
+import LuxuryPackageDetailTabs, { LuxuryPackageDetailNav } from "@/components/pilgrimage/LuxuryPackageDetailTabs";
 import LuxuryPricingSidebar from "@/components/pilgrimage/LuxuryPricingSidebar";
 
 const PACKAGES = {
@@ -12,7 +12,7 @@ const PACKAGES = {
     tagline: "Gateway to the Himalayas",
     description: "Explore the holy twins of Haridwar and Rishikesh. Witness the Ganga Aarti, visit ancient temples, and relax in the yoga capital.",
     heroImage: {
-      src: "/images/pilgrimage/uttarakhand-card.png",
+      src: "/images/india-states/har-ki-pauri.png",
       alt: "Haridwar Har Ki Pauri Sacred Ghat on the Ganges",
     },
     duration: {
@@ -384,7 +384,7 @@ const PACKAGES = {
     tagline: "Pilgrimage to Lord Shiva's Abode",
     description: "A focused package dedicated entirely to the sacred Kedarnath Temple. Ideal for pilgrims seeking a shorter trip with direct trekking focus.",
     heroImage: {
-      src: "/images/pilgrimage/badrinath.jpg",
+      src: "/images/india-states/kedarnath-temple.png",
       alt: "Kedarnath Temple and peaks",
     },
     duration: {
@@ -664,8 +664,11 @@ export default async function PackageDetailPage({
         </div>
       </section>
 
+      {/* Sub-Navigation Bar */}
+      <LuxuryPackageDetailNav packageData={pkg} />
+
       {/* Main Page Layout Grid */}
-      <div className="bg-[#F8F7F4] min-h-screen py-16 px-6 lg:px-12">
+      <div className="bg-[#F8F7F4] min-h-screen pt-8 pb-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-8">

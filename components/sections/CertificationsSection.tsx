@@ -90,7 +90,7 @@ export function CertificationsSection() {
           {CERTIFICATIONS.map((cert, index) => (
             <div
               key={index}
-              className="group p-8 rounded-lg border-2 border-midnight/10 hover:border-gold-dark/50 transition-all duration-300 hover:shadow-lg bg-surface/30"
+              className="group p-8 rounded-lg bg-surface/30 premium-card-static"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors duration-300 text-gold-dark">

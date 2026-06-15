@@ -54,7 +54,7 @@ const WELCOME_SUGGESTIONS: SuggestionCard[] = [
   {
     id: 'varanasi-soul',
     badge: 'ETERNAL KASHI',
-    imageSrc: '/images/india-states/varanasi-ghats.jpg',
+    imageSrc: '/images/india-states/varanasi-ghats-photo.png',
     imageAlt: 'Varanasi Ghats — ancient stone steps meeting the sacred Ganga at dusk',
     title: 'Varanasi Soul',
     price: '₹9,200+',
@@ -109,7 +109,7 @@ const MOCK_RESPONSES: { pattern: RegExp; text: string; suggestions?: SuggestionC
       {
         id: 'varanasi-soul-2',
         badge: 'ETERNAL KASHI',
-        imageSrc: '/images/india-states/varanasi-ghats.jpg',
+        imageSrc: '/images/india-states/varanasi-ghats-photo.png',
         imageAlt: 'Varanasi Ghats at dawn',
         title: 'Varanasi Soul',
         price: '₹9,200+',

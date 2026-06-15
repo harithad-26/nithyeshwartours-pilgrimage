@@ -44,7 +44,7 @@ export function StatsSection() {
           {STATS.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold-dark/50 transition-all duration-300"
+              className="text-center p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/40 hover:bg-white/10 hover:-translate-y-2 active:scale-[0.98] transition-all duration-300 hover:shadow-[0_15px_30px_rgba(254,214,91,0.08)] cursor-pointer"
             >
               <div className="font-serif text-5xl md:text-6xl text-gold font-normal mb-3">
                 {stat.number}

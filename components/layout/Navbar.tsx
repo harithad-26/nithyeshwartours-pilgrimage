@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { NavLink } from "./NavLink";
 import { MobileNavToggle } from "./MobileNav";
 
@@ -18,10 +19,21 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-serif text-midnight font-bold text-lg lg:text-xl tracking-[0.12em] uppercase shrink-0 transition-opacity duration-300 hover:opacity-75"
+            className="flex items-center gap-3 shrink-0 transition-opacity duration-300 hover:opacity-75"
             aria-label="Nithyeshwar Tours — Home"
           >
-            NITHYESHWAR <span className="text-gold-dark font-medium">TOURS</span>
+            <div className="relative w-12 h-12">
+              <Image
+                src="/images/logo/nithyeshwar-logo.svg"
+                alt="Nithyeshwar Tours"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <span className="font-serif text-midnight font-bold text-lg lg:text-xl tracking-[0.12em] uppercase">
+              NITHYESHWAR <span className="text-gold-dark font-medium">TOURS</span>
+            </span>
           </Link>
 
           {/* Desktop nav links */}

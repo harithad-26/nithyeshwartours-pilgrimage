@@ -80,12 +80,12 @@ export function TopPackages({ packages }: TopPackagesProps) {
 
   return (
     <section
-      className="py-24 bg-surface"
+      className="py-12 md:py-16 lg:py-24 bg-surface"
       aria-labelledby="top-packages-heading"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
         {/* Header row */}
-        <div className="flex items-center justify-between mb-12 gap-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 md:mb-12 gap-4 md:gap-6">
           <SectionHeader
             eyebrow="CURATED COLLECTIONS"
             title="Top Packages"
@@ -93,44 +93,29 @@ export function TopPackages({ packages }: TopPackagesProps) {
           />
           <Link
             href="/india"
-            className="group/btn flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-wider text-gold-dark bg-gold-muted/10 border border-gold-dark/25 px-5 py-3 rounded-full transition-all duration-300 hover:bg-gold-dark hover:text-white shrink-0 shadow-xs hover:shadow-md"
+            className="group/btn flex items-center justify-center gap-2 font-sans text-[10px] md:text-xs font-bold uppercase tracking-wider text-gold-dark bg-gold-muted/10 border border-gold-dark/25 px-4 md:px-5 py-2.5 md:py-3 rounded-full transition-all duration-300 hover:bg-gold-dark hover:text-white shrink-0 shadow-xs hover:shadow-md w-full sm:w-auto"
             aria-label="View all packages"
           >
             <span>View All Packages</span>
-            <svg
-              className="transition-transform duration-300 group-hover/btn:translate-x-1"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
           </Link>
         </div>
 
         {/* 12-col bento grid: row1 = [8,4], row2 = [4,8] */}
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
           {/* Row 1: large (8) + small (4) */}
           {cards[0] && (
-            <BentoCard card={cards[0]} className="col-span-12 md:col-span-8 h-[450px]" priority />
+            <BentoCard card={cards[0]} className="col-span-1 md:col-span-8 h-[380px] md:h-[450px]" priority />
           )}
           {cards[1] && (
-            <BentoCard card={cards[1]} className="col-span-12 md:col-span-4 h-[450px]" />
+            <BentoCard card={cards[1]} className="col-span-1 md:col-span-4 h-[380px] md:h-[450px]" />
           )}
 
           {/* Row 2: small (4) + large (8) */}
           {cards[2] && (
-            <BentoCard card={cards[2]} className="col-span-12 md:col-span-4 h-[450px]" />
+            <BentoCard card={cards[2]} className="col-span-1 md:col-span-4 h-[380px] md:h-[450px]" />
           )}
           {cards[3] && (
-            <BentoCard card={cards[3]} className="col-span-12 md:col-span-8 h-[450px]" />
+            <BentoCard card={cards[3]} className="col-span-1 md:col-span-8 h-[380px] md:h-[450px]" />
           )}
         </div>
       </div>
@@ -150,7 +135,7 @@ function BentoCard({
   return (
     <Link
       href={card.href}
-      className={`group relative rounded-2xl overflow-hidden block border border-midnight/5 hover:border-gold-dark/30 hover:shadow-2xl shadow-ambient transition-all duration-500 ${className}`}
+      className={`group relative rounded-2xl overflow-hidden block border border-midnight/5 hover:border-gold-dark/30 hover:shadow-2xl shadow-ambient transition-all duration-500 active:scale-[0.98] active:duration-150 ${className}`}
       aria-label={`View ${card.title} package`}
     >
       <Image
@@ -175,39 +160,24 @@ function BentoCard({
       )}
 
       {/* Text content with slide-up micro-interaction */}
-      <div className="absolute bottom-0 left-0 right-0 p-8 z-10 translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
-        <h3 className="font-serif text-2xl md:text-3xl text-white font-normal leading-snug mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+      <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 z-10 translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
+        <h3 className="font-serif text-xl md:text-2xl lg:text-3xl text-white font-normal leading-snug mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
           {card.title}
         </h3>
-        <p className="font-sans text-sm text-white/70 leading-relaxed mb-4 line-clamp-2 max-w-xl transition-opacity duration-500 group-hover:text-white/85">
+        <p className="font-sans text-xs md:text-sm text-white/70 leading-relaxed mb-3 md:mb-4 line-clamp-2 max-w-xl transition-opacity duration-500 group-hover:text-white/85">
           {card.description}
         </p>
-        <div className="flex items-center justify-between border-t border-white/10 pt-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="flex items-center justify-between border-t border-white/10 pt-3 md:pt-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
           {card.price && (
             <div>
-              <p className="font-sans text-[10px] tracking-wider uppercase text-white/50 mb-0.5">Starts from</p>
-              <p className="font-serif text-2xl text-gold font-bold">
+              <p className="font-sans text-[9px] md:text-[10px] tracking-wider uppercase text-white/50 mb-0.5">Starts from</p>
+              <p className="font-serif text-xl md:text-2xl text-gold font-bold">
                 {card.price}
               </p>
             </div>
           )}
           <span className="inline-flex items-center gap-1.5 font-sans text-xs font-semibold text-gold-light group-hover:underline">
             View Details
-            <svg
-              className="transition-transform duration-300 group-hover:translate-x-1"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
           </span>
         </div>
       </div>

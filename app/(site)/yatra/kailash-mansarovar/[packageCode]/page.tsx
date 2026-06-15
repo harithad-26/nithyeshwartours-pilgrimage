@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import LuxuryPackageDetailTabs from "@/components/pilgrimage/LuxuryPackageDetailTabs";
+import LuxuryPackageDetailTabs, { LuxuryPackageDetailNav } from "@/components/pilgrimage/LuxuryPackageDetailTabs";
 import LuxuryPricingSidebar from "@/components/pilgrimage/LuxuryPricingSidebar";
 
 
@@ -14,7 +14,7 @@ const PACKAGES = {
     tagline: "The Ultimate Pilgrimage Journey",
     description: "Experience the sacred Mount Kailash Parikrama and holy dip in Mansarovar Lake via the Kathmandu-Simikot-Hilsa helicopter route.",
     heroImage: {
-      src: "/images/pilgrimage/kmy_01_hero.png",
+      src: "/images/pilgrimage/hero-kailash.png",
       alt: "Mount Kailash and Mansarovar Lake",
     },
     duration: {
@@ -829,7 +829,7 @@ export default async function PackageDetailPage({
 
           {/* Title */}
           <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 leading-[0.95] max-w-4xl font-light">
-            {pkg.name.split('—')[0].trim()}
+            {pkg.name}
           </h1>
 
           {/* Tagline */}
@@ -863,7 +863,7 @@ export default async function PackageDetailPage({
             >
               Book This Package
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </a>
             <a
@@ -878,8 +878,11 @@ export default async function PackageDetailPage({
         </div>
       </section>
 
+      {/* Sub-Navigation Bar */}
+      <LuxuryPackageDetailNav packageData={pkg} />
+
       {/* Main Page Layout Grid */}
-      <div className="bg-[#F8F7F4] min-h-screen py-16 px-6 lg:px-12">
+      <div className="bg-[#F8F7F4] min-h-screen pt-8 pb-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left Column: All details scrolling sequentially with Scrollspy */}

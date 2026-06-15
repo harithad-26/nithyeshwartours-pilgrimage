@@ -14,10 +14,10 @@ export function SectionHeader({
   light = false,
 }: SectionHeaderProps) {
   return (
-    <div className={`mb-12 ${align === "center" ? "text-center" : "text-left"}`}>
+    <div className={`mb-8 md:mb-12 ${align === "center" ? "text-center" : "text-left"}`}>
       {eyebrow && (
         <p
-          className={`font-sans text-xs font-semibold tracking-[0.12em] uppercase mb-3 ${
+          className={`font-sans text-[10px] md:text-xs font-semibold tracking-[0.12em] uppercase mb-2 md:mb-3 ${
             light ? "text-gold" : "text-gold-dark"
           }`}
         >
@@ -25,7 +25,7 @@ export function SectionHeader({
         </p>
       )}
       <h2
-        className={`font-serif text-3xl md:text-4xl font-semibold leading-tight tracking-tight ${
+        className={`font-serif text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight ${
           light ? "text-white" : "text-navy"
         }`}
       >
@@ -33,7 +33,7 @@ export function SectionHeader({
       </h2>
       {subtitle && (
         <p
-          className={`mt-4 font-sans text-base leading-relaxed max-w-xl ${
+          className={`mt-3 md:mt-4 font-sans text-sm md:text-base leading-relaxed max-w-xl ${
             align === "center" ? "mx-auto" : ""
           } ${light ? "text-white/70" : "text-midnight/60"}`}
         >

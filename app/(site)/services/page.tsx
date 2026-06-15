@@ -14,24 +14,24 @@ export default function ServicesPage() {
     <>
       {/* ── Hero Section ─────────────────────────────────────────────── */}
       <section
-        className="pt-32 pb-0 bg-surface"
+        className="pt-20 md:pt-28 lg:pt-32 pb-0 bg-surface"
         aria-label="Sacred Concierge Services"
       >
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[500px]">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center min-h-[400px] md:min-h-[500px]">
             {/* Left: copy */}
-            <div className="flex flex-col gap-8 self-center">
-              <p className="font-sans text-xs font-bold tracking-[0.2em] uppercase text-gold-dark">
+            <div className="flex flex-col gap-6 md:gap-8 self-center">
+              <p className="font-sans text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gold-dark">
                 BEYOND THE PILGRIMAGE
               </p>
 
-              <h1 className="font-serif text-[60px] leading-[1.25] text-midnight font-normal">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-[1.25] text-midnight font-normal">
                 Sacred Concierge
                 <br />
                 Services
               </h1>
 
-              <p className="font-sans text-lg text-[#43474e] leading-[1.625] max-w-[512px] font-normal">
+              <p className="font-sans text-sm md:text-base lg:text-lg text-[#43474e] leading-[1.625] max-w-[512px] font-normal">
                 Our devotion extends beyond the path. We provide a seamless
                 sanctuary of services including global flight connectivity,
                 curated spiritual stays, and expert visa guidance to ensure your
@@ -40,7 +40,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Right: hero image */}
-            <div className="relative h-[500px] rounded-lg overflow-hidden shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] self-center">
+            <div className="relative h-[350px] md:h-[450px] lg:h-[500px] rounded-lg overflow-hidden shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] self-center">
               <Image
                 src="/images/about-hero.jpg"
                 alt="Nithyeshwar Tours luxury concierge specialist"
@@ -62,14 +62,14 @@ export default function ServicesPage() {
 
       {/* ── Flight & Hotel Section ────────────────────────────────────── */}
       <section
-        className="bg-surface-low px-12 py-24"
+        className="bg-surface-low px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-24"
         aria-label="Flight reservations and curated stays"
       >
-        <div className="grid grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
           {/* Flight Booking card — 7 columns */}
-          <div className="col-span-12 lg:col-span-7 bg-white border-l-2 border-gold-dark rounded-lg p-10 shadow-[0px_10px_15px_rgba(0,31,63,0.06)]">
+          <div className="col-span-1 lg:col-span-7 bg-white border-l-2 border-gold-dark rounded-lg p-6 md:p-8 lg:p-10 shadow-[0px_10px_15px_rgba(0,31,63,0.06)]">
             {/* Card header */}
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
               {/* Plane icon */}
               <svg
                 width="25"
@@ -84,7 +84,7 @@ export default function ServicesPage() {
                   fill="#735c00"
                 />
               </svg>
-              <h2 className="font-serif text-2xl text-midnight leading-8">
+              <h2 className="font-serif text-xl md:text-2xl text-midnight leading-8">
                 Flight Reservations
               </h2>
             </div>
@@ -93,7 +93,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Curated Stays card — 5 columns */}
-          <div className="col-span-12 lg:col-span-5 bg-navy rounded-lg p-10 flex flex-col justify-between min-h-[438px]">
+          <div className="col-span-1 lg:col-span-5 bg-navy rounded-lg p-6 md:p-8 lg:p-10 flex flex-col justify-between min-h-[400px] md:min-h-[438px]">
             <div className="flex flex-col gap-8">
               {/* Header */}
               <div className="flex items-center gap-4">
@@ -194,22 +194,22 @@ export default function ServicesPage() {
 
       {/* ── Spiritual & Administrative Support ───────────────────────── */}
       <section
-        className="py-24 bg-surface"
+        className="py-12 md:py-16 lg:py-24 bg-surface"
         aria-label="Spiritual and administrative support services"
       >
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
           {/* Section heading */}
-          <div className="flex flex-col items-center gap-4 mb-16">
-            <h2 className="font-serif text-[36px] leading-[40px] text-midnight font-bold text-center">
+          <div className="flex flex-col items-center gap-3 md:gap-4 mb-10 md:mb-16">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-[36px] leading-tight lg:leading-[40px] text-midnight font-bold text-center">
               Spiritual &amp; Administrative Support
             </h2>
-            <div className="w-24 h-[2px] bg-gold-dark" aria-hidden="true" />
+            <div className="w-20 md:w-24 h-[2px] bg-gold-dark" aria-hidden="true" />
           </div>
 
           {/* 3-column cards — middle one is "featured" (offset up, dark bg) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start">
             {/* Card 1: Visa Assistance */}
-            <article className="bg-[#eeeeed] rounded-lg p-8 flex flex-col gap-[14px]">
+            <article className="bg-[#eeeeed] rounded-lg p-6 md:p-8 flex flex-col gap-[14px]">
               {/* Shield icon */}
               <div aria-hidden="true">
                 <svg
@@ -261,7 +261,7 @@ export default function ServicesPage() {
             </article>
 
             {/* Card 2: Spiritual Guides — featured, offset up, dark bg */}
-            <article className="bg-navy rounded-lg p-8 flex flex-col gap-[14px] md:-mt-8">
+            <article className="bg-navy rounded-lg p-6 md:p-8 flex flex-col gap-[14px] md:-mt-8">
               {/* Guide/star icon */}
               <div aria-hidden="true">
                 <svg
@@ -313,7 +313,7 @@ export default function ServicesPage() {
             </article>
 
             {/* Card 3: Pilgrim Insurance */}
-            <article className="bg-[#eeeeed] rounded-lg p-8 flex flex-col gap-[14px]">
+            <article className="bg-[#eeeeed] rounded-lg p-6 md:p-8 flex flex-col gap-[14px]">
               {/* Umbrella icon */}
               <div aria-hidden="true">
                 <svg

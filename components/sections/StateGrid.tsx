@@ -223,7 +223,7 @@ function StateTileCard({ tile }: { tile: StateTile }) {
 export function StateGrid() {
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-[450px_370px_420px_370px] gap-8"
+      className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-[450px_370px_420px_370px] gap-4 md:gap-6 lg:gap-8"
       aria-label="India destinations grid"
     >
       {STATES.map((tile) => (

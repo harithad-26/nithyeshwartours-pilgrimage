@@ -46,11 +46,11 @@ export function AwardsSection() {
           {AWARDS.map((award, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-8 border border-transparent hover:border-gold-dark/30 transition-all duration-300 shadow-sm hover:shadow-lg"
+              className="bg-white rounded-lg p-8 premium-card-static group"
             >
               <div className="flex items-start gap-6">
                 <div className="shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
                     <svg
                       width="28"
                       height="28"

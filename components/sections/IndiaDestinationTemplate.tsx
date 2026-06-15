@@ -210,7 +210,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
             {trustCards.map((card, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface-low hover:-translate-y-1 hover:shadow-ambient transition-all duration-300"
+                className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white premium-card-static group"
               >
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
                   {renderTrustIcon(card.iconName)}
@@ -286,9 +286,10 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {packages.map((pkg) => (
-              <div
+              <Link
                 key={pkg.id || pkg.slug}
-                className="flex flex-col h-full p-8 rounded-xl bg-white border border-gold-dark/10 shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300"
+                href={`/packages/${pkg.slug}`}
+                className="flex flex-col h-full p-8 rounded-xl bg-white premium-card-interactive group text-left"
               >
                 {/* Code badge */}
                 <div className="flex items-center justify-between mb-4">
@@ -331,13 +332,12 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
                 </ul>
 
                 {/* CTA View Details */}
-                <Link
-                  href={`/packages/${pkg.slug}`}
-                  className="mt-auto flex items-center justify-center py-3.5 font-sans text-xs font-bold tracking-[0.15em] uppercase rounded border border-gold-dark text-gold-dark hover:bg-gold-dark hover:text-white transition-colors duration-300 min-h-11"
+                <span
+                  className="mt-auto flex items-center justify-center py-3.5 font-sans text-xs font-bold tracking-[0.15em] uppercase rounded border border-gold-dark text-gold-dark group-hover:bg-gold-dark group-hover:text-white transition-all duration-300 min-h-11"
                 >
                   View Details
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -362,7 +362,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
             {standards.map((standard, idx) => (
               <article
                 key={idx}
-                className="flex flex-col gap-5 p-8 bg-white border border-gold-dark/10 rounded shadow-ambient hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/30 transition-all duration-300"
+                className="flex flex-col gap-5 p-8 bg-white premium-card-static group"
               >
                 <div className="w-12 h-12 rounded-xl bg-gold-dark/5 flex items-center justify-center border border-gold-dark/15">
                   {renderStandardIcon(standard.iconName)}
@@ -429,7 +429,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
             {destination.testimonials.map((t, i) => (
               <article
                 key={i}
-                className="bg-white p-8 rounded border border-midnight/5 shadow-ambient hover:-translate-y-1 hover:shadow-card hover:border-midnight transition-all duration-300 flex flex-col justify-between"
+                className="bg-white p-8 rounded flex flex-col justify-between premium-card-static"
               >
                 <div>
                   <div className="flex gap-1 mb-5" aria-label={`Rating: ${t.rating} stars`}>

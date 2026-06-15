@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Package } from "@/lib/types";
-import LuxuryPackageDetailTabs from "@/components/pilgrimage/LuxuryPackageDetailTabs";
+import LuxuryPackageDetailTabs, { LuxuryPackageDetailNav } from "@/components/pilgrimage/LuxuryPackageDetailTabs";
 import LuxuryPricingSidebar from "@/components/pilgrimage/LuxuryPricingSidebar";
 
 interface IndiaPackageDetailTemplateProps {
@@ -133,8 +133,11 @@ export function IndiaPackageDetailTemplate({ pkg }: IndiaPackageDetailTemplatePr
         </div>
       </section>
 
-      {/* 2. Main Page Layout Grid */}
-      <div className="bg-[#F8F7F4] min-h-screen py-16 px-6 lg:px-12">
+      {/* 2. Sub-Navigation Bar */}
+      <LuxuryPackageDetailNav packageData={normalizedPkg as any} />
+
+      {/* 3. Main Page Layout Grid */}
+      <div className="bg-[#F8F7F4] min-h-screen pt-8 pb-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left Column: All details scrolling sequentially with Scrollspy */}

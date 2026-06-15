@@ -98,7 +98,7 @@ export default function PilgrimagesPage() {
               <Link
                 key={yatra.id}
                 href={yatra.href}
-                className="group relative rounded-md overflow-hidden h-full flex flex-col bg-white shadow-ambient hover:shadow-card transition-shadow duration-300"
+                className="group relative rounded-md overflow-hidden h-full flex flex-col bg-white premium-card-interactive"
               >
                 {/* Image */}
                 <div className="relative h-52 overflow-hidden">
@@ -204,6 +204,16 @@ export default function PilgrimagesPage() {
               </svg>
               Call +91 72001 18411
             </Link>
+            <a
+              href="mailto:info@nithyeshwartours.com"
+              className="inline-flex items-center justify-center gap-2 font-sans text-sm font-semibold text-white border border-white/20 px-8 py-4 rounded-md transition-all duration-300 hover:bg-white/10 min-h-11"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              Email Us
+            </a>
           </div>
         </div>
       </section>

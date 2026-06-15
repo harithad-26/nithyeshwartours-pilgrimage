@@ -12,7 +12,10 @@ export function PackageCard({ pkg, priority = false }: PackageCardProps) {
   const imgUrl = getStrapiImageUrl(pkg.coverImage.url);
 
   return (
-    <article className="group bg-white rounded-md overflow-hidden shadow-ambient hover:shadow-card transition-shadow duration-300">
+    <Link
+      href={`/packages/${pkg.slug}`}
+      className="group block bg-white rounded-md overflow-hidden premium-card-interactive"
+    >
       {/* Image */}
       <div className="relative h-60 overflow-hidden">
         <Image
@@ -48,15 +51,13 @@ export function PackageCard({ pkg, priority = false }: PackageCardProps) {
               ₹{pkg.price.toLocaleString("en-IN")}
             </p>
           </div>
-          <Link
-            href={`/packages/${pkg.slug}`}
-            className="font-sans text-xs font-semibold text-gold-dark border border-gold-dark/40 px-4 py-2 rounded-md transition-all duration-300 hover:bg-gold-dark hover:text-white focus-visible:outline-2 focus-visible:outline-gold"
-            aria-label={`View details for ${pkg.title}`}
+          <span
+            className="font-sans text-xs font-semibold text-gold-dark border border-gold-dark/40 px-4 py-2 rounded-md transition-all duration-300 group-hover:bg-gold-dark group-hover:text-white"
           >
             View Details
-          </Link>
+          </span>
         </div>
       </div>
-    </article>
+    </Link>
   );
 }

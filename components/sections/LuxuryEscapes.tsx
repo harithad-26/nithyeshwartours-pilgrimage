@@ -11,11 +11,11 @@ const highlights = [
 export function LuxuryEscapes() {
   return (
     <section
-      className="py-24 bg-surface-low overflow-hidden"
+      className="py-12 md:py-16 lg:py-24 bg-surface-low overflow-hidden"
       aria-labelledby="luxury-escapes-heading"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
 
           {/* Left: images with decorative gold elements */}
           <div className="relative order-2 lg:order-1 flex justify-center">
@@ -67,20 +67,20 @@ export function LuxuryEscapes() {
               align="left"
             />
 
-            <p className="font-sans text-base text-[#43474e] leading-relaxed mb-8 mt-4">
+            <p className="font-sans text-sm md:text-base text-[#43474e] leading-relaxed mb-6 md:mb-8 mt-3 md:mt-4">
               Our Luxury Escapes prioritize silence, space, and spirit. Stay in
               restored palaces, private villas, and heritage sanctuaries where
               every detail is an homage to timeless elegance.
             </p>
 
-            <ul className="space-y-4 mb-10" aria-label="Luxury escape highlights">
+            <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10" aria-label="Luxury escape highlights">
               {highlights.map((point) => (
-                <li key={point} className="flex items-start gap-4">
+                <li key={point} className="flex items-start gap-3 md:gap-4">
                   {/* Custom Gold Star Icon */}
                   <svg
                     className="mt-1 shrink-0 text-gold-dark"
-                    width="14"
-                    height="14"
+                    width="12"
+                    height="12"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -90,7 +90,7 @@ export function LuxuryEscapes() {
                     <path d="M12 2L2 12l10 10 10-10L12 2z" />
                     <circle cx="12" cy="12" r="3.5" fill="currentColor" />
                   </svg>
-                  <span className="font-sans text-base font-medium text-midnight/80 leading-relaxed">
+                  <span className="font-sans text-sm md:text-base font-medium text-midnight/80 leading-relaxed">
                     {point}
                   </span>
                 </li>
@@ -99,23 +99,9 @@ export function LuxuryEscapes() {
 
             <Link
               href="/trip-builder"
-              className="group/btn inline-flex items-center gap-2 bg-navy text-gold font-sans text-sm font-bold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 hover:bg-midnight hover:scale-[1.02] active:scale-[0.98] min-h-12"
+              className="group/btn inline-flex items-center gap-2 bg-navy text-gold font-sans text-xs md:text-sm font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-lg transition-all duration-300 hover:bg-midnight hover:scale-[1.02] active:scale-[0.98] min-h-[44px] md:min-h-12"
             >
               Explore Luxury Collections
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-                className="transition-transform duration-300 group-hover/btn:translate-x-1"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
             </Link>
           </div>
         </div>

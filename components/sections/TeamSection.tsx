@@ -48,9 +48,9 @@ export function TeamSection() {
           {TEAM_MEMBERS.map((member, index) => (
             <div
               key={index}
-              className="group text-center"
+              className="group text-center active:scale-[0.98] transition-transform duration-150 cursor-pointer"
             >
-              <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden bg-surface-low border border-midnight/5 shadow-ambient group-hover:shadow-card transition-shadow duration-300">
+              <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden bg-surface-low border border-midnight/5 shadow-ambient transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:border-gold-dark/30">
                 {/* Placeholder with gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gold-muted/20 to-midnight/10 flex items-center justify-center">
                   <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-midnight/20">
@@ -64,7 +64,7 @@ export function TeamSection() {
                   alt={member.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-midnight/0 group-hover:bg-midnight/5 transition-all duration-300" />
               </div>
@@ -88,9 +88,9 @@ export function TeamSection() {
               Join Our Sacred Mission
             </h3>
             <p className="font-sans text-base text-midnight/60 leading-relaxed mb-6">
-              We're always looking for passionate individuals who share our vision
+              We&apos;re always looking for passionate individuals who share our vision
               of creating meaningful spiritual journeys. If you have expertise in
-              travel, spirituality, or customer care, we'd love to hear from you.
+              travel, spirituality, or customer care, we&apos;d love to hear from you.
             </p>
             <a
               href="/inquiry"

@@ -96,7 +96,7 @@ export default function UttarPradeshYatraPage() {
       {/* 1. Cinematic Hero — Left Aligned */}
       <section className="relative h-screen flex items-center overflow-hidden" aria-label="Uttar Pradesh Sacred Yatra Circuit">
         <Image
-          src="/images/pilgrimage/uttarpradesh-card.png"
+          src="/images/india-states/ram-mandir-ayodhya.png"
           alt="Uttar Pradesh — Varanasi, Ayodhya, Prayagraj — spiritual heartland of India"
           fill
           sizes="100vw"
@@ -148,7 +148,7 @@ export default function UttarPradeshYatraPage() {
               >
                 Explore Packages
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M19 9l7 7-7 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
               <Link
@@ -168,69 +168,85 @@ export default function UttarPradeshYatraPage() {
         </div>
       </section>
 
-      {/* 2. Trust Stats */}
-      <section className="py-16 px-6 bg-white border-b border-midnight/5" aria-label="Why choose Nithyeshwar Tours">
+      {/* 2. Trust Stats - Redesigned Premium Luxury Design */}
+      <section className="py-10 px-6 bg-gradient-to-b from-[#FCFBF9] to-white border-b border-gold/10 animate-in fade-in duration-500" aria-label="Why choose Nithyeshwar Tours">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-midnight/8 rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <circle cx="26" cy="14" r="8" />
-                  <path d="M8 44c0-9.94 8.06-18 18-18s18 8.06 18 18" />
-                  <path d="M38 20c4 1.5 7 5.3 7 10" strokeDasharray="2 2" />
-                  <path d="M14 20c-4 1.5-7 5.3-7 10" strokeDasharray="2 2" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <circle cx="26" cy="14" r="8" />
+                    <path d="M8 44c0-9.94 8.06-18 18-18s18 8.06 18 18" />
+                    <path d="M38 20c4 1.5 7 5.3 7 10" strokeDasharray="2 2" />
+                    <path d="M14 20c-4 1.5-7 5.3-7 10" strokeDasharray="2 2" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">50k+</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Pilgrims Guided</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Over three decades guiding devoted pilgrims across the sacred cities of Uttar Pradesh.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">50k+</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Pilgrims Guided</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Over three decades guiding devoted pilgrims across the sacred cities of Uttar Pradesh.</p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <path d="M26 6L32 18l13 2-9.5 9.2 2.2 13L26 36l-11.7 6.2 2.2-13L7 20l13-2z" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <path d="M26 6L32 18l13 2-9.5 9.2 2.2 13L26 36l-11.7 6.2 2.2-13L7 20l13-2z" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">4.9/5</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Average Guest Rating</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Consistently rated the most trusted sacred tour operator by our returning pilgrims and families.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">4.9/5</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Average Guest Rating</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Consistently rated the most trusted sacred tour operator by our returning pilgrims and families.</p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-10 border-r border-midnight/8 last:border-r-0 bg-white hover:bg-surface hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <path d="M16 6L6 16h4v12h12V16h4z" />
-                  <path d="M14 28v-6h10v6" />
-                  <circle cx="26" cy="11" r="2.5" />
-                  <rect x="30" y="6" width="12" height="12" rx="2" />
-                  <path d="M33 16V9l5 3.5" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <path d="M16 6L6 16h4v12h12V16h4z" />
+                    <path d="M14 28v-6h10v6" />
+                    <circle cx="26" cy="11" r="2.5" />
+                    <rect x="30" y="6" width="12" height="12" rx="2" />
+                    <path d="M33 16V9l5 3.5" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">VIP</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Temple Access</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Pre-arranged VIP Darshan at Kashi Vishwanath and Ram Janmabhoomi — skip the queues entirely.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">VIP</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Temple Access</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Pre-arranged VIP Darshan at Kashi Vishwanath and Ram Janmabhoomi — skip the queues entirely.</p>
             </div>
 
-            <div className="flex flex-col items-center text-center p-10 bg-white hover:bg-surface hover:-translate-y-1 hover:shadow-ambient transition-all duration-300">
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.4" aria-hidden="true">
-                  <path d="M26 6v5M26 41v5M6 26h5M41 26h5" />
-                  <circle cx="26" cy="26" r="14" />
-                  <path d="M26 18v8l5 3" />
-                </svg>
+            <div className="group relative bg-white px-6 py-6 border border-gold-dark/10 hover:border-gold/40 hover:-translate-y-1 shadow-[0_4px_20px_rgba(154,124,46,0.015)] hover:shadow-[0_12px_32px_rgba(154,124,46,0.08)] transition-all duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-gold-dark/40 group-hover:bg-gold group-hover:w-16 transition-all duration-300" />
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-9 h-9 mb-3.5 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 52 52" fill="none" stroke="#9a7c2e" strokeWidth="1.25" aria-hidden="true" className="group-hover:scale-105 transition-transform duration-300">
+                    <path d="M26 6v5M26 41v5M6 26h5M41 26h5" />
+                    <circle cx="26" cy="26" r="14" />
+                    <path d="M26 18v8l5 3" />
+                  </svg>
+                </div>
+                <p className="font-serif text-4xl md:text-5xl text-gold-dark font-extralight tracking-tight leading-none mb-1.5 group-hover:scale-102 transition-transform duration-300">30+</p>
+                <p className="font-sans text-[10px] text-midnight/80 uppercase tracking-[0.2em] font-bold mb-2">Years of Sacred Service</p>
+                <p className="font-sans text-[11px] text-midnight/55 leading-relaxed font-light mt-1">Nithyeshwar Tours has served pilgrims in the sacred heartland of India for over three decades since 1993.</p>
               </div>
-              <p className="font-serif text-4xl text-midnight font-normal leading-none mb-1">30+</p>
-              <p className="font-serif text-base text-midnight/80 font-normal mb-3">Years of Sacred Service</p>
-              <p className="font-sans text-xs text-midnight/50 leading-relaxed">Nithyeshwar Tours has served pilgrims in the sacred heartland of India for over three decades since 1993.</p>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* 3. Sacred Experiences */}
+      {/* 3. Sacred Experiences (With Visual Storytelling Layout) */}
       <section className="py-28 px-6 bg-surface" aria-labelledby="experiences-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
@@ -243,65 +259,50 @@ export default function UttarPradeshYatraPage() {
             <div className="w-12 h-0.5 bg-gold-dark mx-auto mt-6" aria-hidden="true" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {[
               {
-                title: "Sacred Cities of India",
-                desc: "Varanasi (the city Lord Shiva never abandons), Ayodhya (birthplace of Lord Ram), Prayagraj (Triveni Sangam), and Gaya (ancestral liberation) — the four holiest sites in the Hindu world.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
-                    <path d="M16 4L6 16h4v12h12V16h4z" />
-                    <path d="M12 28V20h8v8" />
-                    <circle cx="16" cy="12" r="2.5" />
-                  </svg>
-                ),
+                title: "Varanasi",
+                desc: "Witness the transcendent evening Ganga Aarti and receive darshan at the holy golden-spired Kashi Vishwanath temple.",
+                image: "/images/india-states/varanasi-ghats-photo.png",
+                subtitle: "The Eternal City",
               },
               {
-                title: "Ganga Aarti",
-                desc: "Witness the divine evening fire ritual at Dashashwamedh Ghat — priests choreograph flames, flowers, and devotional chants in a thousand-year-old ceremony on the banks of the sacred Ganga.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
-                    <path d="M16 6v4" />
-                    <path d="M10 10l3 3M22 10l-3 3" />
-                    <circle cx="16" cy="18" r="5" />
-                    <path d="M8 28h16" />
-                    <path d="M12 28v-5M16 28v-5M20 28v-5" />
-                  </svg>
-                ),
+                title: "Ayodhya",
+                desc: "Worship at the newly built grand Ram Janmabhoomi temple, visit Hanuman Garhi, and attend the peaceful Sarayu River aarti.",
+                image: "/images/india-states/ram-mandir-ayodhya.png",
+                subtitle: "Lord Ram's Birthplace",
               },
               {
-                title: "Ancestral Liberation",
-                desc: "Perform Pind Daan at Vishnu Pad Temple, Gaya — believed to grant immediate moksha to departed ancestors. We coordinate qualified priests and complete ceremony arrangements on your behalf.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
-                    <circle cx="16" cy="12" r="4" />
-                    <path d="M16 16v8" />
-                    <path d="M10 26c0-3.3 2.7-6 6-6s6 2.7 6 6" />
-                    <path d="M8 20c-2 0-4-2-4-4s2-4 4-4M24 20c2 0 4-2 4-4s-2-4-4-4" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Triveni Sangam",
-                desc: "Take a holy dip at the sacred confluence of the Ganga, Yamuna, and the invisible Saraswati at Prayagraj — a site where bathing is believed to wash away the sins of all past lifetimes.",
-                icon: (
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#9a7c2e" strokeWidth="1.5" aria-hidden="true">
-                    <path d="M8 24c2-4 4-8 8-8s6 4 8 8" />
-                    <path d="M4 28c3-6 5-12 12-12s9 6 12 12" />
-                    <path d="M16 12V4M12 8l4-4 4 4" />
-                  </svg>
-                ),
+                title: "Prayagraj",
+                desc: "Take a holy dip at the sacred confluence of the Ganga, Yamuna, and invisible Saraswati rivers, purging sins across lifetimes.",
+                image: "/images/pilgrimage/prayagraj_sangam_highlight.png",
+                subtitle: "Triveni Sangam",
               },
             ].map((exp) => (
               <article
                 key={exp.title}
-                className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-gold-dark/20 p-8"
+                className="flex flex-col bg-white shadow-ambient rounded-md overflow-hidden border border-midnight/5 transition-all duration-300 hover:shadow-card hover:-translate-y-1 hover:border-midnight group"
               >
-                <div className="w-14 h-14 rounded-xl bg-gold-dark/5 border border-gold-dark/15 flex items-center justify-center mb-6">
-                  {exp.icon}
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={exp.image}
+                    alt={exp.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-midnight/10" aria-hidden="true" />
                 </div>
-                <h3 className="font-serif text-xl text-midnight font-normal mb-4">{exp.title}</h3>
-                <p className="font-sans text-sm text-midnight/65 leading-relaxed flex-1">{exp.desc}</p>
+                <div className="p-8 flex-1 flex flex-col gap-3">
+                  <h3 className="font-serif text-2xl text-midnight font-normal leading-snug">
+                    {exp.title}
+                  </h3>
+                  <p className="font-sans text-xs font-semibold uppercase tracking-wider text-gold-dark">{exp.subtitle}</p>
+                  <p className="font-sans text-sm text-midnight/70 leading-relaxed">
+                    {exp.desc}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
@@ -539,6 +540,113 @@ export default function UttarPradeshYatraPage() {
                 For the Grand UP Yatra, we coordinate qualified Brahmin priests at Vishnu Pad Temple in Gaya for complete ancestral liberation rites — one of the deepest spiritual services we offer.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Bento Gallery Section */}
+      <section className="py-28 px-6 bg-white border-t border-midnight/5" aria-labelledby="gallery-heading">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
+              VISUAL REVERENCE
+            </span>
+            <h2 id="gallery-heading" className="font-serif text-4xl text-midnight font-normal leading-tight">
+              Glances of the Sacred Cities
+            </h2>
+            <div className="w-12 h-0.5 bg-gold-dark mx-auto mt-6" aria-hidden="true" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[720px] md:h-[520px]">
+            {/* Left wide card - Ayodhya */}
+            <div className="relative col-span-1 md:col-span-2 h-full overflow-hidden rounded shadow-ambient group">
+              <Image
+                src="/images/india-states/ram-mandir-ayodhya.png"
+                alt="Grand Ram Mandir in Ayodhya shining brightly"
+                fill
+                sizes="(max-width: 768px) 100vw, 66vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-6 text-white">
+                <p className="font-serif text-xl">The Birthplace of Lord Ram</p>
+                <p className="font-sans text-xs text-white/70">Ram Janmabhoomi Temple, Ayodhya</p>
+              </div>
+            </div>
+
+            {/* Right stacked cards */}
+            <div className="grid grid-rows-2 gap-6 h-full">
+              {/* Kashi Vishwanath */}
+              <div className="relative h-full overflow-hidden rounded shadow-ambient group">
+                <Image
+                  src="/images/pilgrimage/kashi_vishwanath_highlight.png"
+                  alt="Golden domes of Kashi Vishwanath Temple in Varanasi"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-102"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                  <p className="font-serif text-base">Kashi Vishwanath Mandir</p>
+                </div>
+              </div>
+              
+              {/* Ganga Aarti */}
+              <div className="relative h-full overflow-hidden rounded shadow-ambient group">
+                <Image
+                  src="/images/pilgrimage/ganga_aarti_highlight.png"
+                  alt="Ganga Aarti fire ceremony ritual on Varanasi ghats"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-102"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                  <p className="font-serif text-base">Evening Ganga Aarti</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            {/* Prayagraj */}
+            <div className="relative h-64 overflow-hidden rounded shadow-ambient group">
+              <Image
+                src="/images/pilgrimage/prayagraj_sangam_highlight.png"
+                alt="Holy dip at Triveni Sangam in Prayagraj"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                <p className="font-serif text-base">Triveni Sangam, Prayagraj</p>
+              </div>
+            </div>
+
+            {/* Varanasi Ghats */}
+            <div className="relative h-64 overflow-hidden rounded shadow-ambient group">
+              <Image
+                src="/images/india-states/varanasi-ghats-photo.png"
+                alt="Boats on the holy river Ganga in front of Varanasi Ghats"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                <p className="font-serif text-base">Ghats of Varanasi</p>
+              </div>
+            </div>
+
+            {/* Sarnath Dhamek Stupa */}
+            <div className="relative h-64 overflow-hidden rounded shadow-ambient group">
+              <Image
+                src="/images/pilgrimage/sarnath_gallery.png"
+                alt="Dhamek Stupa at Sarnath Buddhist site gardens"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight/80 to-transparent p-4 text-white">
+                <p className="font-serif text-base">Dhamek Stupa, Sarnath</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

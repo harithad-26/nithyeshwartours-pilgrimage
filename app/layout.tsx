@@ -23,6 +23,13 @@ export const metadata: Metadata = {
   },
   description:
     "Curating transformative pilgrimage and travel experiences across India and beyond. Book your sacred journey with Nithyeshwar Tours.",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' }
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     siteName: "Nithyeshwar Tours",
     type: "website",
@@ -36,7 +43,23 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${notoSerif.variable} ${manrope.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var stored = localStorage.getItem('theme-edges');
+                  var theme = stored || 'sharp';
+                  document.documentElement.setAttribute('data-theme-edges', theme);
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-dvh flex flex-col bg-surface text-midnight">
         {children}
       </body>
