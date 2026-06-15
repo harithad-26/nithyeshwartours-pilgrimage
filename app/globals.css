@@ -286,3 +286,17 @@ html[data-theme-edges="sharp"] .rounded-full:not(.whatsapp-float):not(.theme-tog
   transition-duration: 0.08s;
 }
 
+/* Mobile responsive layout overrides for bottom bar and WhatsApp button */
+@media (max-width: 1023px) {
+  /* Prevent the mobile bottom pricing bar from being cut off by browser margins/safe areas */
+  div.fixed.bottom-0.left-0.right-0.z-50.bg-white {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 12px) !important;
+  }
+  
+  /* Elevate the WhatsApp floating button above the mobile bottom bar to prevent overlapping the Book Now button */
+  .whatsapp-float {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 92px) !important;
+  }
+}
+
+

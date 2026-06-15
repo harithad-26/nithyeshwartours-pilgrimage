@@ -39,7 +39,7 @@ export function Step3Travelers({ data, updateData, onNext, onBack }: Step3Props)
     <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500 px-4">
       <div className="text-center mb-8 md:mb-12">
         <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-midnight font-normal mb-3 md:mb-4">
-          Who's traveling?
+          Who&apos;s traveling?
         </h2>
         <p className="font-sans text-sm md:text-base text-midnight/60">
           Tell us about your travel group

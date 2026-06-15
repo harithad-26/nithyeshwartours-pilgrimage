@@ -76,7 +76,7 @@ export function TrustStrip() {
             Trusted by Travellers Across Generations
           </h2>
           <p className="font-sans text-sm md:text-base text-midnight/60 leading-relaxed max-w-2xl mx-auto">
-            For over three decades, we've been crafting unforgettable journeys that connect you with the beauty of India and the world. Our commitment to excellence has earned the trust of thousands of families.
+            For over three decades, we&apos;ve been crafting unforgettable journeys that connect you with the beauty of India and the world. Our commitment to excellence has earned the trust of thousands of families.
           </p>
         </div>
 

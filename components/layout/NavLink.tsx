@@ -15,7 +15,7 @@ export function NavLink({ href, children }: NavLinkProps) {
     <Link
       href={href}
       className={`
-        font-serif text-base font-normal tracking-tight transition-colors duration-300 pb-1
+        font-serif text-base font-normal tracking-tight transition-colors duration-300 pb-1 w-fit
         ${isActive
           ? "text-gold-dark border-b-2 border-gold-dark"
           : "text-midnight/70 hover:text-midnight"
