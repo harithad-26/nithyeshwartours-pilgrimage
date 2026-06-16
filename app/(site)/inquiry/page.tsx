@@ -20,14 +20,14 @@ export default function InquiryPage() {
   return (
     <>
       {/* Page header */}
-      <section className="pt-36 pb-20 px-6 bg-surface">
+      <section className="pt-24 sm:pt-36 pb-12 sm:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-surface">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Form side — 2/3 width on lg */}
           <div className="lg:col-span-2">
             <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4">
               Begin Your Pilgrimage
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-midnight font-normal leading-tight mb-3">
+            <h1 className="font-serif text-3xl md:text-5xl text-midnight font-normal leading-tight mb-3">
               Inquire with
               <br />
               <span className="text-gold-dark">Reverence.</span>

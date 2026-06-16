@@ -84,12 +84,12 @@ export default function KailashMansarovarPage() {
         {/* Navy-Tinted Luxury Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/80 to-midnight/15" aria-hidden="true" />
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-8">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="max-w-3xl">
             <span className="font-sans text-xs font-bold tracking-[0.35em] uppercase text-gold mb-4 block">
               THE ULTIMATE SPIRITUAL FRONTIER
             </span>
-            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-white mb-6 leading-[0.95] font-light">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[0.95] font-light">
               Kailash
               <br />
               Mansarovar
@@ -229,7 +229,7 @@ export default function KailashMansarovarPage() {
 
 
       {/* 3. Sacred Trinity: Storytelling & Inspiration (With Premium Images) */}
-      <section className="py-28 px-6 bg-surface" aria-labelledby="trinity-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface" aria-labelledby="trinity-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -315,7 +315,7 @@ export default function KailashMansarovarPage() {
       <PersonaHighlights />
 
       {/* 4. Journey Timeline Section */}
-      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="timeline-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="timeline-heading">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -409,7 +409,7 @@ export default function KailashMansarovarPage() {
       </section>
 
       {/* 5. Premium Package Cards */}
-      <section className="py-28 px-6 bg-surface" id="packages" aria-labelledby="packages-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface" id="packages" aria-labelledby="packages-heading">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -436,7 +436,7 @@ export default function KailashMansarovarPage() {
                     10 Nights / 11 Days
                   </span>
                 </div>
-                <h3 className="font-serif text-2xl text-midnight font-normal leading-snug mb-2">
+                <h3 className="font-serif text-xl sm:text-2xl text-midnight font-normal leading-snug mb-2 line-clamp-2 min-h-14">
                   Premium Helicopter Expedition
                 </h3>
                 <p className="font-sans text-[11px] text-midnight/50 tracking-[0.2em] uppercase mb-6 font-medium">
@@ -508,7 +508,7 @@ export default function KailashMansarovarPage() {
                     12 Nights / 13 Days
                   </span>
                 </div>
-                <h3 className="font-serif text-2xl text-midnight font-normal leading-snug mb-2">
+                <h3 className="font-serif text-xl sm:text-2xl text-midnight font-normal leading-snug mb-2 line-clamp-2 min-h-14">
                   Classic Overland Coach Yatra
                 </h3>
                 <p className="font-sans text-[11px] text-midnight/50 tracking-[0.2em] uppercase mb-6 font-medium">
@@ -572,7 +572,7 @@ export default function KailashMansarovarPage() {
       </section>
 
       {/* 6. Expedition Standards (Support - Changed from Dark Navy to Light Premium Gold Accented Card) */}
-      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -631,7 +631,7 @@ export default function KailashMansarovarPage() {
       </section>
 
       {/* 7. Image Gallery Section (Real dedicated pictures used) */}
-      <section className="py-28 px-6 bg-white" aria-labelledby="gallery-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-white" aria-labelledby="gallery-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -740,7 +740,7 @@ export default function KailashMansarovarPage() {
       </section>
 
       {/* 8. Pilgrim Stories Section (Polished with profile initials badges) */}
-      <section className="py-28 px-6 bg-surface-low border-t border-midnight/5" aria-labelledby="stories-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface-low border-t border-midnight/5" aria-labelledby="stories-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -786,7 +786,7 @@ export default function KailashMansarovarPage() {
       </section>
 
       {/* 9. FAQ Section (Ends cleanly, goes FAQ -> Footer) */}
-      <section className="py-28 px-6 bg-surface border-t border-midnight/5 pb-36" aria-labelledby="faq-title">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface border-t border-midnight/5" aria-labelledby="faq-title">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">

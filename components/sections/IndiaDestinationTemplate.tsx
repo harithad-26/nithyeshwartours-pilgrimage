@@ -164,7 +164,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-5">
             {destination.eyebrow}
           </p>
-          <h1 className="font-serif text-6xl md:text-7xl text-surface font-normal leading-tight mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-surface font-normal leading-tight mb-6">
             {destination.name}
           </h1>
           <p className="font-sans text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">
@@ -180,7 +180,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
       </section>
 
       {/* 1.5 About Destination - Full Description Section */}
-      <section className="py-20 px-6 bg-white border-b border-midnight/5">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12 bg-white border-b border-midnight/5">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4">
@@ -204,7 +204,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
       </section>
 
       {/* 2. Trust Section (4-column Grid) */}
-      <section className="py-20 px-6 bg-white border-b border-midnight/5" aria-label="Why choose Nithyeshwar Tours">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12 bg-white border-b border-midnight/5" aria-label="Why choose Nithyeshwar Tours">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-midnight/8 rounded-xl overflow-hidden">
             {trustCards.map((card, idx) => (
@@ -225,7 +225,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
       </section>
 
       {/* 3. Key Attractions (3 Alternating Rows) */}
-      <section className="bg-surface py-28 px-12">
+      <section className="bg-surface py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
             Sacred Triad
@@ -272,7 +272,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
       </section>
 
       {/* 4. Packages Grid (Tamil Nadu style 4-column Grid) */}
-      <section className="bg-surface py-28 px-12 border-t border-midnight/5" aria-labelledby="packages-heading">
+      <section className="bg-surface py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12 border-t border-midnight/5" aria-labelledby="packages-heading">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
             SACRED CIRCUITS
@@ -299,7 +299,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif text-2xl font-normal leading-snug mb-3 text-midnight">
+                <h3 className="font-serif text-xl sm:text-2xl font-normal leading-snug mb-3 text-midnight line-clamp-2 min-h-14">
                   {pkg.title}
                 </h3>
 
@@ -344,7 +344,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
       </section>
 
       {/* 5. Service Standards */}
-      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -376,7 +376,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
       </section>
 
       {/* 6. Planning steps */}
-      <section className="bg-surface py-28 px-12">
+      <section className="bg-surface py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
             How It Works
@@ -413,7 +413,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
       </section>
 
       {/* 7. Devotee reviews / testimonials */}
-      <section className="py-28 px-6 bg-surface-low border-t border-midnight/5" aria-labelledby="stories-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12 bg-surface-low border-t border-midnight/5" aria-labelledby="stories-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -457,7 +457,7 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
       </section>
 
       {/* 8. FAQs Section */}
-      <section className="py-28 px-6 bg-white border-t border-midnight/5" aria-labelledby="faq-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12 bg-white border-t border-midnight/5" aria-labelledby="faq-heading">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">

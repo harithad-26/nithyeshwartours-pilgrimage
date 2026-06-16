@@ -15,15 +15,15 @@ export default async function TestimonialsPage() {
   return (
     <>
       {/* Page header */}
-      <section className="pt-36 pb-16 px-6 bg-surface">
+      <section className="pt-24 sm:pt-36 pb-10 sm:pb-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-surface">
         <div className="max-w-4xl mx-auto text-center">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4">
             Voices of Enlightenment
           </p>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-midnight font-normal leading-tight tracking-tight mb-5">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-7xl text-midnight font-normal leading-tight tracking-tight mb-5">
             Pilgrim Stories
           </h1>
-          <p className="font-sans text-lg text-[#43474e] leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="font-sans text-base sm:text-lg text-[#43474e] leading-relaxed font-light max-w-2xl mx-auto">
             Thousands of devotees have walked these sacred paths with us. Here
             are their stories, told in their own words.
           </p>
@@ -34,7 +34,7 @@ export default async function TestimonialsPage() {
       <TestimonialsGrid testimonials={testimonials} />
 
       {/* CTA section */}
-      <section className="py-32 px-6 bg-midnight">
+      <section className="py-12 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 bg-midnight">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-5">
             Add Your Story

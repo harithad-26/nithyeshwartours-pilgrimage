@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 export default function TripBuilderPage() {
   return (
     <div className="bg-surface min-h-screen">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-12 pt-32 pb-24">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-12 pt-24 sm:pt-32 pb-12 sm:pb-24">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-10 sm:mb-16">
           <p className="font-sans text-xs font-bold tracking-[0.2em] uppercase text-gold-dark mb-4">
             Personalized Pilgrimage
           </p>
-          <h1 className="font-serif text-6xl md:text-[72px] text-midnight font-normal leading-[1] max-w-[768px]">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[72px] text-midnight font-normal leading-[1] max-w-[768px]">
             Design Your Sacred
             <br />
             Journey

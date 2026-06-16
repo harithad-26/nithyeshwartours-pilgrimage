@@ -120,7 +120,7 @@ export function SacredPilgrimages({ packages }: SacredPilgrimagesProps) {
 
                 {/* Card body */}
                 <div className="flex flex-col flex-1 p-5 md:p-6 gap-2 md:gap-3 bg-gradient-to-b from-transparent to-navy/10">
-                  <h3 className="font-serif text-xl md:text-2xl text-gold font-normal leading-snug drop-shadow-sm">
+                  <h3 className="font-serif text-xl md:text-2xl text-gold font-normal leading-snug drop-shadow-sm line-clamp-2 min-h-[56px]">
                     {item.title}
                   </h3>
                   <p className="font-sans text-xs md:text-sm text-white/70 leading-relaxed flex-1 line-clamp-3">

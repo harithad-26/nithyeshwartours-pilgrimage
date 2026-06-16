@@ -1973,7 +1973,7 @@ export const MOCK_INDIA_PACKAGES: Package[] = [
     duration: "5 Nights / 6 Days",
     groupSize: "2-8 Persons",
     availability: "Bi-Weekly",
-    coverImage: makeImage("/images/pilgrimage/varanasi.jpg", "Triveni Sangam Prayagraj"),
+    coverImage: makeImage("/images/india-states/varanasi-ghats-photo.png", "Triveni Sangam Prayagraj"),
     galleryImages: [
       makeImage("/images/destinations/uttar-pradesh.jpg", "Kashi"),
     ],

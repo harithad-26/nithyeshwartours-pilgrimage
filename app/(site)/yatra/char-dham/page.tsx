@@ -105,12 +105,12 @@ export default function CharDhamPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/75 to-midnight/20" aria-hidden="true" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-8">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="max-w-3xl">
             <span className="font-sans text-xs font-bold tracking-[0.35em] uppercase text-gold mb-4 block">
               THE SACRED CIRCUIT OF UTTARAKHAND
             </span>
-            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-white mb-4 leading-[0.95] font-light">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 leading-[0.95] font-light">
               Char Dham
               <br />
               <span className="italic font-normal">Yatra</span>
@@ -168,7 +168,7 @@ export default function CharDhamPage() {
       </section>
 
       {/* 2. Trust Stats - Redesigned Premium Luxury Design */}
-      <section className="py-10 px-6 bg-gradient-to-b from-[#FCFBF9] to-white border-b border-gold/10 animate-in fade-in duration-500" aria-label="Why choose Nithyeshwar Tours">
+      <section className="py-8 sm:py-10 px-4 sm:px-6 bg-gradient-to-b from-[#FCFBF9] to-white border-b border-gold/10 animate-in fade-in duration-500" aria-label="Why choose Nithyeshwar Tours">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
@@ -243,13 +243,13 @@ export default function CharDhamPage() {
       </section>
 
       {/* 3. The Four Sacred Dhams (With Visual Storytelling Layout) */}
-      <section className="py-28 px-6 bg-surface" aria-labelledby="dhams-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface" aria-labelledby="experiences-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
               FOUR ABODES OF THE DIVINE
             </span>
-            <h2 id="dhams-heading" className="font-serif text-4xl md:text-5xl text-midnight font-normal leading-tight">
+            <h2 id="experiences-heading" className="font-serif text-4xl md:text-5xl text-midnight font-normal leading-tight">
               The Sacred Char Dham
             </h2>
             <div className="w-12 h-0.5 bg-gold-dark mx-auto mt-6" aria-hidden="true" />
@@ -317,7 +317,7 @@ export default function CharDhamPage() {
       </section>
 
       {/* 4. Journey Route Timeline */}
-      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="timeline-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="timeline-heading">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -401,7 +401,7 @@ export default function CharDhamPage() {
       </section>
 
       {/* 5. Package Cards */}
-      <section className="py-28 px-6 bg-surface" id="packages" aria-labelledby="packages-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface" id="packages" aria-labelledby="packages-heading">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -441,7 +441,7 @@ export default function CharDhamPage() {
                       </span>
                     )}
                   </div>
-                  <h3 className="font-serif text-2xl text-midnight font-normal leading-snug mb-2">{pkg.name}</h3>
+                  <h3 className="font-serif text-xl sm:text-2xl text-midnight font-normal leading-snug mb-2 line-clamp-2 min-h-14">{pkg.name}</h3>
                   <p className="font-sans text-[11px] text-midnight/45 tracking-[0.15em] uppercase mb-6 font-medium">
                     {pkg.subtitle}
                   </p>
@@ -496,7 +496,7 @@ export default function CharDhamPage() {
       </section>
 
       {/* 6. Expedition Standards */}
-      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -548,7 +548,7 @@ export default function CharDhamPage() {
       </section>
 
       {/* Bento Gallery Section */}
-      <section className="py-28 px-6 bg-white border-t border-midnight/5" aria-labelledby="gallery-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-white border-t border-midnight/5" aria-labelledby="gallery-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -655,7 +655,7 @@ export default function CharDhamPage() {
       </section>
 
       {/* 7. FAQ */}
-      <section className="py-28 px-6 bg-surface border-t border-midnight/5 pb-36" aria-labelledby="faq-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface border-t border-midnight/5" aria-labelledby="faq-heading">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">

@@ -38,7 +38,7 @@ const DEPARTURES = [
 
 export function UpcomingYatras() {
   return (
-    <section className="py-20 md:py-28 bg-surface relative" aria-labelledby="upcoming-departures-heading">
+    <section className="py-12 md:py-20 lg:py-28 bg-surface relative" aria-labelledby="upcoming-departures-heading">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
         <SectionHeader
           eyebrow="Faith In Motion"
@@ -63,7 +63,7 @@ export function UpcomingYatras() {
                   className="grid grid-cols-12 items-center px-8 py-6 hover:bg-surface-low transition-colors duration-200 group"
                 >
                   <div className="col-span-4">
-                    <h4 className="font-serif text-base text-midnight font-normal group-hover:text-gold-dark transition-colors duration-200">
+                    <h4 className="font-serif text-base text-midnight font-normal group-hover:text-gold-dark transition-colors duration-200 line-clamp-2">
                       {yatra.destination}
                     </h4>
                   </div>
@@ -118,7 +118,7 @@ export function UpcomingYatras() {
                   </span>
                   <span className="font-sans text-xs text-midnight/50 font-medium">{yatra.duration}</span>
                 </div>
-                <h4 className="font-serif text-base text-midnight font-normal mb-4">
+                <h4 className="font-serif text-base text-midnight font-normal mb-4 line-clamp-2 min-h-12">
                   {yatra.destination}
                 </h4>
                 <div className="border-t border-midnight/5 pt-4 flex items-center justify-between">

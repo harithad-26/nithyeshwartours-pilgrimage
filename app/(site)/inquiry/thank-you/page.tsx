@@ -25,7 +25,7 @@ export default function ThankYouPage() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-serif text-4xl md:text-5xl text-midnight mb-4">
+          <h1 className="font-serif text-3xl md:text-5xl text-midnight mb-4">
             Thank You!
           </h1>
           <p className="font-sans text-lg text-midnight/70 mb-8">

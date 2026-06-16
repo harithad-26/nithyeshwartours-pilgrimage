@@ -52,12 +52,12 @@ export default async function DynamicPackageDetailPage({ params }: PageProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/65 to-midnight/15" aria-hidden="true" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-16">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pb-10 sm:pb-16">
           <div className="max-w-3xl">
             <span className="font-sans text-[10px] font-bold tracking-[0.35em] uppercase text-gold mb-3 block">
               {pkg.tagline}
             </span>
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-3 leading-[0.95] font-light">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white mb-3 leading-[0.95] font-light line-clamp-2">
               {pkg.title}
             </h1>
             <p className="font-sans text-sm text-white/50 mb-6">{pkg.code} · {pkg.subtitle}</p>
@@ -584,21 +584,21 @@ export default async function DynamicPackageDetailPage({ params }: PageProps) {
       </div>
 
       {/* Mobile Booking Bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-midnight/10 shadow-2xl px-4 py-3">
-        <div className="flex items-center gap-3">
-          <div className="flex-1">
-            <p className="font-sans text-[10px] text-midnight/45 uppercase tracking-wider">Starting from</p>
-            <p className="font-serif text-2xl text-midnight font-normal leading-none">{pkg.price}</p>
+      <div className="mobile-sticky-bar lg:hidden fixed bottom-6 left-4 right-4 z-50 bg-white/95 backdrop-blur-md border border-midnight/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] rounded-2xl px-5 py-3.5">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="font-sans text-[10px] text-midnight/45 uppercase tracking-wider mb-0.5">Starting from</p>
+            <p className="font-serif text-xl text-midnight font-medium leading-none">{pkg.price}</p>
           </div>
           <Link
             href={`/inquiry?package=${packageCode}`}
-            className="flex items-center gap-2 px-6 py-3.5 bg-gold text-midnight font-sans text-xs font-bold tracking-[0.1em] uppercase hover:bg-yellow-300 transition-all duration-300 min-h-11 shrink-0"
+            className="flex items-center justify-center font-sans px-5 py-2.5 bg-midnight text-white text-xs font-bold uppercase tracking-wider hover:bg-midnight/90 transition-all duration-300 rounded-xl"
           >
-            Book This Package
+            Book Now
           </Link>
         </div>
       </div>
-      <div className="lg:hidden h-20" aria-hidden="true" />
+      <div className="lg:hidden h-24" aria-hidden="true" />
     </div>
   );
 }

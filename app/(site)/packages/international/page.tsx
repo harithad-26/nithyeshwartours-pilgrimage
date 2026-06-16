@@ -39,17 +39,17 @@ export default function InternationalPage() {
   return (
     <>
       {/* Hero Header */}
-      <section className="bg-surface pt-32 pb-0 px-12">
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center mb-20">
+      <section className="bg-surface pt-24 sm:pt-32 pb-0 px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col items-center text-center mb-10 md:mb-16 lg:mb-20">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4">
             Beyond Boundaries
           </p>
-          <h1 className="font-serif text-[72px] text-midnight font-normal leading-none mb-5">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[72px] text-midnight font-normal leading-none mb-5">
             Worldly Wonders &amp;
             <br />
             Sacred Sanctuaries
           </h1>
-          <p className="font-sans text-lg text-[#43474e] leading-relaxed max-w-2xl">
+          <p className="font-sans text-base sm:text-lg text-[#43474e] leading-relaxed max-w-2xl">
             Experience a higher plane of travel. From the turquoise horizons of
             the Maldives to the spiritual echoes of Bali, our international
             voyages are crafted for the soul.
@@ -59,11 +59,11 @@ export default function InternationalPage() {
         {/* Bento Grid */}
         <div className="max-w-7xl mx-auto">
           {/* Row 1 */}
-          <div className="grid grid-cols-12 gap-8 mb-8" style={{ gridTemplateRows: "592px" }}>
+          <div className="grid grid-cols-12 gap-8 mb-8 international-bento-grid">
             {/* Maldives — large */}
             <div className="col-span-12 lg:col-span-8 bg-white rounded-lg overflow-hidden shadow-card flex flex-col">
               {/* Image portion */}
-              <Link href="/packages/international/maldives" className="relative flex-1 block overflow-hidden group">
+              <Link href="/packages/international/maldives" className="relative flex-1 block overflow-hidden group min-h-[280px]">
                 <Image
                   src="/images/destinations/international.jpg"
                   alt="Maldives: The Azure Sanctuary"
@@ -81,25 +81,25 @@ export default function InternationalPage() {
                 </div>
               </Link>
               {/* Info bar */}
-              <div className="flex items-end justify-between p-8">
+              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between p-6 sm:p-8 gap-4">
                 <div>
-                  <h2 className="font-serif text-[30px] text-midnight font-normal leading-tight mb-3">
+                  <h2 className="font-serif text-2xl sm:text-[30px] text-midnight font-normal leading-tight mb-3 line-clamp-2">
                     <Link href="/packages/international/maldives" className="hover:text-gold-dark transition-colors">
                       Maldives: The Azure Sanctuary
                     </Link>
                   </h2>
-                  <div className="flex items-center gap-6 font-sans text-sm text-[#43474e]">
+                  <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-sans text-sm text-[#43474e]">
                     <span>Overwater Villas</span>
                     <span>Holistic Wellness</span>
                     <span>Private Island Dining</span>
                   </div>
                 </div>
-                <div className="flex flex-col items-end shrink-0 ml-8">
-                  <div className="text-right">
-                    <p className="font-sans text-xs uppercase tracking-[0.12em] text-[#43474e] mb-1">
+                <div className="flex flex-col items-start sm:items-end shrink-0 sm:ml-8">
+                  <div>
+                    <p className="font-sans text-[10px] sm:text-xs uppercase tracking-[0.12em] text-[#43474e] mb-1">
                       Starting From
                     </p>
-                    <p className="font-serif text-[30px] text-gold-dark font-normal leading-none">
+                    <p className="font-serif text-2xl sm:text-[30px] text-gold-dark font-normal leading-none">
                       $3,499
                     </p>
                   </div>
@@ -109,7 +109,7 @@ export default function InternationalPage() {
 
             {/* Bali — tall */}
             <div className="col-span-12 lg:col-span-4 bg-white rounded-lg overflow-hidden shadow-card flex flex-col">
-              <Link href="/packages/international/bali" className="relative flex-1 block overflow-hidden group">
+              <Link href="/packages/international/bali" className="relative flex-1 block overflow-hidden group min-h-[240px]">
                 <Image
                   src="/images/destinations/bali.png"
                   alt="Bali Spirit"
@@ -120,8 +120,8 @@ export default function InternationalPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-midnight/80" aria-hidden="true" />
               </Link>
-              <div className="p-8">
-                <h3 className="font-serif text-2xl text-midnight font-normal mb-3">
+              <div className="p-6 sm:p-8">
+                <h3 className="font-serif text-2xl text-midnight font-normal mb-3 line-clamp-2">
                   <Link href="/packages/international/bali" className="hover:text-gold-dark transition-colors">
                     Bali Spirit
                   </Link>
@@ -137,7 +137,7 @@ export default function InternationalPage() {
           </div>
 
           {/* Row 2 */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-12 md:pb-16 lg:pb-20">
             {SMALL_CARDS.map((card) => {
               const cardContent = (
                 <>
@@ -151,8 +151,8 @@ export default function InternationalPage() {
                       quality={80}
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-midnight/80" aria-hidden="true" />
-                    <div className="absolute bottom-6 left-6">
-                      <p className="font-serif text-2xl text-surface font-normal leading-tight">
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <p className="font-serif text-xl sm:text-2xl text-surface font-normal leading-tight line-clamp-2">
                         {card.title}
                       </p>
                       <p className="font-sans text-sm text-white/80">{card.subtitle}</p>

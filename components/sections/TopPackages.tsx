@@ -161,7 +161,7 @@ function BentoCard({
 
       {/* Text content with slide-up micro-interaction */}
       <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 z-10 translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
-        <h3 className="font-serif text-xl md:text-2xl lg:text-3xl text-white font-normal leading-snug mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+        <h3 className="font-serif text-xl md:text-2xl lg:text-3xl text-white font-normal leading-snug mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] line-clamp-2">
           {card.title}
         </h3>
         <p className="font-sans text-xs md:text-sm text-white/70 leading-relaxed mb-3 md:mb-4 line-clamp-2 max-w-xl transition-opacity duration-500 group-hover:text-white/85">

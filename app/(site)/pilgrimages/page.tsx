@@ -75,15 +75,15 @@ export default function PilgrimagesPage() {
   return (
     <>
       {/* Page header */}
-      <section className="pt-36 pb-16 px-6 bg-surface">
+      <section className="pt-24 sm:pt-36 pb-10 sm:pb-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-surface">
         <div className="max-w-7xl mx-auto text-center">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4">
             The Eternal Path
           </p>
-          <h1 className="font-serif text-6xl md:text-7xl text-midnight font-normal leading-tight tracking-tight max-w-3xl mx-auto mb-5">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-midnight font-normal leading-tight tracking-tight max-w-3xl mx-auto mb-5">
             Sacred Pilgrimages
           </h1>
-          <p className="font-sans text-lg text-[#43474e] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-[#43474e] max-w-2xl mx-auto leading-relaxed">
             Explore our complete collection of pilgrimage journeys across India and beyond.
             From the Himalayan heights to the temple trails of the South.
           </p>
@@ -91,7 +91,7 @@ export default function PilgrimagesPage() {
       </section>
 
       {/* Yatra Cards Grid */}
-      <section className="px-6 pb-24 bg-surface" aria-label="All pilgrimage packages">
+      <section className="px-4 sm:px-6 md:px-8 lg:px-12 pb-12 sm:pb-16 md:pb-24 bg-surface" aria-label="All pilgrimage packages">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {YATRAS.map((yatra) => (
@@ -132,7 +132,7 @@ export default function PilgrimagesPage() {
                 {/* Content */}
                 <div className="p-6 flex flex-col gap-4 flex-grow">
                   <div className="space-y-1.5">
-                    <h3 className="font-serif text-2xl text-midnight font-normal leading-tight">
+                    <h3 className="font-serif text-xl sm:text-2xl text-midnight font-normal leading-tight line-clamp-2 min-h-[56px]">
                       {yatra.name}
                     </h3>
                     <p className="font-sans text-sm text-gold-dark font-medium">
@@ -171,7 +171,7 @@ export default function PilgrimagesPage() {
       </section>
 
       {/* Trust CTA */}
-      <section className="py-24 px-6 bg-midnight">
+      <section className="py-12 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 bg-midnight">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-5">
             Need Guidance?

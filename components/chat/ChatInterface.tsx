@@ -21,7 +21,7 @@ const SUGGESTION_CARDS = [
     title: "Varanasi Soul",
     subtitle: "Eternal City of Kashi",
     price: "₹9,200+",
-    img: "/images/pilgrimage/varanasi.jpg",
+    img: "/images/pilgrimage/varanasi-card.png",
     href: "/packages/uttar-pradesh",
   },
 ];

@@ -54,14 +54,14 @@ export default function HoneymoonPage() {
   return (
     <>
       {/* Hero — split layout */}
-      <section className="bg-surface-low pt-28 pb-20 px-12">
+      <section className="bg-surface-low pt-24 sm:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text side */}
           <div>
             <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-5">
               For Two Souls
             </p>
-            <h1 className="font-serif text-5xl md:text-6xl text-midnight font-normal leading-tight mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl text-midnight font-normal leading-tight mb-6">
               Sacred Beginnings
               <br />
               in Sanctuary
@@ -80,7 +80,7 @@ export default function HoneymoonPage() {
           </div>
 
           {/* Image side */}
-          <div className="relative h-[500px] lg:h-[560px] rounded-md overflow-hidden shadow-2xl">
+          <div className="relative h-[350px] sm:h-[500px] lg:h-[560px] rounded-md overflow-hidden shadow-2xl">
             <Image
               src="/images/destinations/honeymoon.jpg"
               alt="Romantic honeymoon retreat"
@@ -95,7 +95,7 @@ export default function HoneymoonPage() {
       </section>
 
       {/* Popular Honeymoon Spots */}
-      <section className="bg-surface py-28 px-12">
+      <section className="bg-surface py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
             Where Love Blooms
@@ -122,7 +122,7 @@ export default function HoneymoonPage() {
                   />
                   <div className="absolute inset-0 bg-midnight/20" aria-hidden="true" />
                 </div>
-                <h3 className="font-serif text-2xl text-midnight font-normal mb-2">
+                <h3 className="font-serif text-xl sm:text-2xl text-midnight font-normal mb-2 line-clamp-2">
                   {spot.name}
                 </h3>
                 <p className="font-sans text-sm text-midnight/60 leading-relaxed">
@@ -135,7 +135,7 @@ export default function HoneymoonPage() {
       </section>
 
       {/* Resort Collections */}
-      <section className="bg-surface-low py-28 px-12">
+      <section className="bg-surface-low py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
             Stay in Splendour
@@ -158,8 +158,8 @@ export default function HoneymoonPage() {
                   />
                   <div className="absolute inset-0 bg-midnight/20" aria-hidden="true" />
                 </div>
-                <div className="p-8">
-                  <h3 className="font-serif text-2xl text-midnight font-normal mb-3">
+                <div className="p-6 sm:p-8">
+                  <h3 className="font-serif text-xl sm:text-2xl text-midnight font-normal mb-3 line-clamp-2">
                     {resort.name}
                   </h3>
                   <p className="font-sans text-sm text-midnight/60 leading-relaxed mb-4">
@@ -176,7 +176,7 @@ export default function HoneymoonPage() {
       </section>
 
       {/* Special Experiences */}
-      <section className="bg-midnight py-28 px-12">
+      <section className="bg-midnight py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4 text-center">
             Once in a Lifetime
@@ -209,7 +209,7 @@ export default function HoneymoonPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-surface-low py-20 px-12 text-center">
+      <section className="bg-surface-low py-12 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 text-center">
         <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4">
           Your Love Story
         </p>

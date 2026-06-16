@@ -1,20 +1,20 @@
 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Outer circle with gap -->
-  <path d="M 60 10 A 50 50 0 1 1 10 60" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M 10 60 A 50 50 0 0 1 60 10" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="8 4"/>
+  <path d="M 60 10 A 50 50 0 1 1 10 60" stroke="#735c00" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 10 60 A 50 50 0 0 1 60 10" stroke="#735c00" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="8 4"/>
   
   <!-- Airplane -->
-  <path d="M 75 25 L 90 35 L 88 40 L 78 36 L 75 45 L 72 45 L 73 36 L 63 32 L 63 27 L 75 25 Z" fill="currentColor"/>
+  <path d="M 75 25 L 90 35 L 88 40 L 78 36 L 75 45 L 72 45 L 73 36 L 63 32 L 63 27 L 75 25 Z" fill="#735c00"/>
   
   <!-- Letter N -->
-  <path d="M 35 45 L 45 45 L 45 50 L 50 50 L 50 45 L 60 45 L 60 75 L 50 75 L 50 60 L 45 60 L 45 75 L 35 75 L 35 45 Z" fill="currentColor"/>
+  <path d="M 35 45 L 45 45 L 45 50 L 50 50 L 50 45 L 60 45 L 60 75 L 50 75 L 50 60 L 45 60 L 45 75 L 35 75 L 35 45 Z" fill="#001f3f"/>
   
   <!-- Luggage -->
-  <path d="M 33 65 L 38 65 L 38 62 L 33 62 Z M 30 66 L 30 75 L 42 75 L 42 66 Z M 32 67 L 32 74 L 34 74 L 34 67 Z M 36 67 L 36 74 L 38 74 L 38 67 Z" fill="currentColor" stroke="currentColor" stroke-width="0.5"/>
+  <path d="M 33 65 L 38 65 L 38 62 L 33 62 Z M 30 66 L 30 75 L 42 75 L 42 66 Z M 32 67 L 32 74 L 34 74 L 34 67 Z M 36 67 L 36 74 L 38 74 L 38 67 Z" fill="#735c00" stroke="#735c00" stroke-width="0.5"/>
   
   <!-- Bus -->
-  <path d="M 70 65 L 85 65 L 85 78 L 70 78 Z M 72 67 L 76 67 L 76 73 L 72 73 Z M 79 67 L 83 67 L 83 73 L 79 73 Z M 71 75 A 2 2 0 1 1 73 75 A 2 2 0 1 1 71 75 M 82 75 A 2 2 0 1 1 84 75 A 2 2 0 1 1 82 75" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+  <path d="M 70 65 L 85 65 L 85 78 L 70 78 Z M 72 67 L 76 67 L 76 73 L 72 73 Z M 79 67 L 83 67 L 83 73 L 79 73 Z M 71 75 A 2 2 0 1 1 73 75 A 2 2 0 1 1 71 75 M 82 75 A 2 2 0 1 1 84 75 A 2 2 0 1 1 82 75" fill="#001f3f" stroke="#001f3f" stroke-width="1"/>
   
   <!-- Road lines -->
-  <line x1="77" y1="78" x2="77" y2="95" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="77" y1="78" x2="77" y2="95" stroke="#735c00" stroke-width="2" stroke-dasharray="4 3"/>
 </svg>

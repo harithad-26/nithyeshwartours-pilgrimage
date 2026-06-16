@@ -106,12 +106,12 @@ export default function UttarPradeshYatraPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/75 to-midnight/20" aria-hidden="true" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-8">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="max-w-3xl">
             <span className="font-sans text-xs font-bold tracking-[0.35em] uppercase text-gold mb-4 block">
               THE SPIRITUAL HEARTLAND OF INDIA
             </span>
-            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-white mb-4 leading-[0.95] font-light">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-4 leading-[0.95] font-light">
               Uttar Pradesh
               <br />
               <span className="italic font-normal">Yatra</span>
@@ -169,7 +169,7 @@ export default function UttarPradeshYatraPage() {
       </section>
 
       {/* 2. Trust Stats - Redesigned Premium Luxury Design */}
-      <section className="py-10 px-6 bg-gradient-to-b from-[#FCFBF9] to-white border-b border-gold/10 animate-in fade-in duration-500" aria-label="Why choose Nithyeshwar Tours">
+      <section className="py-8 sm:py-10 px-4 sm:px-6 bg-gradient-to-b from-[#FCFBF9] to-white border-b border-gold/10 animate-in fade-in duration-500" aria-label="Why choose Nithyeshwar Tours">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
@@ -247,7 +247,7 @@ export default function UttarPradeshYatraPage() {
       </section>
 
       {/* 3. Sacred Experiences (With Visual Storytelling Layout) */}
-      <section className="py-28 px-6 bg-surface" aria-labelledby="experiences-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface" aria-labelledby="experiences-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -310,7 +310,7 @@ export default function UttarPradeshYatraPage() {
       </section>
 
       {/* 4. Sacred Circuit Timeline */}
-      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="timeline-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="timeline-heading">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -394,7 +394,7 @@ export default function UttarPradeshYatraPage() {
       </section>
 
       {/* 5. Package Cards */}
-      <section className="py-28 px-6 bg-surface" id="packages" aria-labelledby="packages-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface" id="packages" aria-labelledby="packages-heading">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -434,7 +434,7 @@ export default function UttarPradeshYatraPage() {
                       </span>
                     )}
                   </div>
-                  <h3 className="font-serif text-2xl text-midnight font-normal leading-snug mb-2">{pkg.name}</h3>
+                  <h3 className="font-serif text-xl sm:text-2xl text-midnight font-normal leading-snug mb-2 line-clamp-2 min-h-14">{pkg.name}</h3>
                   <p className="font-sans text-[11px] text-midnight/45 tracking-[0.15em] uppercase mb-6 font-medium">
                     {pkg.subtitle}
                   </p>
@@ -489,7 +489,7 @@ export default function UttarPradeshYatraPage() {
       </section>
 
       {/* 6. Expedition Standards */}
-      <section className="py-28 px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface-low border-y border-midnight/5" aria-labelledby="standards-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -545,7 +545,7 @@ export default function UttarPradeshYatraPage() {
       </section>
 
       {/* Bento Gallery Section */}
-      <section className="py-28 px-6 bg-white border-t border-midnight/5" aria-labelledby="gallery-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-white border-t border-midnight/5" aria-labelledby="gallery-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">
@@ -652,7 +652,7 @@ export default function UttarPradeshYatraPage() {
       </section>
 
       {/* 7. FAQ */}
-      <section className="py-28 px-6 bg-surface border-t border-midnight/5" aria-labelledby="faq-heading">
+      <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 bg-surface border-t border-midnight/5" aria-labelledby="faq-heading">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <span className="font-sans text-xs font-bold tracking-[0.25em] uppercase text-gold-dark mb-3 block">

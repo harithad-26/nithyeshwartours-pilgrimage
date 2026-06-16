@@ -113,15 +113,15 @@ export default function TravelMemoriesPage() {
   return (
     <>
       {/* Page header */}
-      <section className="pt-36 pb-16 px-6 bg-surface">
+      <section className="pt-24 sm:pt-36 pb-10 sm:pb-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-surface">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4">
             Captured Moments
           </p>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-midnight font-normal leading-tight tracking-tight max-w-2xl mb-5">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-7xl text-midnight font-normal leading-tight tracking-tight max-w-2xl mb-5">
             Travel Memories
           </h1>
-          <p className="font-sans text-lg text-[#43474e] max-w-xl leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-[#43474e] max-w-xl leading-relaxed">
             Glimpses of the sacred — moments of devotion, beauty, and
             transformation captured along our pilgrim paths.
           </p>
@@ -129,7 +129,7 @@ export default function TravelMemoriesPage() {
       </section>
 
       {/* Asymmetric gallery grid */}
-      <section className="px-6 pb-0 bg-surface" aria-label="Travel memories gallery">
+      <section className="px-4 sm:px-6 md:px-8 lg:px-12 pb-0 bg-surface" aria-label="Travel memories gallery">
         <div className="max-w-7xl mx-auto space-y-6">
           {/* Row 1: 8+4 */}
           <div className="grid grid-cols-12 gap-6">
@@ -162,9 +162,9 @@ export default function TravelMemoriesPage() {
       </section>
 
       {/* Navy quote band */}
-      <section className="py-24 px-6 bg-midnight mt-16">
+      <section className="py-12 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 bg-midnight mt-12 md:mt-16">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-serif text-3xl md:text-4xl text-white font-normal leading-snug mb-4">
+          <p className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-snug mb-4">
             &ldquo;Every photograph is a prayer answered, a moment of grace
             made visible.&rdquo;
           </p>
@@ -175,7 +175,7 @@ export default function TravelMemoriesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-surface-low">
+      <section className="py-12 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 bg-surface-low">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-midnight font-normal leading-snug mb-4">
             Create Your Own Memories

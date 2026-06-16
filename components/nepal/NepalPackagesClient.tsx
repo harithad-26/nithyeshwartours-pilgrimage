@@ -97,7 +97,7 @@ const PACKAGES = [
     bestFor: "Pilgrims · First-Time Travelers",
     difficulty: "Leisurely",
     difficultyRating: "●○○",
-    img: "/images/pilgrimage/varanasi.jpg"
+    img: "/images/pilgrimage/varanasi-card.png"
   }
 ];
 

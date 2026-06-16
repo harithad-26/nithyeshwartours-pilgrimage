@@ -115,14 +115,14 @@ export default async function PilgrimagePage() {
           className="absolute inset-0 bg-linear-to-b from-midnight/50 via-midnight/55 to-midnight/80"
           aria-hidden="true"
         />
-        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pt-24">
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-3xl mx-auto pt-24">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-5">
             The Eternal Path
           </p>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-tight tracking-tight mb-6">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-7xl text-white font-normal leading-tight tracking-tight mb-6">
             Walking the Sacred Way
           </h1>
-          <p className="font-sans text-lg text-white/70 leading-relaxed font-light max-w-2xl mx-auto mb-10">
+          <p className="font-sans text-base sm:text-lg text-white/70 leading-relaxed font-light max-w-2xl mx-auto mb-10">
             More than travel. A transformation. We walk with you on paths that
             have guided devotees for centuries.
           </p>
@@ -136,7 +136,7 @@ export default async function PilgrimagePage() {
       </section>
 
       {/* Spiritual Portals — bento grid */}
-      <section className="py-32 px-6 bg-surface" aria-labelledby="portals-heading">
+      <section className="py-12 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-surface" aria-labelledby="portals-heading">
         <div className="max-w-7xl mx-auto">
           <p className="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold-dark mb-4 text-center">
             Sacred Sites
@@ -148,7 +148,7 @@ export default async function PilgrimagePage() {
             Spiritual Portals
           </h2>
 
-          <div className="grid grid-cols-12 grid-rows-[360px_360px] gap-6">
+          <div className="grid grid-cols-12 gap-6">
             {SPIRITUAL_PORTALS.map((portal) => (
               <Link
                 key={portal.name}
@@ -185,7 +185,7 @@ export default async function PilgrimagePage() {
 
       {/* Sacred Geometry — dark section */}
       <section
-        className="py-32 px-6 bg-midnight"
+        className="py-12 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-midnight"
         aria-labelledby="geometry-heading"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -237,7 +237,7 @@ export default async function PilgrimagePage() {
 
       {/* Char Dham Circuit */}
       <section
-        className="py-32 px-6 bg-surface-low"
+        className="py-12 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-surface-low"
         aria-labelledby="chardham-heading"
       >
         <div className="max-w-4xl mx-auto">
