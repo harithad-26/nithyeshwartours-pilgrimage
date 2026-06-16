@@ -172,7 +172,7 @@ export function Step5Summary({ data, onBack }: Step5Props) {
 
               <Link
                 href={`/inquiry?destination=${encodeURIComponent(data.destination)}&travelers=${data.travelers}&duration=${data.duration}`}
-                className="btn-premium btn-premium-gold w-full text-center"
+                className="w-full text-center bg-gold hover:bg-gold-light text-midnight font-sans text-xs font-bold uppercase tracking-wider py-2.5 px-4 rounded-md transition-all duration-300 min-h-[40px] flex items-center justify-center cursor-pointer active:scale-[0.98]"
               >
                 <span>Proceed to Book</span>
               </Link>

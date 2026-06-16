@@ -115,10 +115,10 @@ export function HeroSection() {
             <div className="flex items-center shrink-0 p-1 md:pl-2">
               <Link
                 href="/inquiry"
-                className="btn-premium btn-premium-primary w-full md:w-auto"
+                className="group flex items-center justify-center gap-2 bg-navy text-gold font-sans text-xs md:text-sm font-bold px-6 md:px-8 py-2.5 md:py-3.5 rounded-xl transition-all duration-300 hover:bg-midnight hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-gold-muted/20 whitespace-nowrap min-h-[40px] md:min-h-11 w-full md:w-auto focus-visible:outline-2 focus-visible:outline-gold focus-visible:outline-offset-2 cursor-pointer"
                 aria-label="Plan your journey with AI"
               >
-                <span>Plan with AI</span>
+                Plan with AI
               </Link>
             </div>
           </div>
@@ -141,7 +141,7 @@ function SearchField({ id, label, placeholder, icon, divider }: SearchFieldProps
     <label
       htmlFor={id}
       className={[
-        "group flex-1 min-w-0 flex flex-col gap-1 md:gap-1.5 px-4 md:px-6 py-3 md:py-4 cursor-text hover:bg-black/[0.015] transition-colors duration-200",
+        "group flex-1 min-w-0 flex flex-col gap-0.5 md:gap-1 px-4 md:px-6 py-2 md:py-3 cursor-text hover:bg-black/[0.015] transition-colors duration-200",
         "border-t border-midnight/5 md:border-t-0",
         "first:border-t-0",
         divider ? "md:border-r md:border-r-midnight/10" : "",
@@ -159,7 +159,7 @@ function SearchField({ id, label, placeholder, icon, divider }: SearchFieldProps
           type="text"
           placeholder={placeholder}
           autoComplete="off"
-          className="font-sans text-xs md:text-sm font-medium text-midnight placeholder:text-midnight/35 bg-transparent w-full min-h-7 focus:outline-none focus-visible:outline-none"
+          className="font-sans text-xs md:text-sm font-medium text-midnight placeholder:text-midnight/35 bg-transparent w-full min-h-6 focus:outline-none focus-visible:outline-none"
           aria-label={label}
         />
       </div>

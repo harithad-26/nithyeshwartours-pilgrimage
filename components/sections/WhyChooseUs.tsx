@@ -29,7 +29,7 @@ const PILLARS = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 md:py-28 bg-surface-low relative overflow-hidden" aria-labelledby="why-choose-us-heading">
+    <section className="pt-36 pb-20 md:py-28 bg-surface-low relative overflow-hidden" aria-labelledby="why-choose-us-heading">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
         <SectionHeader
           eyebrow="A Legacy of Trust"

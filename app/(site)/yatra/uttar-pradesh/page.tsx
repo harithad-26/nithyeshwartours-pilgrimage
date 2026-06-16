@@ -160,12 +160,6 @@ export default function UttarPradeshYatraPage() {
             </div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" aria-hidden="true">
-          <span className="font-sans text-[10px] text-white/40 uppercase tracking-widest">Begin the Journey</span>
-          <div className="w-px h-10 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
-        </div>
       </section>
 
       {/* 2. Trust Stats - Redesigned Premium Luxury Design */}

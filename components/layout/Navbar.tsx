@@ -31,7 +31,7 @@ export function Navbar() {
                 priority
               />
             </div>
-            <span className="font-serif text-midnight font-bold text-lg lg:text-xl tracking-[0.12em] uppercase">
+            <span className="font-serif text-midnight font-bold text-base sm:text-lg lg:text-xl tracking-[0.12em] uppercase">
               NITHYESHWAR <span className="text-gold-dark font-medium">TOURS</span>
             </span>
           </Link>
@@ -47,12 +47,14 @@ export function Navbar() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
-            <Link
-              href="/inquiry"
-              className="hidden md:inline-flex btn-premium btn-premium-primary text-xs px-5 py-2.5 min-h-[40px]"
-            >
-              <span>Book Now</span>
-            </Link>
+            <div className="hidden md:block">
+              <Link
+                href="/inquiry"
+                className="btn-premium btn-premium-primary text-xs px-5 py-2.5 min-h-[40px]"
+              >
+                <span>Book Now</span>
+              </Link>
+            </div>
             <MobileNavToggle />
           </div>
         </div>
