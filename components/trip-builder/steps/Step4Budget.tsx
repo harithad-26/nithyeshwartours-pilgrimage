@@ -142,9 +142,9 @@ export function Step4Budget({ data, updateData, onNext, onBack }: Step4Props) {
         <button
           type="button"
           onClick={onBack}
-          className="btn-premium btn-premium-secondary w-full sm:w-auto"
+          className="group bg-white hover:bg-slate-50 text-midnight border border-midnight/20 font-sans text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-md transition-all duration-300 min-h-[42px] flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98] w-full sm:w-auto"
         >
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0 rotate-180">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0 rotate-180 transition-transform duration-300 group-hover:-translate-x-1">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
           <span>Back</span>
@@ -153,10 +153,10 @@ export function Step4Budget({ data, updateData, onNext, onBack }: Step4Props) {
           type="button"
           onClick={onNext}
           disabled={!data.budget}
-          className="btn-premium btn-premium-primary w-full sm:w-auto"
+          className="group bg-midnight text-white hover:bg-navy disabled:opacity-50 disabled:cursor-not-allowed font-sans text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-md transition-all duration-300 min-h-[42px] flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98] w-full sm:w-auto border border-midnight hover:border-navy"
         >
           <span>Review Summary</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
