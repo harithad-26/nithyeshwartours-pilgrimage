@@ -1421,9 +1421,12 @@ export default async function NepalPackageDetailPage({
                 <div>
                   <Link
                     href={`/inquiry?package=${packageCode}`}
-                    className="flex items-center justify-center font-sans text-xs font-semibold bg-white text-[#000613] w-full py-3 transition-all duration-300 hover:bg-gold hover:text-[#000613] min-h-[44px] tracking-wider uppercase"
+                    className="btn-premium btn-premium-white w-full text-center"
                   >
-                    Book This Package
+                    <span>Book This Package</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </div>
 
@@ -1466,9 +1469,9 @@ export default async function NepalPackageDetailPage({
           </div>
           <Link
             href={`/inquiry?package=${packageCode}`}
-            className="flex items-center justify-center font-sans px-5 py-2.5 bg-midnight text-white text-xs font-bold uppercase tracking-wider hover:bg-midnight/90 transition-all duration-300 rounded-xl"
+            className="btn-premium btn-premium-primary text-xs px-5 py-2.5 min-h-[38px]"
           >
-            Book Now
+            <span>Book Now</span>
           </Link>
         </div>
       </div>

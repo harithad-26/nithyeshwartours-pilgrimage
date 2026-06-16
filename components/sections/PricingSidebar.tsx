@@ -39,15 +39,15 @@ export function PricingSidebar({ pkg }: { pkg: Package }) {
         <div className="space-y-3 mt-8">
           <Link
             href="/inquiry"
-            className="flex items-center justify-center font-sans text-sm font-semibold bg-gold text-midnight w-full py-3.5 rounded-md hover:bg-gold-dark hover:text-white transition-colors duration-300 min-h-11"
+            className="btn-premium btn-premium-gold w-full text-center"
           >
-            Book Now
+            <span>Book Now</span>
           </Link>
           <Link
             href="/inquiry"
-            className="flex items-center justify-center font-sans text-sm font-semibold text-white border border-white/20 w-full py-3.5 rounded-md hover:border-gold/50 hover:text-gold transition-colors duration-300 min-h-11"
+            className="btn-premium btn-premium-glass w-full text-center"
           >
-            Send Inquiry
+            <span>Send Inquiry</span>
           </Link>
         </div>
       </div>

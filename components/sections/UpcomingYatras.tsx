@@ -88,9 +88,9 @@ export function UpcomingYatras() {
                   <div className="col-span-2 text-right">
                     <Link
                       href={`/inquiry?package=${yatra.inquiryParam}`}
-                      className="inline-block font-sans text-xs font-bold text-midnight hover:text-white bg-gold hover:bg-midnight px-5 py-2.5 rounded-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-sm cursor-pointer"
+                      className="btn-premium btn-premium-gold text-xs px-4 py-2.5 min-h-[38px]"
                     >
-                      Book Now
+                      <span>Book Now</span>
                     </Link>
                   </div>
                 </div>
@@ -128,9 +128,9 @@ export function UpcomingYatras() {
                   </div>
                   <Link
                     href={`/inquiry?package=${yatra.inquiryParam}`}
-                    className="font-sans text-xs font-bold text-midnight bg-gold hover:bg-gold-dark px-4 py-2.5 rounded-lg transition-all duration-200 cursor-pointer"
+                    className="btn-premium btn-premium-gold text-xs px-4 py-2.5 min-h-[38px]"
                   >
-                    Book Now
+                    <span>Book Now</span>
                   </Link>
                 </div>
               </div>

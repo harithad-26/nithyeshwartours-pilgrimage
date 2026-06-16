@@ -289,9 +289,12 @@ export default function InternationalPackagesClient({ destinationKey }: Internat
 
                 <div className="p-8 border-t border-midnight/10 bg-surface-low/30">
                   <span
-                    className="w-full text-center py-4 font-sans text-xs font-bold tracking-[0.12em] uppercase rounded transition-all duration-300 min-h-11 flex items-center justify-center bg-midnight text-white group-hover:bg-navy"
+                    className="btn-premium btn-premium-primary w-full text-center"
                   >
-                    View Details
+                    <span>View Details</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </span>
                 </div>
               </Link>

@@ -172,9 +172,9 @@ export function Step5Summary({ data, onBack }: Step5Props) {
 
               <Link
                 href={`/inquiry?destination=${encodeURIComponent(data.destination)}&travelers=${data.travelers}&duration=${data.duration}`}
-                className="block w-full py-3 md:py-4 bg-gold text-midnight text-center rounded-lg font-sans text-sm font-bold hover:bg-gold/90 transition-all duration-300"
+                className="btn-premium btn-premium-gold w-full text-center"
               >
-                Proceed to Book
+                <span>Proceed to Book</span>
               </Link>
 
               <p className="mt-3 md:mt-4 font-sans text-xs text-white/50 text-center">
@@ -190,12 +190,12 @@ export function Step5Summary({ data, onBack }: Step5Props) {
         <button
           type="button"
           onClick={onBack}
-          className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-white border border-midnight/20 text-midnight rounded-lg font-sans text-sm font-semibold hover:bg-surface transition-all duration-300 flex items-center justify-center gap-2"
+          className="btn-premium btn-premium-secondary w-full sm:w-auto"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0 rotate-180">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-          Modify Preferences
+          <span>Modify Preferences</span>
         </button>
       </div>
     </div>

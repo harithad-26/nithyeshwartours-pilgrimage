@@ -74,21 +74,21 @@ export function Step2Dates({ data, updateData, onNext, onBack }: Step2Props) {
         <button
           type="button"
           onClick={onBack}
-          className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-white border border-midnight/20 text-midnight rounded-lg font-sans text-sm font-semibold hover:bg-surface transition-all duration-300 flex items-center justify-center gap-2"
+          className="btn-premium btn-premium-secondary w-full sm:w-auto"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0 rotate-180">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-          Back
+          <span>Back</span>
         </button>
         <button
           type="button"
           onClick={onNext}
           disabled={!data.month}
-          className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-midnight text-white rounded-lg font-sans text-sm font-semibold hover:bg-midnight/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="btn-premium btn-premium-primary w-full sm:w-auto"
         >
-          Continue
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span>Continue</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>

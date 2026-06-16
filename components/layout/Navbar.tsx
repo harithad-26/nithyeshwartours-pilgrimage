@@ -49,9 +49,9 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/inquiry"
-              className="hidden md:inline-flex items-center justify-center bg-navy text-gold font-sans text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-xl transition-all duration-300 hover:bg-midnight hover:scale-[1.02] active:scale-[0.98] shadow-md min-h-[42px]"
+              className="hidden md:inline-flex btn-premium btn-premium-primary text-xs px-5 py-2.5 min-h-[40px]"
             >
-              Book Now
+              <span>Book Now</span>
             </Link>
             <MobileNavToggle />
           </div>
@@ -67,9 +67,9 @@ export function Navbar() {
             ))}
             <Link
               href="/inquiry"
-              className="inline-flex justify-center bg-navy text-gold font-sans text-xs font-bold uppercase tracking-wider py-3.5 rounded-xl mt-2 min-h-[44px] items-center"
+              className="btn-premium btn-premium-primary w-full mt-2"
             >
-              Book Now
+              <span>Book Now</span>
             </Link>
           </div>
         </div>

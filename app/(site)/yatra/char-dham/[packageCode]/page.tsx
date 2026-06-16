@@ -914,20 +914,20 @@ export default async function PackageDetailPage({
           <div className="flex flex-wrap gap-4">
             <a
               href={`/inquiry?package=${pkg.code}`}
-              className="inline-flex items-center gap-2 font-sans px-8 py-4 bg-white text-midnight text-sm font-semibold hover:bg-white/95 transition-all duration-300"
+              className="btn-premium btn-premium-white"
             >
-              Book This Package
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l7 7-7 7" />
+              <span>Book This Package</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </a>
             <a
               href="https://wa.me/917200118411"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans px-8 py-4 bg-white/10 backdrop-blur text-white text-sm font-medium border border-white/30 hover:bg-white/20 transition-all duration-300"
+              className="btn-premium btn-premium-glass"
             >
-              Contact Us
+              <span>Contact Us</span>
             </a>
           </div>
         </div>

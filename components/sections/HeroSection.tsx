@@ -42,18 +42,18 @@ export function HeroSection() {
         </p>
 
         {/* Call to Actions */}
-        <div className="flex flex-row items-center justify-center gap-4 w-full max-w-md px-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md px-4">
           <Link
             href="/packages"
-            className="flex-1 text-center bg-gold hover:bg-gold-light text-midnight font-sans text-xs md:text-sm font-bold px-5 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] shadow-lg cursor-pointer"
+            className="btn-premium btn-premium-gold w-full sm:w-auto text-center"
           >
-            Explore Packages
+            <span>Explore Packages</span>
           </Link>
           <Link
             href="/trip-builder"
-            className="flex-1 text-center bg-white/10 hover:bg-white/20 text-white border border-white/30 font-sans text-xs md:text-sm font-bold px-5 py-3.5 rounded-xl backdrop-blur-md transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
+            className="btn-premium btn-premium-glass w-full sm:w-auto text-center"
           >
-            Plan Your Journey
+            <span>Plan Your Journey</span>
           </Link>
         </div>
       </div>
@@ -115,10 +115,10 @@ export function HeroSection() {
             <div className="flex items-center shrink-0 p-1 md:pl-2">
               <Link
                 href="/inquiry"
-                className="group flex items-center justify-center gap-2 bg-navy text-gold font-sans text-xs md:text-sm font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl transition-all duration-300 hover:bg-midnight hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-gold-muted/20 whitespace-nowrap min-h-[44px] md:min-h-12 w-full md:w-auto focus-visible:outline-2 focus-visible:outline-gold focus-visible:outline-offset-2 cursor-pointer"
+                className="btn-premium btn-premium-primary w-full md:w-auto"
                 aria-label="Plan your journey with AI"
               >
-                Plan with AI
+                <span>Plan with AI</span>
               </Link>
             </div>
           </div>

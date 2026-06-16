@@ -146,9 +146,9 @@ export function SacredPilgrimages({ packages }: SacredPilgrimagesProps) {
         <div className="mt-8 md:mt-12 text-center">
           <Link
             href="/pilgrimage"
-            className="group/btn inline-flex items-center gap-2 font-sans text-xs md:text-sm font-bold text-midnight bg-gold px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-[1.02] active:scale-[0.98] min-h-[44px] md:min-h-12"
+            className="btn-premium btn-premium-gold"
           >
-            View All Pilgrimages
+            <span>View All Pilgrimages</span>
           </Link>
         </div>
       </div>

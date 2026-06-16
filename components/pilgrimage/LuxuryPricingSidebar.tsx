@@ -76,9 +76,12 @@ export default function LuxuryPricingSidebar({ pkg }: LuxuryPricingSidebarProps)
         <div>
           <Link
             href={`/inquiry?package=${pkg.code}`}
-            className="flex items-center justify-center font-sans text-xs font-semibold bg-white text-[#000613] w-full py-3 transition-all duration-300 hover:bg-gold hover:text-[#000613] min-h-[44px] tracking-wider uppercase"
+            className="btn-premium btn-premium-white w-full text-center"
           >
-            Book This Package
+            <span>Book This Package</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </Link>
         </div>
 

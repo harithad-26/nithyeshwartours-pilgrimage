@@ -333,9 +333,12 @@ export function IndiaDestinationTemplate({ destination, packages }: IndiaDestina
 
                 {/* CTA View Details */}
                 <span
-                  className="mt-auto flex items-center justify-center py-3.5 font-sans text-xs font-bold tracking-[0.15em] uppercase rounded border border-gold-dark text-gold-dark group-hover:bg-gold-dark group-hover:text-white transition-all duration-300 min-h-11"
+                  className="btn-premium btn-premium-secondary mt-auto w-full text-center"
                 >
-                  View Details
+                  <span>View Details</span>
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </span>
               </Link>
             ))}

@@ -319,4 +319,99 @@ html[data-theme-edges="sharp"] .rounded-full:not(.whatsapp-float):not(.theme-tog
   }
 }
 
+/* Reusable Premium Responsive Button System */
+.btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* 8px space between text and icon */
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem; /* px-8 py-4 */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  white-space: nowrap; /* prevent text wrapping awkwardly */
+  flex-shrink: 0;
+  min-height: 48px;
+  width: auto;
+}
+
+.btn-premium-primary {
+  background-color: var(--color-midnight);
+  color: #ffffff;
+  border: 1px solid var(--color-midnight);
+}
+.btn-premium-primary:hover {
+  background-color: var(--color-navy);
+  border-color: var(--color-navy);
+  transform: translateY(-2px);
+}
+.btn-premium-primary:active {
+  transform: translateY(0);
+}
+
+.btn-premium-secondary {
+  background-color: transparent;
+  color: var(--color-midnight);
+  border: 1px solid rgba(0, 6, 19, 0.2);
+}
+.btn-premium-secondary:hover {
+  background-color: rgba(0, 6, 19, 0.02);
+  border-color: var(--color-midnight);
+  transform: translateY(-2px);
+}
+.btn-premium-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-premium-gold {
+  background-color: var(--color-gold);
+  color: var(--color-midnight);
+  border: 1px solid var(--color-gold);
+}
+.btn-premium-gold:hover {
+  background-color: color-mix(in srgb, var(--color-gold) 90%, #000);
+  border-color: color-mix(in srgb, var(--color-gold) 90%, #000);
+  transform: translateY(-2px);
+}
+
+.btn-premium-white {
+  background-color: #ffffff;
+  color: var(--color-midnight);
+  border: 1px solid #ffffff;
+}
+.btn-premium-white:hover {
+  background-color: #f4f3f2;
+  border-color: #f4f3f2;
+  transform: translateY(-2px);
+}
+
+.btn-premium-glass {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.btn-premium-glass:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Ensure SVG icons inside premium buttons never shrink and maintain visual proportion */
+.btn-premium svg {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-premium:hover svg {
+  transform: translateX(4px);
+}
+
+
 

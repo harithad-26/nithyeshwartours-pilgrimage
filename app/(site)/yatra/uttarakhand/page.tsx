@@ -141,21 +141,21 @@ export default function UttarakhandPage() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link
                 href="#packages"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-midnight font-sans text-sm font-semibold rounded hover:bg-gold/90 transition-all duration-300 min-h-11"
+                className="btn-premium btn-premium-gold text-center"
               >
-                Explore Packages
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M9 5l7 7-7 7" />
+                <span>Explore Packages</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
               <Link
                 href="/inquiry?package=UK-General"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-sans text-sm font-medium rounded border border-white/20 hover:bg-white/20 transition-all duration-300 min-h-11"
+                className="btn-premium btn-premium-glass text-center"
               >
-                Inquiry & Reserve
+                <span>Inquiry & Reserve</span>
               </Link>
             </div>
           </div>
@@ -470,9 +470,12 @@ export default function UttarakhandPage() {
                 <div className="p-8 border-t border-midnight/5 bg-surface-low/30">
                   <Link
                     href={`/yatra/uttarakhand/${pkg.code}`}
-                    className="block w-full text-center bg-midnight text-white font-sans text-sm font-semibold py-4 rounded hover:bg-navy transition-all duration-300 min-h-11 tracking-widest uppercase"
+                    className="btn-premium btn-premium-primary w-full text-center"
                   >
-                    View Details
+                    <span>View Details</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </div>
               </article>

@@ -52,9 +52,12 @@ export function PackageCard({ pkg, priority = false }: PackageCardProps) {
             </p>
           </div>
           <span
-            className="font-sans text-xs font-semibold text-gold-dark border border-gold-dark/40 px-4 py-2 rounded-md transition-all duration-300 group-hover:bg-gold-dark group-hover:text-white"
+            className="btn-premium btn-premium-secondary text-xs px-4 py-2 min-h-[40px]"
           >
-            View Details
+            <span>View Details</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-3.5 h-3.5 flex-shrink-0">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </span>
         </div>
       </div>
