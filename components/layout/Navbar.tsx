@@ -50,9 +50,9 @@ export function Navbar() {
             <div className="hidden md:block">
               <Link
                 href="/inquiry"
-                className="btn-premium btn-premium-primary text-xs px-5 py-2.5 min-h-[40px]"
+                className="inline-flex items-center justify-center bg-navy text-gold hover:bg-midnight font-sans text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-sm min-h-[38px]"
               >
-                <span>Book Now</span>
+                Book Now
               </Link>
             </div>
             <MobileNavToggle />
